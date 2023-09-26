@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<!-- InstanceBeginEditable name="doctitle" -->
-  <title>HIS B2B - Manage-Announcements</title>
+  <title>HIS B2B - Announcement Edit</title>
   <!-- InstanceEndEditable -->
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -209,72 +209,31 @@
                 <div class="col-lg-12">
                   <div class="card">
                     <div class="card-body">
-                      <div class="d-flex mb-3">
-                        <button class="btn btn-primary">+ Add New Announcements</button>
-                        <button style="font-size: 13px;" id="deleteChecked" class="btn btn-danger d-flex mx-1 text-13" disabled="disabled"><span class="material-symbols-outlined my-auto" style="font-size: 15px; margin-right: 4px;">delete</span><div class="my-auto">Delete Checked</div></button>
-                      </div>
-                      <div class="row-custom">
-                        <div class="col-custom-entry">
-                          <div class="col-custom-float-left">
-                            <span class="margin-right-1">Show</span>
-                            <label class="visually-hidden float-left" for="inlineFormSelectPref">Preference</label>
-                            <select class="form-select pagination-entry margin-right-1" id="inlineFormSelectPref">
-                              <option selected>10</option>
-                              <option value="1">20</option>
-                              <option value="2">50</option>
-                              <option value="3">100</option>
-                            </select>
-                            <span class="margin-right-2">Entries</span>
-                            <span>Showing 1 to 3 of 3 entries</span>
+                      <div class="row">
+                        <div class="col-md col-sm">
+                          <div class="mb-1">
+                              <div for="exampleFormControlInput1 fs-5" class="form-label">Announcement Title</div>
+                              <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2" style="border-radius: 5px;" value="Deposit Regulation">
+                          </div>
+                          <div class="d-flex">
+                            <span id="daterange-btn" class="material-symbols-outlined datepicker" style="cursor: pointer;">date_range</span>
+                            <input type="text" class="form-control daterange-input" aria-label="Recipient's username" aria-describedby="basic-addon2" value=" 4,800,000.00">
                           </div>
                         </div>
-                        <div class="col-custom-entry">
-                          <div class="col-custom-float-right">
-                            <input class="form-control hotel-confirmation" type="text" placeholder="Search...">
+                        <!-- <div class="col-md col-sm">
+                          <div class="mb-1">
+                              <div for="exampleFormControlInput1 fs-5" class="form-label">Announcement Title</div>
+                              <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2" style="border-radius: 5px;" value="Deposit Regulation">
                           </div>
-                        </div>
-                      </div>
-                      <div class="table-responsive">
-                        <table class="table mb-0 table-custom manageroom">
-                          <thead>
-                            <tr>
-                              <th>
-                   
-                                  <input id="checkboxAll" class="form-check-input" type="checkbox" style="cursor: pointer;" value="" id="flexCheckDefault">
-                                
-                              </th>
-                              <th>Announcement Title</th>
-                              <th>Show Date</th>
-                              <th>Due Date</th>
-                              <th>Action</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>
-                                <input class="form-check-input checkboxSelected" type="checkbox" style="cursor: pointer;" value="" id="flexCheckDefault">
-                              </td>
-                              <td>Deposit Regulation</td>
-                              <td>Sep 27, 2023 - Oct 28, 2023	</td>
-                              <td>Sep 27, 2023 - Oct 28, 2023	</td>
-                              <td>
-                                <button class="btn btn-primary btn-re me-1 btn-announcement-edit">Edit</button>
-                                <button class="btn btn-primary btn-re btn-red me-1">Delete</button>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div class="pagination-container">
-                        <div class="pagination1-align-right">
-                          <div class="pagination1">
-                            <a href="#">Prev</a>
-                            <a href="#" class="active">1</a>
-                            <a href="#">2</a>
-                            <a>...</a>
-                            <a href="#">Next</a>
+                          <div class="mb-1">
+                            <div id="daterange-btn" class="daterange">
+                              <span class="material-symbols-outlined datepicker" style="cursor: pointer;">date_range</span>
+                              <div class="datepicker">							
+                                <input id="datepickerchart" class="daterange-input form-control fs-85" placeholder="Choose date range" name="chart_date_range" type="text">
+                              </div>
+                            </div>
                           </div>
-                        </div>
+                        </div> -->
                       </div>
                     </div>
                   </div>

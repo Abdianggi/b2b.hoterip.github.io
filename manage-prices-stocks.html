@@ -220,17 +220,18 @@
           <!-- Dashboard Header Section    -->
           <section class="pb-0">
             <div class="container-fluid">
-              <div class="card">
+              <div class="card" style="font-size: 0.85rem;">
                 <div class="card-header">
                   <span class="mb-3 mx-1">
-                    <div for="exampleFormControlInput1 fs-5" class="form-label fw-bold">
+                    <div class="form-label fw-bold">
                       From - To
                     </div>
-                    <div id="daterange-btn" class="daterange" style="margin: 0px; float: none;">
-                      <!-- <span class="material-symbols-outlined datepicker" style="cursor: pointer" >date_range</span> -->
-                      <div class="datepicker">
-                        <input id="datepickerchart" class="daterange-input form-control" name="chart_date_range" type="text"/>
-                      </div>
+                    <div class="d-flex">
+                      <!-- <span id="daterange-btn" class="material-symbols-outlined datepicker" style="cursor: pointer;">date_range</span> -->
+                      <!-- <button class="btn btn-primary">
+                        <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                      </button> -->
+                      <input type="text" class="form-control daterange-input" aria-label="Recipient's username" aria-describedby="basic-addon2">
                     </div>
                   </span>
                   <span class="mb-3 mx-1">
