@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html><!-- InstanceBegin template="/Templates/template.dwt" codeOutsideHTMLIsLocked="false" -->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- InstanceBeginEditable name="doctitle" -->
+  <title>HIS B2B - Hotel Edit</title>
+  <!-- InstanceEndEditable -->
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="all,follow">
+    <!-- Google fonts - Poppins -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
+    <!-- Choices CSS-->
+    <link rel="stylesheet" href="vendor/choices.js/public/assets/styles/choices.min.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="css/tab.css">
+	<link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.ico">
+	<link rel="stylesheet" type="text/css" media="all" href="css/daterangepicker.css" />
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <div class="page">
+      <!-- Main Navbar-->
+      <header class="header z-index-50">
+        <nav class="nav navbar py-3 px-0 shadow-sm text-white position-relative">
+          <!-- Search Box-->
+          <div class="search-box shadow-sm">
+            <button class="dismiss d-flex align-items-center">
+              <svg class="svg-icon svg-icon-heavy">
+                <use xlink:href="#close-1"> </use>
+              </svg>
+            </button>
+            <form id="searchForm" action="#" role="search">
+              <input class="form-control shadow-0" type="text" placeholder="What are you looking for...">
+            </form>
+          </div>
+		<!-- Hotel Selelct -->
+			<div class="search-box shadow-sm">
+            <button class="dismiss d-flex align-items-center">
+              <svg class="svg-icon svg-icon-heavy">
+                <use xlink:href="#close-1"> </use>
+              </svg>
+            </button>
+            <form id="selectHotel" action="#" role="search">
+              <input class="form-control shadow-0" type="text" placeholder="Type 2 or more character">
+            </form>
+          </div>
+			
+          <div class="container-fluid w-100">
+            <div class="navbar-holder d-flex align-items-center justify-content-between w-100">
+              <!-- Navbar Header-->
+              <div class="navbar-header">
+                <!-- Navbar Brand --><a class="navbar-brand d-none d-sm-inline-block" href="index.html">
+                  <div class="logo"><img class="his-logo" src="images/his-logo.png" width="60" height="25" alt=""/><span>B2B </span><strong>Extranet</strong></div>
+                  <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong>BD</strong></div></a>
+              </div>
+              <!-- Navbar Menu -->
+              <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                <!-- Search-->
+                <li class="nav-item d-flex align-items-center"><a id="search" href="#">
+                    <svg class="svg-icon svg-icon-xs svg-icon-heavy">
+                      <use xlink:href="#find-1"> </use>
+                    </svg></a></li>
+				<!-- Hotel Search -->
+				<li class="nav-item dropdown"> <a class="nav-link text-white" id="hotelAccount" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="material-symbols-outlined navbar">domain</span><span class="d-none d-sm-inline-block hotel-select">Mockup Hotel & Spa Jimbaran Bali</span></a>
+                  <ul class="dropdown-menu dropdown-menu-end mt-3 shadow-sm hotel-search">
+                    <li><span class="dropdown-item py-3"> 
+                        <div class="d-flex">
+						  <div class="col-sm-9">
+                            <input class="form-control hotel-search" type="text" placeholder="Type 2 characters or more to search the hotel...">
+                          </div>
+                        </div></span>
+					</li>
+                  </ul>
+                </li>
+                <!-- New Bookings-->
+                <li class="nav-item dropdown"> <a class="nav-link text-white" id="notifications" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="material-symbols-outlined navbar">add_shopping_cart</span><span class="d-none d-sm-inline-block">New Bookings</span>
+                    <span class="badge bg-blue badge-corner fw-normal">5</span></a>
+                  <ul class="dropdown-menu dropdown-menu-end mt-3 shadow-sm" aria-labelledby="notifications">
+                    <li><a class="dropdown-item py-3" href="#"> 
+                        <div class="d-flex">
+                          <div class="icon">
+                            <span class="material-symbols-outlined">add_box</span>
+                          </div>
+                          <div class="ms-3"><span class="h6 d-block fw-normal mb-1 text-xs text-gray-600">B108566</span><small class="small text-gray-600">4 minutes ago</small></div>
+                        </div></a></li>
+                    <li><a class="dropdown-item py-3" href="#"> 
+                        <div class="d-flex">
+                          <div class="icon">
+                            <span class="material-symbols-outlined">add_box</span>
+                          </div>
+                          <div class="ms-3"><span class="h6 d-block fw-normal mb-1 text-xs text-gray-600">B107335</span><small class="small text-gray-600">6 minutes ago</small></div>
+                        </div></a></li>
+                    <li><a class="dropdown-item py-3" href="#"> 
+                        <div class="d-flex">
+                          <div class="icon">
+                            <span class="material-symbols-outlined">add_box</span>
+                          </div>
+                          <div class="ms-3"><span class="h6 d-block fw-normal mb-1 text-xs text-gray-600">B105578</span><small class="small text-gray-600">16 minutes ago</small></div>
+                        </div></a></li>
+                    <li><a class="dropdown-item all-notifications text-center" href="#"> <strong class="text-xs text-gray-600">view all bookings                                            </strong></a></li>
+                  </ul>
+                </li>
+				<!-- Hotel Account-->
+                <li class="nav-item dropdown"> <a class="nav-link text-white" id="hotelAccount" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="material-symbols-outlined navbar">location_home</span><span class="d-none d-sm-inline-block">Hotel Account</span></a>
+                  <ul class="dropdown-menu dropdown-menu-end mt-3 shadow-sm" aria-labelledby="notifications">
+                    <li><a class="dropdown-item py-3" href="#"> 
+                        <div class="d-flex">
+                          <div class="ms-3"><span class="h6 d-block fw-normal mb-1 text-xs text-gray-600">Contacts</span></div>
+                        </div></a>
+					</li>
+                  </ul>
+                </li>
+                <!-- User Account dropdown    -->
+                <li class="nav-item dropdown"><a class="nav-link text-white d-flex align-items-center" id="userAccount" href="#" data-bs-toggle="dropdown" aria-expanded="false"><span class="material-symbols-outlined navbar">account_circle</span><span class="d-none d-sm-inline-block">Putu Pedungan WS</span></a>
+                  <ul class="dropdown-menu dropdown-menu-end mt-3 shadow-sm" aria-labelledby="languages">
+                    <li><a class="dropdown-item" rel="nofollow" href="#"><span class="text-xs text-gray-700">Profile</span></a></li>
+                    <li><a class="dropdown-item" rel="nofollow" href="#"><span class="text-xs text-gray-700">Change Password                                         </span></a></li>
+					<!-- Logout -->
+					<li class="dropdown-item"><a class="text-xs text-gray-700" href="login.html"> <span class="d-none d-sm-inline">Logout</span>
+                    <svg class="svg-icon svg-icon-xs svg-icon-heavy">
+                      <use xlink:href="#security-1"> </use>
+                    </svg></a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div class="page-content d-flex align-items-stretch"> 
+        <!-- Side Navbar -->
+        <nav class="side-navbar z-index-40">
+          <!-- Sidebar Navidation Menus-->
+          <ul class="list-unstyled py-4 sidebar">
+            <!-- InstanceBeginEditable name="nav-active-1" -->
+          <li class="sidebar-item"><!-- InstanceEndEditable --><a class="sidebar-link" href="index.html"> 
+                <span class="material-symbols-outlined sidebar">team_dashboard</span>
+				<span class="navbar-text nav1">Dashboard</span></a></li>
+            <!-- InstanceBeginEditable name="nav-active-2" -->
+          <li class="sidebar-item"><!-- InstanceEndEditable --><a class="sidebar-link" href="manage-bookings.html"> 
+                <span class="material-symbols-outlined sidebar">shopping_cart</span>
+				<span class="navbar-text nav2">Manage Bookings</span></a></li>
+            <!-- InstanceBeginEditable name="nav-active-3" -->
+          <li class="sidebar-item active"><!-- InstanceEndEditable --><a class="sidebar-link" href="hotel-edit.html">
+                <span class="material-symbols-outlined sidebar">apartment</span>
+				<span class="navbar-text nav3">Hotel Edit</span></a></li>
+            <!-- InstanceBeginEditable name="nav-active-4" -->
+          <li class="sidebar-item"><!-- InstanceEndEditable --><a class="sidebar-link" href="manage-rooms.html"> 
+                <span class="material-symbols-outlined sidebar">single_bed</span>
+				<span class="navbar-text nav4">Manage Rooms</span></a></li>
+            <!-- InstanceBeginEditable name="nav-active-5" -->
+          <li class="sidebar-item"><!-- InstanceEndEditable --><a class="sidebar-link" href="manage-prices-stocks.html"> 
+                <span class="material-symbols-outlined sidebar">credit_card</span>
+				<span class="navbar-text nav5">Manage Prices & Stocks</span></a></li>
+            <!-- InstanceBeginEditable name="nav-active-6" -->
+          <li class="sidebar-item"><!-- InstanceEndEditable --><a class="sidebar-link" href="manage-promotions.html"> 
+                <span class="material-symbols-outlined sidebar">campaign</span>
+				<span class="navbar-text nav6">Manage Promotions</span></a></li>
+            <!-- InstanceBeginEditable name="nav-active-7" -->
+          <li class="sidebar-item"><!-- InstanceEndEditable --><a class="sidebar-link" href="manage-surcharges.html"> 
+                <span class="material-symbols-outlined sidebar">payments</span>
+				<span class="navbar-text nav7">Manage Surcharges</span></a></li>
+            <!-- InstanceBeginEditable name="nav-active-8" -->
+          <li class="sidebar-item"><!-- InstanceEndEditable --><a class="sidebar-link" href="manage-announcements.html"> 
+                <span class="material-symbols-outlined sidebar">breaking_news</span>
+				<span class="navbar-text nav8">Manage Announcements</span></a></li>
+            <!-- InstanceBeginEditable name="nav-active-9" -->
+          <li class="sidebar-item"><!-- InstanceEndEditable --><a class="sidebar-link" href="finance-reports.html"> 
+                <span class="material-symbols-outlined sidebar">finance</span>
+				<span class="navbar-text nav9">Finance Report</span></a></li>
+            <!-- InstanceBeginEditable name="nav-active-10" -->
+          <li class="sidebar-item"><!-- InstanceEndEditable --><a class="sidebar-link" href="logs.html"> 
+                <span class="material-symbols-outlined sidebar">web_stories</span>
+				<span class="navbar-text nav10">Logs</span></a></li>
+		  </ul>
+        </nav>
+        <div class="content-inner w-100">
+			<!-- InstanceBeginEditable name="Header" -->
+        <!-- Page Header-->
+        <header class="bg-blue shadow-sm px-4 py-3 z-index-20 blue-ribbonmp">
+          <div class="burger-sidebar-toggle">
+            <span><a class="material-symbols-outlined togglebtn" id="toggle-btn" href="#">menu</a></span>
+          </div>
+          <div class="container-fluid px-0">
+            <h4 class="mb-0 p-1 paddingtb-5">Hotel Edit</h4>
+          </div>
+        </header>
+        <!-- InstanceEndEditable -->
+			<!-- InstanceBeginEditable name="Content" -->
+        <!-- Dashboard Header Section    -->
+        <section class="pb-0">
+          <div class="container-fluid">
+            <div class="row align-items-stretch">
+           
+              <div class="row align-items-stretch">
+                <div class="col-lg-12">
+                  <div class="card">
+                    <div class="card-body">
+						<maintab>
+							<input id="tab1" type="radio" name="tabs" class="d-none" checked>
+							<label for="tab1"><span class="material-symbols-outlined tab">description</span>Description</label>
+							<input id="tab2" type="radio" name="tabs" class="d-none" >
+							<label for="tab2"><span class="material-symbols-outlined tab">location_on</span>Location</label>
+							<input id="tab3" type="radio" name="tabs" class="d-none" >
+							<label for="tab3"><span class="material-symbols-outlined tab">info</span>Information</label>
+							<input id="tab4" type="radio" name="tabs" class="d-none" >
+							<label for="tab4"><span class="material-symbols-outlined tab">settings_applications</span>Facilities & Services</label>
+							<input id="tab5" type="radio" name="tabs" class="d-none" >
+							<label for="tab5"><span class="material-symbols-outlined tab">local_atm</span>Currency & Rate</label>
+						  <sectiontab id="content1">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <div for="exampleFormControlInput1 fs-5" class="form-label">Hotel Name
+                                <img src="./manage-room-edit_files/usa.png" style="width: 20px; margin-left: 5px;">
+                                <span class="mandatorystar">*</span>
+                            </div>
+                            <input type="text" class="form-control" style="border-radius: 5px;" value="Mockup Hotel & Spa Jimbaran">
+                            <div class="formtext margin-top">
+                              Enter hotel name in capital letters on each first letter in the word. For example: Beach Laguna Resort. If you can not write in this language, please write in English so Hoterip Staff can translate it.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div for="exampleFormControlInput1 fs-5" class="form-label">Hotel Name
+                                <img src="./manage-room-edit_files/japan.png" style="width: 20px; margin-left: 5px;">
+                                <span class="mandatorystar">*</span>
+                            </div>
+                            <input type="text" class="form-control" style="border-radius: 5px;" value="モックアップ ホテル & スパ ジンバラン">
+                            <div class="formtext margin-top">
+                              Enter hotel name in capital letters on each first letter in the word. For example: Beach Laguna Resort. If you can not write in this language, please write in 日本語 so Hoterip Staff can translate it.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div for="exampleFormControlInput1 fs-5" class="form-label">Hotel Name
+                                <img src="./manage-room-edit_files/indo.png" style="width: 20px; margin-left: 5px;">
+                                <span class="mandatorystar">*</span>
+                            </div>
+                            <input type="text" class="form-control" style="border-radius: 5px;" value="Mockup Hotel & Spa Jimbaran">
+                            <div class="formtext margin-top">
+                              Enter hotel name in capital letters on each first letter in the word. For example: Beach Laguna Resort. If you can not write in this language, please write in Bahasa Indonesia so Hoterip Staff can translate it
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="mb-3">
+                            <div for="exampleFormControlInput1 fs-5" class="form-label">Hotel Description
+                                <img src="./manage-room-edit_files/usa.png" style="width: 20px; margin-left: 5px;">
+                                <span class="mandatorystar">*</span>
+                            </div>
+                            <textarea type="text" class="form-control fnt13" rows="6" style="resize: none; overflow: hidden; overflow-wrap: break-word; height: 134px; border-radius: 5px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
+                            <div class="formtext margin-top">
+                              Enter hotel description to describe the hotel. Maximum 1000 letters
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div for="exampleFormControlInput1 fs-5" class="form-label">Hotel Description
+                                <img src="./manage-room-edit_files/japan.png" style="width: 20px; margin-left: 5px;">
+                            </div>
+                            <textarea type="text" class="form-control fnt13" rows="6" style="resize: none; overflow: hidden; overflow-wrap: break-word; height: 134px; border-radius: 5px;">界ユネタ時日タホノ供要まのぼら聞調中ど曹東ナニ字10電ぴかす宏置フ実打妙三ルぱん自出シナ庭村たみトだ住夢巻為るぶ。1訊ネリモ記側ラリ兆無ラすえ木動す手半ナ度募独ぽぐこ崩作すびっ覚塾ヲセホ格給むンけき芸株断ネル東際せ政城務りるや屋均拠池健ぶ。野ラクレ能安モラソ数種ニハワヒ竹班スで名組14善マ次製着カ境町輝く法73石フ示選ルを質式ねきンく供成ラヨ援納い。授らとんは標米ツラ作参安ハコ転添蔵ぎが碁51少ツウモ現経スイコ芸野コソエカ車読レら歩大づょめ読話フヲ深映ひ崩試お隊画こ相数関俸愚めそばん。同ニヘ見安シマナミ幸平かリゃ短府ふぜうり写健び京47担フホ盟恵稿べ開島投だっそぎ食果9三ドてある昇消ユヘカ綱升忍曇椎おびッー。室キロ代朝やぎじ庶元保ケ毎漢ツヒ作地スイヒエ整合ど稿示モ気送ち力会9月ちたは択57子かけス記熊習也既どほた。</textarea>
+                            <div class="formtext margin-top">
+                              Enter hotel description to describe the hotel. Maximum 1000 letters
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div for="exampleFormControlInput1 fs-5" class="form-label">Hotel Description
+                                <img src="./manage-room-edit_files/indo.png" style="width: 20px; margin-left: 5px;">
+                            </div>
+                            <textarea type="text" class="form-control fnt13" rows="6" style="resize: none; overflow: hidden; overflow-wrap: break-word; height: 134px; border-radius: 5px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
+                            <div class="formtext margin-top">
+                              Enter hotel description to describe the hotel. Maximum 1000 letters
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="mb-3">
+                                <div for="exampleFormControlInput1 fs-5" class="form-label">HIS Hotel Code</div>
+                                <input type="text" class="form-control" aria-label="Recipient&#39;s username" aria-describedby="basic-addon2" style="border-radius: 5px;" value="DPSMJB">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+						  </sectiontab>
+              <sectiontab id="content2">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                          <div for="exampleFormControlInput1 fs-5" class="form-label">City<span class="mandatorystar">*</span></div>
+                          <select class="form-select borderadius fnt13" aria-label="Default select example">
+                              <option selected="">Bali, Indonesia</option>
+                              <option value="">
+                                  Ambon, Indonesia
+                              </option>
+                              <option value="">
+                                  Anyer, Indonesia
+                              </option>
+                              <option value="">
+                                  Bali, Indonesia
+                              </option>
+                              <option value="">
+                                  Balikpapan, Indonesia
+                              </option>
+                              <option value="">
+                                  Banda Aceh, Indonesia
+                              </option>
+                              <option value="">
+                                  Bandung, Indonesia
+                              </option>
+                              <option value="">
+                                  Bangka, Indonesia
+                              </option>
+                          </select>
+                          <div class="formtext margin-top">
+                              Select the city where the hotel is located. You can search quickly by typing the name of the city name when selecting the dropdown box.
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <div for="exampleFormControlInput1 fs-5" class="form-label">District or Area<span class="mandatorystar">*</span></div>
+                          <select class="form-select borderadius fnt13" aria-label="Default select example">
+                              <option selected="">Jimbaran</option>
+                              <option value="">
+                                  Seminyak
+                              </option>
+                              <option value="">
+                                  Ubud
+                              </option>
+                              <option value="">
+                                  Sanur
+                              </option>
+                              <option value="">
+                                  Legian
+                              </option>
+                              <option value="">
+                                  Kuta
+                              </option>
+                              <option value="">
+                                  Nusa Dua
+                              </option>
+                              <option value="">
+                                  Jimbaran
+                              </option>
+                          </select>
+                          <div class="formtext margin-top">
+                            Select the district or area where the hotel is located. You can search quickly by typing the name of the district or area name when selecting the dropdown box.
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <div for="exampleFormControlInput1 fs-5" class="form-label">Time Zone<span class="mandatorystar">*</span></div>
+                          <select class="form-select borderadius fnt13" aria-label="Default select example">
+                              <option selected="">(UTC+08:00) Singapore, Kuala Lumpur</option>
+                              <option value="">
+                                  (UTC+06:00) Astana, Dhaka
+                              </option>
+                              <option value="">
+                                  (UTC+06:00) Omsk, Novosibirsk
+                              </option>
+                              <option value="">
+                                  (UTC+06:30) Yangon (Rangoon)
+                              </option>
+                              <option value="">
+                                  (UTC+07:00) Bangkok, Hanoi, Jakarta
+                              </option>
+                              <option value="">
+                                  (UTC+07:00) Krasnoyarsk
+                              </option>
+                              <option value="">
+                                  (UTC+08:00) Beijing, Chongqing, Hong Kong, Urumqi
+                              </option>
+                              <option value="">
+                                  (UTC+08:00) Irkutsk, Ulaan Bataar
+                              </option>
+                              <option value="">
+                                  (UTC+08:00) Perth
+                              </option>
+                              <option value="">
+                                  (UTC+08:00) Singapore, Kuala Lumpur
+                              </option>
+                          </select>
+                          <div class="formtext margin-top">
+                            Enter hotel address in capital letters on each first letter in the word. For example: Jl. Pratama Raya 168.
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                            <div for="exampleFormControlInput1 fs-5" class="form-label">Room Name
+                                <img src="./manage-room-edit_files/indo.png" style="width: 20px; margin-left: 5px;">
+                            </div>
+                            <input type="text" class="form-control" style="border-radius: 5px;" value="Deluxe Special Room">
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="mb-3">
+                                <div for="exampleFormControlInput1 fs-5" class="form-label">HIS Room Code</div>
+                                <input type="text" class="form-control" style="border-radius: 5px;">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="mb-3">
+                                <div for="exampleFormControlInput1 fs-5" class="form-label">Room Size</div>
+                                <input type="text" class="form-control room-size" style="border-radius: 5px;" value="10">
+                            </div>
+                          </div>
+                          
+                        </div>
+                        <div class="mb-3">
+                            <div for="exampleFormControlInput1 fs-5" class="form-label">Bed Size</div>
+                            <select class="form-select borderadius" aria-label="Default select example">
+                                <option selected="">-</option>
+                                <option value="">
+                                    1 Double Bed
+                                </option>
+                                <option value="">
+                                    2 Double Beds
+                                </option>
+                                <option value="">
+                                    3 Double Beds
+                                </option>
+                                <option value="">
+                                    4 Double Beds
+                                </option>
+                                <option value="">
+                                    1 Single Bed
+                                </option>
+                                <option value="">
+                                    2 Single Beds
+                                </option>
+                                <option value="">
+                                    3 Single Beds
+                                </option>
+                                <option value="">
+                                    5 Single Beds
+                                </option>
+                                <option value="">
+                                    4 Single Beds
+                                </option>
+                                <option value="">
+                                    6 Single Beds
+                                </option>
+                                <option value="">
+                                    1 Double Beds and 1 Single Bed
+                                </option>
+                                <option value="">
+                                    2 Double Beds and 1 Single Bed
+                                </option>
+                                <option value="">
+                                    2 Double Beds and 2 Single Beds
+                                </option>
+                                <option value="">
+                                    3 Double Beds and 2 Single Beds
+                                </option>
+                                <option value="">
+                                    4 Double Beds and 2 Single Beds
+                                </option>
+                                <option value="">
+                                    1 Double Bed and 3 Single Beds
+                                </option>
+                                <option value="">
+                                    1 Double Bed and 4 Single Beds
+                                </option>
+                                <option value="">
+                                    1 Double Bed or 2 Single Beds
+                                </option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <div for="exampleFormControlInput1 fs-5" class="form-label">Number of Beds</div>
+                            <input type="text" class="form-control number-bed" style="border-radius: 5px; width: 50%;" value="2">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <div for="exampleFormControlInput1 fs-5" class="form-label">Publish Price</div>
+                            <div class="d-flex w-50">
+                                <input type="text" class="form-control rounded-input-addon" aria-label="Recipient&#39;s username" aria-describedby="basic-addon2" value=" 4,800,000.00">
+                                <span class="rounded-addon" style="background-color: rgb(227, 235, 235);">IDR</span>
+                            </div>
+                            <!-- <label class="input-group-text">IDR</label> -->
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="mb-3">
+                                    <div for="exampleFormControlInput1 fs-5" class="form-label">Adult Breakfast Price</div>
+                                    <input type="text" class="form-control" aria-label="Recipient&#39;s username" aria-describedby="basic-addon2" style="border-radius: 5px;" value="136,150.00">
+                                    <!-- <label class="input-group-text">IDR</label> -->
+                                </div>
+                                <div class="mb-3">
+                                    <div for="exampleFormControlInput1 fs-5" class="form-label">Extra Bed Price</div>
+                                    <input type="text" class="form-control" aria-label="Recipient&#39;s username" aria-describedby="basic-addon2" style="border-radius: 5px;" value="510,000.00">
+                                    <!-- <label class="input-group-text">IDR</label> -->
+                                </div>
+                                <div class="form-check form-switch mb-3">
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked="">
+                                    <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Breakfast Included</div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="mb-3">
+                                    <div for="exampleFormControlInput1 fs-5" class="form-label">Child Breakfast Price</div>
+                                    <input type="text" class="form-control" aria-label="Recipient&#39;s username" aria-describedby="basic-addon2" style="border-radius: 5px;" value="136,150.00">
+                                    <!-- <label class="input-group-text">IDR</label> -->
+                                </div>
+                                <div class="mb-3">
+                                    <div for="exampleFormControlInput1 fs-5" class="form-label">Maximum Number of Extra Bed</div>
+                                    <input type="text" class="form-control number-bed" aria-label="Recipient&#39;s username" aria-describedby="basic-addon2" style="border-radius: 5px;" value="1">
+                                    <!-- <label class="input-group-text">IDR</label> -->
+                                </div>
+                                <div class="form-check form-switch mb-3">
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                    <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Extra Bed Get Breakfast</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-check form-switch mb-3">
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                            <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Export Stock</div>
+                        </div>
+                    </div>
+                </div>
+              </sectiontab>
+						  <sectiontab id="content3">
+							<p>
+							  Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs.
+							</p>
+							<p>
+							  Brisket meatball turkey short loin boudin leberkas meatloaf chuck andouille pork loin pastrami spare ribs pancetta rump. Frankfurter corned beef beef tenderloin short loin meatloaf swine ground round venison.
+							</p>
+						  </sectiontab>
+						  <sectiontab id="content4">
+							<p>
+							  Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken. Pork belly meatball t-bone bresaola tail filet mignon kevin turkey ribeye shank flank doner cow kielbasa shankle. Pig swine chicken hamburger, tenderloin turkey rump ball tip sirloin frankfurter meatloaf boudin brisket ham hock. Hamburger venison brisket tri-tip andouille pork belly ball tip short ribs biltong meatball chuck. Pork chop ribeye tail short ribs, beef hamburger meatball kielbasa rump corned beef porchetta landjaeger flank. Doner rump frankfurter meatball meatloaf, cow kevin pork pork loin venison fatback spare ribs salami beef ribs.
+							</p>
+							<p>
+							  Jerky jowl pork chop tongue, kielbasa shank venison. Capicola shank pig ribeye leberkas filet mignon brisket beef kevin tenderloin porchetta. Capicola fatback venison shank kielbasa, drumstick ribeye landjaeger beef kevin tail meatball pastrami prosciutto pancetta. Tail kevin spare ribs ground round ham ham hock brisket shoulder. Corned beef tri-tip leberkas flank sausage ham hock filet mignon beef ribs pancetta turkey.
+							</p>
+						  </sectiontab>
+						  <sectiontab id="content5">
+							  <p>
+								<div class="form-group">
+									<div class="form-group-col col1">Currency<span class="mandatorystar">*</span></div>
+									<div class="form-group-col col2">
+										<label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+										<select class="form-select tab" id="inlineFormSelectPref">
+											<option selected>Select...</option>
+											<option value="1">Rupiah</option>
+											<option value="2">US Dollar</option>
+											<option value="3">Taiwan Dollar</option>
+											<option value="3">Taiwan Dollar</option>
+											<option value="3">Singapore Dollar</option>
+										</select>
+									</div>
+								</div>
+							  	<div class="form-group">
+									<div class="form-group-col col1">Sales Tax<span class="mandatorystar">*</span></div>
+									<div class="form-group-col col2"><input class="form-control tab percent" type="text"></div>
+								</div>
+							  	<div class="form-group">
+									<div class="form-group-col col1">Reward Point<span class="mandatorystar">*</span></div>
+									<div class="form-group-col col2"><input class="form-control tab" type="text"></div>
+								</div>
+							  	<div class="form-group">
+									<div class="form-group-col col1">Minimum Price<span class="mandatorystar">*</span></div>
+									<div class="form-group-col col2"><input class="form-control tab" type="text"></div>
+								</div>
+							  	<div class="form-group">
+									<div class="form-group-col col1">Service Charge (Tax Applied)<span class="mandatorystar">*</span></div>
+									<div class="form-group-col col2"><input class="form-control tab" type="text"></div>
+								</div>
+							  </p>
+						  </sectiontab>
+						</maintab>
+					  <div class="form-group form-btn-right">
+						<div class="form-group-col col-1"><button class="btn btn-primary" type="submit">Submit</button>
+					  </div>
+					</div>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+        </section>
+        <!-- <div class="his-modal-bg"></div>
+        <div class="his-modal">
+          <div class="card w-100">
+            <div class="card">
+              <h5 class="card-header">
+                <button type="button" class="btn-close-modal btn-close" aria-label="Close"></button></h5>
+              <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <!-- Modal  -->
+        <!-- Button trigger modal -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Deluxe Special Room Edit</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div id="his-modal-body" class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- InstanceEndEditable -->
+          <!-- Page Footer-->
+          <footer class="position-absolute bottom-0 bg-darkBlue text-white text-center py-3 w-100 text-xs footer-color" id="footer">
+            <div class="container-fluid">
+              <div class="row gy-2">
+                <div class="col-sm-6 text-sm-start">
+                  <p class="mb-0">HIS Tours & Travel &copy; 2015-2023</p>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <!-- JavaScript files-->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+	<script src="js/custombyabdi.js"></script>
+	<script src="js/autoNumeric/autoNumeric.min.js"></script>
+	<script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
+	<script type="text/javascript" src="js/daterangepicker.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="vendor/just-validate/js/just-validate.min.js"></script>
+    <script src="vendor/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="js/charts-home.js"></script>
+    <!-- Main File-->
+    <script src="js/front.js"></script>
+    <script>
+      // ------------------------------------------------------- //
+      //   Inject SVG Sprite - 
+      //   see more here 
+      //   https://css-tricks.com/ajaxing-svg-sprite/
+      // ------------------------------------------------------ //
+      function injectSvgSprite(path) {
+      
+          var ajax = new XMLHttpRequest();
+          ajax.open("GET", path, true);
+          ajax.send();
+          ajax.onload = function(e) {
+          var div = document.createElement("div");
+          div.className = 'd-none';
+          div.innerHTML = ajax.responseText;
+          document.body.insertBefore(div, document.body.childNodes[0]);
+          }
+      }
+      // this is set to BootstrapTemple website as you cannot 
+      // inject local SVG sprite (using only 'icons/orion-svg-sprite.svg' path)
+      // while using file:// protocol
+      // pls don't forget to change to your domain :)
+      injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg'); 
+      
+      
+    </script>
+    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  </body>
+<!-- InstanceEnd --></html>

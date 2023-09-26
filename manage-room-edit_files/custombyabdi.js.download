@@ -1,0 +1,83 @@
+$(document).ready(function(){
+    console.log('ready');
+    
+    $('#daterange-btn').on('click', function(){
+        $('.daterange-input').focus();
+    })
+    $('.daterange-input').daterangepicker();
+
+    $('#checkboxAll').on('click', function(){
+      $('#deleteChecked').css('cursor','default');
+      if ($('#checkboxAll').is(':checked')) {
+        $('.checkboxSelected').prop('checked', true);
+      }else{
+        $('.checkboxSelected').prop('checked', false);
+      }
+    });
+
+    $('.checkboxSelected, #checkboxAll').on('change', function(){
+      var checkAll = $('.checkboxSelected').filter(':checked').length;
+      if (checkAll == $('.checkboxSelected').length) {
+        $('#checkboxAll').prop('checked', true);
+      }else{
+        $('#checkboxAll').prop('checked', false);
+      }
+
+      if (checkAll > 0) {
+        $('#deleteChecked').prop("disabled", false);
+        $('#deleteChecked').css('cursor', 'pointer');
+      }else{
+        $('#deleteChecked').prop("disabled", true);
+        $('#deleteChecked').css('cursor', 'not-allowed');
+      }
+    });
+
+    $('.btn-edit-modal').on('click', function(){
+      console.log('show modal');
+      window.location.href='manage-room-edit.html';
+    });
+
+    $('.select2').select2();
+
+    $('.room-size').inputmask({"mask": "999[M2]" });
+    $(".number-bed, .max-numextrabed").inputmask({"mask": "999" });
+
+    // $('.btn-close-modal').on('click', function(){
+    //   $('.his-modal , .his-modal-bg').fadeOut("slow");
+    // });
+
+   
+});
+
+$(document).ready( function(){
+  //chart
+  const ctx = document.getElementById('myChart').getContext("2d");
+
+  var gradient = ctx.createLinearGradient(0, 0, 400, 0);
+  gradient.addColorStop(0, 'rgb(102,176,212)');
+  gradient.addColorStop(1, 'rgb(109,182,133)');   
+
+  new Chart(ctx, {
+    type: 'horizontalBar',
+    data: {
+      labels: ['Today', 'Yesterday', 'Las 7 Days', 'This Month'],
+      datasets: [{
+        label: 'Bookings',
+        data: [11, 6, 14, 20],
+        backgroundColor: gradient,
+      //   borderWidth: 1
+      }],
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+});
+
+
+
+

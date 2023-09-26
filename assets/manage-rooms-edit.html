@@ -1,0 +1,400 @@
+<section class="pb-0">
+    <div class="container-fluid">
+      <div class="row align-items-stretch">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-body">
+                <maintab>
+                    <input id="tab1" type="radio" name="tabs" class="d-none" checked>
+                    <label for="tab1"><span class="material-symbols-outlined tab">description</span>Description</label>
+                    <input id="tab2" type="radio" name="tabs" class="d-none">
+                    <label for="tab2"><span class="material-symbols-outlined tab">location_on</span>Location</label>
+                    <input id="tab3" type="radio" name="tabs" class="d-none">
+                    <label for="tab3"><span class="material-symbols-outlined tab">info</span>Information</label>
+                    <input id="tab4" type="radio" name="tabs" class="d-none">
+                    <label for="tab4"><span class="material-symbols-outlined tab">settings_applications</span>Facilities</label>
+                    <input id="tab5" type="radio" name="tabs" class="d-none">
+                    <label for="tab5"><span class="material-symbols-outlined tab">star</span>Capacity</label>
+                  <sectiontab id="content1">
+                    <div class="form-check form-switch mb-3">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                        <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Room Active</div>
+                    </div>
+                    <div class="form-check form-switch mb-3">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                        <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Ctrip Active</div>
+                    </div>
+                    <div class="form-check form-switch mb-3">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                        <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Tuniu Active</div>
+                    </div>
+                    <div class="form-check form-switch mb-3">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                        <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Dida Active</div>
+                    </div>
+                    <div class="form-check form-switch mb-3">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                        <div class="form-check-label mx-3" for="flexSwitchCheckDefault">B2B Rate Plan Active</div>
+                    </div>
+                    <div class="form-check form-switch mb-3">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                        <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Show B2B Rate Plan on CM (D-Edge)</div>
+                    </div>
+                  </sectiontab>
+                  <sectiontab id="content2">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <div for="exampleFormControlInput1 fs-5" class="form-label">HIS Room Code</div>
+                                <input type="text" class="form-control" style="border-radius: 5px;">
+                            </div>
+                            <div class="mb-3">
+                                <div for="exampleFormControlInput1 fs-5" class="form-label">Room Name
+                                    <img src="img/icons/flags/usa.png" style="width: 20px; margin-left: 5px;">
+                                </div>
+                                <input type="text" class="form-control" style="border-radius: 5px;">
+                            </div>
+                            <div class="mb-3">
+                                <div for="exampleFormControlInput1 fs-5" class="form-label">Room Name
+                                    <img src="img/icons/flags/japan.png" style="width: 20px; margin-left: 5px;">
+                                </div>
+                                <input type="text" class="form-control" style="border-radius: 5px;">
+                            </div>
+                            <div class="mb-3">
+                                <div for="exampleFormControlInput1 fs-5" class="form-label">Room Name
+                                    <img src="img/icons/flags/indo.png" style="width: 20px; margin-left: 5px;">
+                                </div>
+                                <input type="text" class="form-control" style="border-radius: 5px;">
+                            </div>
+                            <div class="mb-3">
+                                <div for="exampleFormControlInput1 fs-5" class="form-label">Room Size</div>
+                                <input type="text" class="form-control room-size" style="border-radius: 5px; width: 50%;">
+                            </div>
+                            <div class="mb-3">
+                                <div for="exampleFormControlInput1 fs-5" class="form-label">Bed Size</div>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>-</option>
+                                    <option value="">
+                                        1 Double Bed
+                                    </option>
+                                    <option value="">
+                                        2 Double Beds
+                                    </option>
+                                    <option value="">
+                                        3 Double Beds
+                                    </option>
+                                    <option value="">
+                                        4 Double Beds
+                                    </option>
+                                    <option value="">
+                                        1 Single Bed
+                                    </option>
+                                    <option value="">
+                                        2 Single Beds
+                                    </option>
+                                    <option value="">
+                                        3 Single Beds
+                                    </option>
+                                    <option value="">
+                                        5 Single Beds
+                                    </option>
+                                    <option value="">
+                                        4 Single Beds
+                                    </option>
+                                    <option value="">
+                                        6 Single Beds
+                                    </option>
+                                    <option value="">
+                                        1 Double Beds and 1 Single Bed
+                                    </option>
+                                    <option value="">
+                                        2 Double Beds and 1 Single Bed
+                                    </option>
+                                    <option value="">
+                                        2 Double Beds and 2 Single Beds
+                                    </option>
+                                    <option value="">
+                                        3 Double Beds and 2 Single Beds
+                                    </option>
+                                    <option value="">
+                                        4 Double Beds and 2 Single Beds
+                                    </option>
+                                    <option value="">
+                                        1 Double Bed and 3 Single Beds
+                                    </option>
+                                    <option value="">
+                                        1 Double Bed and 4 Single Beds
+                                    </option>
+                                    <option value="">
+                                        1 Double Bed or 2 Single Beds
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <div for="exampleFormControlInput1 fs-5" class="form-label">Number of Beds</div>
+                                <input type="text" class="form-control" style="border-radius: 5px; width: 50%;" value="25">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <div for="exampleFormControlInput1 fs-5" class="form-label">Publish Price</div>
+                                <div class="d-flex w-50" >
+                                    <input type="number" class="form-control rounded-input-addon" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                    <span class="rounded-addon" style="background-color: rgb(227, 235, 235);">IDR</span>
+                                </div>
+                                <!-- <label class="input-group-text">IDR</label> -->
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="mb-3">
+                                        <div for="exampleFormControlInput1 fs-5" class="form-label">Adult Breakfast Price</div>
+                                        <input type="number" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2" style="border-radius: 5px;">
+                                        <!-- <label class="input-group-text">IDR</label> -->
+                                    </div>
+                                    <div class="mb-3">
+                                        <div for="exampleFormControlInput1 fs-5" class="form-label">Extra Bed Price</div>
+                                        <input type="number" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2" style="border-radius: 5px;">
+                                        <!-- <label class="input-group-text">IDR</label> -->
+                                    </div>
+                                    <div class="form-check form-switch mb-3">
+                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked>
+                                        <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Breakfast Included</div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="mb-3">
+                                        <div for="exampleFormControlInput1 fs-5" class="form-label">Child Breakfast Price</div>
+                                        <input type="number" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2" style="border-radius: 5px;">
+                                        <!-- <label class="input-group-text">IDR</label> -->
+                                    </div>
+                                    <div class="mb-3">
+                                        <div for="exampleFormControlInput1 fs-5" class="form-label">Maximum Number of Extra Bed</div>
+                                        <input type="number" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2" style="border-radius: 5px;">
+                                        <!-- <label class="input-group-text">IDR</label> -->
+                                    </div>
+                                    <div class="form-check form-switch mb-3">
+                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                        <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Extra Bed Get Breakfast</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Export Stock</div>
+                            </div>
+                        </div>
+                    </div>
+                  </sectiontab>
+                  <sectiontab id="content3">
+                    <p>
+                      Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs.
+                    </p>
+                    <p>
+                      Brisket meatball turkey short loin boudin leberkas meatloaf chuck andouille pork loin pastrami spare ribs pancetta rump. Frankfurter corned beef beef tenderloin short loin meatloaf swine ground round venison.
+                    </p>
+                  </sectiontab>
+                  <sectiontab id="content4">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked>
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Air Conditioner</div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Alarm Clock</div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Balcony</div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Bathrobe</div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Bathub</div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Body Lotion</div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked>
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Cable TV</div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked>
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Coffe Maker</div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Complimentary Water Bottle</div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked>
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Cotton Bud</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">DVD Player</div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Fan</div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Hair Drayer</div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Idd Telephone</div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked>
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Independent Shower Room</div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked>
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Safety Box</div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Internet Jack</div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Iron</div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Jacuzzi</div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Kitchen Set</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Living Room</div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked>
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Mini Bar</div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Masquito Equipment</div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked>
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Moveable Shower Head</div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Radio</div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Room Wear</div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked>
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Shampo</div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Shaver</div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked>
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Soap</div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked>
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Toothbrush</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked>
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Towel</div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked>
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">TV</div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Slipper</div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Body Shampo</div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Toothpaste</div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Nhk TV Channel</div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <div class="form-check-label mx-3" for="flexSwitchCheckDefault">Electric Pot</div>
+                            </div>
+                        </div>
+                    </div>
+                  </sectiontab>
+                  <sectiontab id="content5">
+                      <p>
+                        <div class="form-group">
+                            <div class="form-group-col col1">Currency<span class="mandatorystar">*</span></div>
+                            <div class="form-group-col col2">
+                                <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                                <select class="form-select tab" id="inlineFormSelectPref">
+                                    <option selected>Select...</option>
+                                    <option value="1">Rupiah</option>
+                                    <option value="2">US Dollar</option>
+                                    <option value="3">Taiwan Dollar</option>
+                                    <option value="3">Taiwan Dollar</option>
+                                    <option value="3">Singapore Dollar</option>
+                                </select>
+                            </div>
+                        </div>
+                          <div class="form-group">
+                            <div class="form-group-col col1">Sales Tax<span class="mandatorystar">*</span></div>
+                            <div class="form-group-col col2"><input class="form-control tab percent" type="text"></div>
+                        </div>
+                          <div class="form-group">
+                            <div class="form-group-col col1">Reward Point<span class="mandatorystar">*</span></div>
+                            <div class="form-group-col col2"><input class="form-control tab" type="text"></div>
+                        </div>
+                          <div class="form-group">
+                            <div class="form-group-col col1">Minimum Price<span class="mandatorystar">*</span></div>
+                            <div class="form-group-col col2"><input class="form-control tab" type="text"></div>
+                        </div>
+                          <div class="form-group">
+                            <div class="form-group-col col1">Service Charge (Tax Applied)<span class="mandatorystar">*</span></div>
+                            <div class="form-group-col col2"><input class="form-control tab" type="text"></div>
+                        </div>
+                      </p>
+                  </sectiontab>
+                </maintab>
+              <div class="form-group form-btn-right">
+                <div class="form-group-col col-1"><button class="btn btn-primary" type="submit">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
