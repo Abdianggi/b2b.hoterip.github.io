@@ -697,7 +697,9 @@ $(document).ready(function(){
             </td>
             <td>
               <button class="btn btn-danger deleteBenefit" style="font-size: 0.85rem;">
-              <i class="fa-solid fa-trash"></i>
+              <span class="material-symbols-outlined">
+                delete
+              </span>
               </button>
             </td>
           </tr>
@@ -945,7 +947,7 @@ $(document).ready(function(){
         </td>
         <td>
           <button class="btn btn-danger deleteBenefit" style="font-size: 0.85rem;">
-          <i class="fa-solid fa-trash"></i>
+          <i class="fa-regular fa-trash-can"></i>
           </button>
         </td>
       </tr>
@@ -965,6 +967,29 @@ $(document).ready(function(){
   $('.room-night').inputmask({"mask": "999[Night]" });
   $('.room-book').inputmask({"mask": "999[Room]" });
   $('.benefit-get').inputmask({"mask": "999[%]" });
+});
+
+/*
+=====================
+Manage Announcements Page
+=====================
+*/
+$(document).ready(function(){
+  console.log('Announcements Ready');
+  $(document).on('click', '.btn-announcement-edit', function(){
+    window.location.href= 'manage-announcement-edit.html';
+  });
+
+  $('#daterange-btn-announcementDueDate').on('click', function(){
+      $('#daterange-inputAnnouncementDueDate').focus();
+  })
+
+  $('#daterange-inputAnnouncementDueDate').daterangepicker({
+    locale: {
+      format: 'YYYY/MM/DD'
+    }
+  });
+
 });
 
 

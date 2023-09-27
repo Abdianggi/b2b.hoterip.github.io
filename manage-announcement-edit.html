@@ -208,32 +208,62 @@
               <div class="row align-items-stretch">
                 <div class="col-lg-12">
                   <div class="card">
-                    <div class="card-body">
+                    <div class="card-body mt-3">
+                      <div class="form-check form-switch mb-3 fs-85">
+                          <input class="form-check-input" type="checkbox">
+                          <div class="form-check-label" for="flexSwitchCheckDefault">Announcements</div>
+                          <p><small>Check if announcement in this hotel active.</small></p>
+                      </div>
                       <div class="row">
                         <div class="col-md col-sm">
-                          <div class="mb-1">
+                          <div class="mb-3">
                               <div for="exampleFormControlInput1 fs-5" class="form-label">Announcement Title</div>
                               <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2" style="border-radius: 5px;" value="Deposit Regulation">
                           </div>
-                          <div class="d-flex">
-                            <span id="daterange-btn" class="material-symbols-outlined datepicker" style="cursor: pointer;">date_range</span>
-                            <input type="text" class="form-control daterange-input" aria-label="Recipient's username" aria-describedby="basic-addon2" value=" 4,800,000.00">
+                          <div class="mb-3">
+                              <div class="row">
+                                <div class="col-md col-sm">
+                                  <div for="exampleFormControlInput1 fs-5" class="form-label">Announcements Show Date</div>
+                                  <div class="d-flex">
+                                    <span id="daterange-btn" class="material-symbols-outlined datepicker" style="cursor: pointer;">date_range</span>
+                                    <input type="text" class="form-control daterange-input">
+                                  </div>
+                                  <p><small>Announcements Show Period.</small></p>
+                                </div>
+                                <div class="col-md col-sm">
+                                  <div for="exampleFormControlInput1 fs-5" class="form-label">Announcements Due Date</div>
+                                  <div class="d-flex">
+                                    <span id="daterange-btn-announcementDueDate" class="material-symbols-outlined datepicker" style="cursor: pointer;">date_range</span>
+                                    <input id="daterange-inputAnnouncementDueDate" type="text" class="form-control">
+                                  </div>
+                                  <p><small>Announcements Show Period.</small></p>
+                                </div>
+                              </div>
                           </div>
                         </div>
-                        <!-- <div class="col-md col-sm">
-                          <div class="mb-1">
-                              <div for="exampleFormControlInput1 fs-5" class="form-label">Announcement Title</div>
-                              <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2" style="border-radius: 5px;" value="Deposit Regulation">
-                          </div>
-                          <div class="mb-1">
-                            <div id="daterange-btn" class="daterange">
-                              <span class="material-symbols-outlined datepicker" style="cursor: pointer;">date_range</span>
-                              <div class="datepicker">							
-                                <input id="datepickerchart" class="daterange-input form-control fs-85" placeholder="Choose date range" name="chart_date_range" type="text">
-                              </div>
+                        <div class="col-md col-sm">
+                          <div class="mb-3">
+                            <div for="exampleFormControlInput1 fs-5" class="form-label">Announcement Description
+                                <img src="./manage-room-edit_files/usa.png" style="width: 20px; margin-left: 5px;">
                             </div>
+                            <textarea class="form-control rounded" rows="3">Upon check-in, guests will now be required to provide a credit card or cash deposit of Rp 1,000,000 for each night of stay for incidentals. Please note that the deposit is in addition to full payment of room and tax.
+                            </textarea>
                           </div>
-                        </div> -->
+                          <div class="mb-3">
+                            <div for="exampleFormControlInput1 fs-5" class="form-label">Announcement Description
+                                <img src="./manage-room-edit_files/japan.png" style="width: 20px; margin-left: 5px;">
+                            </div>
+                            <textarea class="form-control rounded" rows="3">Upon check-in, guests will now be required to provide a credit card or cash deposit of Rp 1,000,000 for each night of stay for incidentals. Please note that the deposit is in addition to full payment of room and tax.
+                            </textarea>
+                          </div>
+                          <div class="mb-3">
+                            <div for="exampleFormControlInput1 fs-5" class="form-label">Announcement Description
+                                <img src="./manage-room-edit_files/indo.png" style="width: 20px; margin-left: 5px;">
+                            </div>
+                            <textarea class="form-control rounded" rows="3">Pada saat check-in, tamu diwajibkan untuk menyerahkan kartu kredit atau deposit tunai sebesar Rp 1,000,000 untuk setiap malam untuk deposit tak terduga. Harap diperhatikan bahwa deposit merupakan tambahan dari total pembayaran untuk kamar dan pajak.
+                            </textarea>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
