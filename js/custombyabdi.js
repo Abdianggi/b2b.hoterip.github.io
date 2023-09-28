@@ -697,9 +697,7 @@ $(document).ready(function(){
             </td>
             <td>
               <button class="btn btn-danger deleteBenefit" style="font-size: 0.85rem;">
-              <span class="material-symbols-outlined">
-                delete
-              </span>
+              <i class="fa-regular fa-trash-can"></i>
               </button>
             </td>
           </tr>
@@ -947,9 +945,7 @@ $(document).ready(function(){
         </td>
         <td>
           <button class="btn btn-danger deleteBenefit" style="font-size: 0.85rem;">
-          <span class="material-symbols-outlined">
-            delete
-          </span>
+          <i class="fa-regular fa-trash-can"></i>
           </button>
         </td>
       </tr>
