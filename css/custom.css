@@ -701,3 +701,10 @@ STYLE CUSTOM BY PUTUABDI
 	/* padding-left: 20px;
 	padding-right: 20px; */
 }
+
+.input-required:after { 
+	content:"*";
+	font-weight: bold;
+	margin-left: 3px;
+	color:rgb(199, 0, 0);
+ }
