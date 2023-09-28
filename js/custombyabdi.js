@@ -947,7 +947,9 @@ $(document).ready(function(){
         </td>
         <td>
           <button class="btn btn-danger deleteBenefit" style="font-size: 0.85rem;">
-          <i class="fa-regular fa-trash-can"></i>
+          <span class="material-symbols-outlined">
+            delete
+          </span>
           </button>
         </td>
       </tr>
