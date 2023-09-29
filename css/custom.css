@@ -708,3 +708,11 @@ STYLE CUSTOM BY PUTUABDI
 	margin-left: 3px;
 	color:rgb(199, 0, 0);
  }
+
+ .rounded-right{
+	border-radius: 0 5px 5px 0 !important;
+ }
+ 
+ .rounded-left{
+	border-radius: 5px 0 0 5px !important;
+ }
