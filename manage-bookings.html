@@ -212,20 +212,22 @@
                     </div>
                     <div class="card-body p-25r pt-4">
                       <div class="row">
-                        <div class="col-md-12">
-                            <div class="mb-3">
+                        <div class="col-md-12 mb-3">
+                          <div class="row">
+                            <div class="mb-3 col-md col-sm">
                                 <div for="exampleFormControlInput1 fs-5" class="form-label">Booking ID</div>
                                 <input type="text" class="form-control" style="border-radius: 5px;">
                             </div>
-                            <div class="mb-3">
+                            <div class="mb-3 col-md col-sm">
                               <div for="exampleFormControlInput1 fs-5" class="form-label">Guest Name</div>
                               <input type="text" class="form-control" style="border-radius: 5px;">
                             </div>
+                          </div>
                         </div>
                         <div class="col-md-6">
                           <div for="exampleFormControlInput1 fs-5" class="form-label">Booking Date</div>
                           <div class="form-check form-switch fnt13">
-                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked="">
+                            <input id="checkboxBookingDateFilter" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
                             <div class="form-check-label formtext" for="flexSwitchCheckDefault">Use booking date filter</div>
                           </div>
                           <div class="d-flex">
@@ -233,13 +235,13 @@
                             <!-- <button class="btn btn-primary">
                               <i class="fa fa-calendar-o" aria-hidden="true"></i>
                             </button> -->
-                            <input type="text" class="form-control rounded daterange-input" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <input id="inputBookingDateFilter" type="text" class="form-control rounded daterange-input" aria-label="Recipient's username" aria-describedby="basic-addon2" checked="true">
                           </div>
                         </div>
                         <div class="col-md-6 margin-right-0">
                           <div for="exampleFormControlInput1 fs-5" class="form-label">Check-In Date</div>
                           <div class="form-check form-switch fnt13">
-                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked="">
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
                             <div class="form-check-label formtext" for="flexSwitchCheckDefault">Use check-in date filter</div>
                           </div>
                           <div class="d-flex">
@@ -315,6 +317,25 @@
                         </div>
                       </div>						
                       <div class="table-responsive">
+
+                        <table id="nameTableBooking" style="width: 100%" class="d-none bg-red">
+                          <tr>
+                            <th>First Name</th>
+                            <td>:&nbsp;</td>
+                            <td>Diana</td>
+                          </tr>
+                          <tr>
+                            <th>Last Name</th>
+                            <td>:&nbsp;</td>
+                            <td>Br</td>
+                          </tr>
+                          <tr>
+                            <th>Nationality</th>
+                            <td>:&nbsp;</td>
+                            <td>Japan</td>
+                          </tr>
+                        </table>
+                        
                         <table class="table mb-0 table-custom">
                           <thead>
                             <tr>
@@ -336,18 +357,26 @@
                           </thead>
                           <tbody>
                             <tr>
-                              <th scope="row"><span class="material-symbols-outlined">lock</span></th>
-                              <td><span class="material-symbols-outlined green">done_outline</span></td>
+                              <td scope="row">
+                                <span class="material-symbols-outlined lock">lock</span>
+                                <!-- <span class="lock" ></span> -->
+                              </td>
+                              <td><span class="confirmation-number material-symbols-outlined red" style="cursor: pointer;">confirmation_number</span></td>
                               <td>109323</td>
                               <td>323</td>
 							                <td>Deluxe Room I</td>
-                              <td>Diana</td>
+                              <td class="name-bookings text-primary" style="cursor: pointer;">Diana Britania</td>
+                              <!-- <td>
+                                  <div class="popver" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-container="body" data-html="true" 
+                                    data-content='<table id="nameTableBooking" style="width: 100%" class="bg-primary"><tr><th>First Name</th><td>:&nbsp;</td><td>`+nameBooking[0]+`</td></tr><tr><th>Last Name</th><td>:&nbsp;</td><td>`+nameBooking[1]+`</td></tr><tr><th>Nationality</th><td>:&nbsp;</td><td>Japan</td></tr></table>'>abdi
+                                </div>
+                              </td> -->
                               <td>Jul 05, 2023</td>
                               <td>Jul 23, 2023</td>
                               <td>Jul 24, 2023</td>
                               <td>1 Room</td>
                               <td>Yes</td>
-                              <td><input class="form-control hotel-confirmation" type="text"></td>
+                              <td class="hotelConfirmation text-primary" style="cursor: pointer;">Hotel Confirmation</td>
                               <td><button class="booking-notes" data-bs-toggle="modal" data-bs-target="#myModal">Notes</button></td>
                                 <div class="modal fade text-start" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
                                   <div class="modal-dialog">
