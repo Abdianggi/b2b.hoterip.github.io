@@ -271,10 +271,76 @@ $(document).ready(function(){
 $('#popover').popover({
   // title: 'Abdi World',
   placement: 'bottom',
-  container: "body",
+  sanitize: false,
+  container: 'body',
   html: true,
   content: function(){
-    return `No one can't rewrite the Stars`;
+    return `
+              <div class="mb-1 fw-bold">
+                Select days of week you want to fill :
+              </div>
+              
+              <div class="">
+                <input class="form-check-input me-1 checkboxSelectedDay" type="checkbox" style="cursor: pointer;" value="" id="flexCheckDefault">
+                  Sunday
+              </div>
+              
+              <div class="">
+                <input class="form-check-input me-1 checkboxSelectedDay" type="checkbox" style="cursor: pointer;" value="" id="flexCheckDefault">
+                  Monday
+              </div>
+              
+              <div class="">
+                <input class="form-check-input me-1 checkboxSelectedDay" type="checkbox" style="cursor: pointer;" value="" id="flexCheckDefault">
+                  Tuesday
+              </div>
+              
+              <div class="">
+                <input class="form-check-input me-1 checkboxSelectedDay" type="checkbox" style="cursor: pointer;" value="" id="flexCheckDefault">
+                  Wednesday
+              </div>
+              
+              <div class="">
+                <input class="form-check-input me-1 checkboxSelectedDay" type="checkbox" style="cursor: pointer;" value="" id="flexCheckDefault">
+                  Thursday
+              </div>
+              
+              <div class="">
+                <input class="form-check-input me-1 checkboxSelectedDay" type="checkbox" style="cursor: pointer;" value="" id="flexCheckDefault">
+                  Friday
+              </div>
+              
+              <div class="">
+                <input class="form-check-input me-1 checkboxSelectedDay" type="checkbox" style="cursor: pointer;" value="" id="flexCheckDefault">
+                  Saturday
+              </div>
+
+              <div class="form-check form-switch">
+                <input id="checkBoxAllDay" class="form-check-input" type="checkbox">
+                <div class="mx-1 fw-bold text-primary section-tab mt-1">
+                  Fill All
+                </div>
+              </div>
+
+            `;
+  }
+});
+
+
+$(document).on('click', '#checkBoxAllDay', function(){
+  if ($('#checkBoxAllDay').is(':checked')) {
+    $('.checkboxSelectedDay').prop('checked', true);
+  }else{
+    $('.checkboxSelectedDay').prop('checked', false);
+  }
+});
+
+$(document).on('change', '.checkboxSelectedDay, #checkBoxAllDay', function(){
+  var checkAll = $('.checkboxSelectedDay').filter(':checked').length;
+  if (checkAll == $('.checkboxSelectedDay').length) {
+    $('#checkBoxAllDay').prop('checked', true);
+  }else{
+    $('#checkBoxAllDay').prop('checked', false);
   }
 });
 
