@@ -124,7 +124,7 @@ $(document).ready(function(){
 
   bookingDateFilterCheck()
   
-  var bookingDateFilterCheck = function(){
+  var checkinDateFilterCheck = function(){
     if ($('#checkboxCheckinDateFilter').is(':checked')) {
       $('#inputCheckinDateFilter').prop('disabled', false);
       $('#inputCheckinDateFilter').css('cursor', '');
@@ -136,10 +136,10 @@ $(document).ready(function(){
   }
 
   $(document).on('change', '#checkboxCheckinDateFilter', function(){
-    bookingDateFilterCheck();
+    checkinDateFilterCheck();
   });
 
-  bookingDateFilterCheck()
+  checkinDateFilterCheck()
 
   $('.lock').css('cursor', 'pointer');
 
