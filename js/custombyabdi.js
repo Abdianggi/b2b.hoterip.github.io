@@ -102,6 +102,11 @@ Manage Bookings
 $(document).ready(function(){
   console.log('ready bookings'); 
 
+  $(document).on('click', '.manageBookingDetails', function(){
+    window.location.href='manage-bookings-details.html', '_blank';
+    // window.open('manage-bookings-details.html', '_blank');
+  });
+
   var bookingDateFilterCheck = function(){
     if ($('#checkboxBookingDateFilter').is(':checked')) {
       $('#inputBookingDateFilter').prop('disabled', false);
@@ -142,6 +147,7 @@ $(document).ready(function(){
     // title: 'Abdi World',
     placement: 'top',
     trigger: 'hover',
+    sanitize: false,
     html: true,
     content: function(){
       var nameBooking = $(this).text().split(' ');
@@ -150,14 +156,17 @@ $(document).ready(function(){
                                 <div style="width:100%">
                                   <tr>
                                     <th>First Name</th>
+                                    <th>&nbsp;:&nbsp;</th>
                                     <td>`+nameBooking[0]+`</td>
                                   </tr>
                                   <tr>
-                                    <th>Last Name:</th>
+                                    <th>Last Name</th>
+                                    <th>&nbsp;:&nbsp;</th>
                                     <td>`+nameBooking[1]+`</td>
                                   </tr>
                                   <tr>
                                     <th>Nationality</th>
+                                    <th>&nbsp;:&nbsp;</th>
                                     <td>Japan</td>
                                   </tr>
                                 </div>
@@ -169,13 +178,71 @@ $(document).ready(function(){
     },
   });
 
+  $('.numberOfRooms').popover({
+    // title: 'Abdi World',
+    placement: 'left',
+    trigger: 'hover',
+    sanitize: false,
+    html: true,
+    content: function(){
+      var nameRoom = $(this).text();
+      var roomHtml = 
+                            `<table class="d-flex">
+                                <div style="width:100%">
+                                  <tr>
+                                    <th>`+nameRoom+`</th>
+                                    <th>&nbsp;:&nbsp;</th>
+                                    <td>N/A</td>
+                                  </tr>
+                                </div>
+                            </table>`;
+                            // `First Name : `+nameBooking[0]+
+                            // ` <br> Last Name : `+nameBooking[1]+
+                            // ` <br> Nationality : Japan`;
+      return roomHtml;
+    },
+  });
+
+  $('.specialRequest').popover({
+    // title: 'Abdi World',
+    placement: 'left',
+    trigger: 'hover',
+    sanitize: false,
+    html: true,
+    content: function(){
+      var specialRequest = 
+                            `<table class="d-flex">
+                                <div style="width:100%">
+                                  <tr>
+                                    <th>Special Request</th>
+                                    <th>&nbsp;:&nbsp;</th>
+                                    <td>N/A</td>
+                                  </tr>
+                                  <tr>
+                                    <th>Additional Room Request</th>
+                                    <th>&nbsp;:&nbsp;</th>
+                                    <td>N/A</td>
+                                  </tr>
+                                </div>
+                            </table>`;
+      return specialRequest;
+    },
+  });
+
   $('.hotelConfirmation').popover({
     container: 'body',
     placement: 'left',
+    sanitize: false,
     html: true,
     content: function(){
-      return '<input class="form-control" type="text">';
-      // return html;
+      return `
+                <div class="d-flex" style="font-size: 0.85rem;">
+                    <input type="text" class="form-control rounded-input-addon fs-85">
+                    <span>
+                      <button class="btn btn-success rounded-addon fs-85" style="border-radius: 0;">Save</button>
+                    </span>
+                </div>
+      `;
     },
   });
 });
