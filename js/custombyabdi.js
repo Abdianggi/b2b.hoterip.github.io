@@ -111,7 +111,7 @@ $(document).ready(function(){
     if ($('#checkboxBookingDateFilter').is(':checked')) {
       $('#inputBookingDateFilter').prop('disabled', false);
       $('#inputBookingDateFilter').css('cursor', '');
-    }else{
+    }else{  
       $('#inputBookingDateFilter').prop('disabled', true);
       $('#inputBookingDateFilter').css('cursor', 'not-allowed');
 
@@ -119,6 +119,23 @@ $(document).ready(function(){
   }
 
   $(document).on('change', '#checkboxBookingDateFilter', function(){
+    bookingDateFilterCheck();
+  });
+
+  bookingDateFilterCheck()
+  
+  var bookingDateFilterCheck = function(){
+    if ($('#checkboxCheckinDateFilter').is(':checked')) {
+      $('#inputCheckinDateFilter').prop('disabled', false);
+      $('#inputCheckinDateFilter').css('cursor', '');
+    }else{  
+      $('#inputCheckinDateFilter').prop('disabled', true);
+      $('#inputCheckinDateFilter').css('cursor', 'not-allowed');
+
+    }
+  }
+
+  $(document).on('change', '#checkboxCheckinDateFilter', function(){
     bookingDateFilterCheck();
   });
 
