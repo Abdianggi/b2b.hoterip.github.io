@@ -831,6 +831,9 @@ STYLE CUSTOM BY PUTUABDI
 .fs-85 {
 	font-size: 0.85rem !important;
 }
+.fs-75 {
+	font-size: 0.75rem !important;
+}
 
 .rounded-input-addon {
 	border-radius: 5px 0 0 5px !important;

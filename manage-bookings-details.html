@@ -204,9 +204,24 @@
 			<!-- Dashboard Header Section    -->
 			<section class="pb-0">
             <div class="container-fluid">
+
+              <div class="row mb-3">
+                <div class="col-md-3 col-sm-12">
+                  <h2>Booking Detail</h2>
+                </div>
+                <div class="col-md col-sm-12 btn-toolbar justify-content-end">
+                  <button class="btn btn-secondary fs-75 me-1 mb-1">Remind CFM#</button>
+                  <button class="btn btn-secondary fs-75 me-1 mb-1">Notify Payment</button>
+                  <button class="btn btn-primary fs-75 me-1 mb-1">Request Payment</button>
+                  <button class="btn btn-primary fs-75 me-1 mb-1">Push Details to ITM</button>
+                  <button class="btn btn-danger fs-75 me-1 mb-1">Cancel This Booking</button>
+                  <button class="btn btn-primary fs-75 me-1 mb-1">Generate PDF</button>
+                  <button class="btn btn-secondary fs-75 me-1 mb-1">Print This Page</button>
+                </div>
+              </div>
+
               <div class="card">
                 <div class="card-body p-5">
-                  <section class="invoice">
                     <div class="row mb-5">
                       <div class="col-md">
                         <span class="fa-solid fa-earth-asia" style="font-size: 25px;"></span>
@@ -336,59 +351,58 @@
                       </div>
                     </div>
 
-                    <div class="row mb-3">
-                      <div class="col-xs-12 table-responsive">
+                    <div class="row mb-5">
+                      <div class="col-md-12 col-sm-12 table-responsive">
                         <p class="lead">Room Information</p>
-                        <div class="col-md-4">
-                          <table class="table text-right table-hover">
-                            <tbody>
-                              <tr>
-                                <th>Adult :</th>
-                                <td>1</td>
-                              </tr>
-                              <tr>
-                                <th>Child :</th>
-                                <td>0</td>
-                              </tr>
-                              <tr>
-                                <th>Infant :</th>
-                                <td>0</td>
-                              </tr>
-                              <tr>
-                                <th>Extrabed :</th>
-                                <td>0</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                        <div class="col-md-12">
-                          <table class="table table-striped table-bordered table-invoice">
-                            <thead>
-                              <tr>
-                                <th>Date</th>
-                                <th>Room Revenue</th>
-                                <th>Extra Bed</th>
-                                <th>Surcharge</th>
-                                <th>Subtotal</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>Jan 6, 2020</td>
-                                <td class="text-right">850,000.00 USD</td>
-                                <td class="text-right">0.00 USD</td>
-                                <td class="text-right">0.00 USD</td>
-                                <td class="text-right">850,000.00 USD</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
+                        <table class="table text-right table-hover w-25 fs-85">
+                          <tbody>
+                            <tr>
+                              <th>Adult :</th>
+                              <td>1</td>
+                            </tr>
+                            <tr>
+                              <th>Child :</th>
+                              <td>0</td>
+                            </tr>
+                            <tr>
+                              <th>Infant :</th>
+                              <td>0</td>
+                            </tr>
+                            <tr>
+                              <th>Extrabed :</th>
+                              <td>0</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="col-md-12 col-sm-12 table-responsive">
+                        <table class="table table-striped table-bordered table-invoice fs-85">
+                          <thead>
+                            <tr>
+                              <th>Date</th>
+                              <th>Room Revenue</th>
+                              <th>Extra Bed</th>
+                              <th>Surcharge</th>
+                              <th>Subtotal</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Jan 6, 2020</td>
+                              <td class="text-right">850,000.00 USD</td>
+                              <td class="text-right">0.00 USD</td>
+                              <td class="text-right">0.00 USD</td>
+                              <td class="text-right">850,000.00 USD</td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </div>
+
                     <div class="row mb-3">
                       <div class="col-lg-6 col-xs-12">
                         <p class="lead">Revenue &amp; Transaction Information</p>
-                        <table class="table text-right table-hover">
+                        <table class="table text-right table-hover fs-85">
                           <tbody>
                             <tr>
                               <th>Hotel Revenue :</th>
@@ -426,7 +440,6 @@
                         </table>
                       </div>
                     </div>
-                  </section>
                   
                 </div>
               </div>
