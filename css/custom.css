@@ -883,3 +883,18 @@ STYLE CUSTOM BY PUTUABDI
 .rounded-left {
 	border-radius: 5px 0 0 5px !important;
 }
+
+.notification {
+	color: white;
+	text-decoration: none;
+	position: relative;
+	display: inline-block;
+  }
+
+.notification-badge {
+	position: absolute;
+	top: -15px;
+	right: -10px;
+	padding: 0px 3px;
+	border-radius: 20%;
+  }
