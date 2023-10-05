@@ -94,11 +94,9 @@ $(document).ready(function(){
   // });
 });
 
-/*
-=====================
+/*=====================
 Manage Bookings
-=====================
-*/
+=====================*/
 $(document).ready(function(){
   console.log('ready bookings'); 
 
@@ -264,11 +262,9 @@ $(document).ready(function(){
   });
 });
 
-/*
-=====================
+/*=====================
 Manage Rooms
-=====================
-*/
+=====================*/
 $(document).ready(function(){
 // Note that the name "myDropzone" is the camelized
 // id of the form.
@@ -278,11 +274,9 @@ Dropzone.options.myDropzone = {
 });
 
 
-/*
-=====================
+/*=====================
 Manage Price Stock Page
-=====================
-*/
+=====================*/
 $(document).ready(function(){
 
 $('#popover').popover({
@@ -549,11 +543,9 @@ $('#checkbox-shareStock').on('change', function(){
 
 });
 
-/*
-=====================
+/*=====================
 Manage Promotions Page
-=====================
-*/
+=====================*/
 $(document).ready(function(){
 $('#hideChecked').on('click', function(){
   var hideChecked = $('.checkboxSelected').is(':checked');
@@ -1203,11 +1195,9 @@ $('.room-book').inputmask({"mask": "999[Room]" });
 $('.benefit-get').inputmask({"mask": "999[%]" });
 });
 
-/*
-=====================
+/*=====================
 Manage Announcements Page
-=====================
-*/
+=====================*/
 $(document).ready(function(){
 console.log('Announcements Ready');
 $(document).on('click', '.btn-announcement-edit', function(){
