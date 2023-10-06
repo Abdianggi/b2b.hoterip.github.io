@@ -1216,6 +1216,40 @@ $('#daterange-inputAnnouncementDueDate').daterangepicker({
 
 });
 
+/*=====================
+Manage Hotel Edit
+=====================*/
+$(document).ready (function(){
+  console.log('Hotel Edit Ready');
+  $('#us3').locationpicker({
+      location: {
+        latitude: -8.715483496557198,  
+        longitude: 115.20915468127211 
+          // latitude: {!! isset($coordinate[0]) ? $coordinate[0] :  '-6.2119788' !!},
+          // longitude:  {!! isset($coordinate[1]) ? $coordinate[1] : '106.805129,13' !!}
+          // latitude: {!! isset($latitude) ? $latitude :  '0' !!},
+          // longitude:  {!! isset($longtitude) ? $longtitude : '0' !!}
+      },
+      zoom: 15,
+      radius: false,
+      inputBinding:{
+        latitudeInput: $('#us3-lat'),
+        longitudeInput: $('#us3-lon'),
+        locationNameInput: $('#us3-name'),
+      },
+      
+      markerInCenter: true,
+      enableAutocomplete: true,
+      enableAutocompleteBlur: true,
+  });
+
+  // $(".dateMonth").daterangepicker({
+  //       locale: {
+  //         format: 'YYYY/MM'
+  //       }
+  //   });
+
+});
 
 $(document).ready( function(){
 //chart
