@@ -1221,6 +1221,12 @@ Manage Hotel Edit
 =====================*/
 $(document).ready (function(){
   console.log('Hotel Edit Ready');
+  $('.numberOfRoom').inputmask({"mask": "999[Room]" });
+  $('.numberOfFloors').inputmask({"mask": "99[Floor]" });
+  $('.distanceKm').inputmask({"mask": "999[Km]" });
+  $('.timeAirPort').inputmask({"mask": "999[Minute]" });
+  $('.percentageInput').inputmask({"mask": "99[%]" });
+
   $('#us3').locationpicker({
       location: {
         latitude: -8.715483496557198,  

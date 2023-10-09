@@ -502,28 +502,28 @@
                     <input type="month" class="form-control rounded dateMonth" value="2018-10">
                   </div>
                   <div class="col-md-3 col-sm-12 mb-3">
-                    <div for="exampleFormControlInput1 fs-5" class="form-label input-required">Number of Rooms</div>
-                    <input type="text" class="form-control rounded" value="">
+                    <div for="exampleFormControlInput1 fs-5" class="form-label">Number of Rooms</div>
+                    <input type="text" class="form-control rounded room-book" value="">
                   </div>
                   <div class="col-md-3 col-sm-12 mb-3">
-                    <div for="exampleFormControlInput1 fs-5" class="form-label input-required">Number of Floors</div>
-                    <input type="text" class="form-control rounded" value="">
+                    <div for="exampleFormControlInput1 fs-5" class="form-label">Number of Floors</div>
+                    <input type="text" class="form-control rounded numberOfFloors" value="">
                   </div>
                   <div class="col-md-3 col-sm-12 mb-3">
-                    <div for="exampleFormControlInput1 fs-5" class="form-label input-required">Distance from Airport</div>
-                    <input type="text" class="form-control rounded" value="">
+                    <div for="exampleFormControlInput1 fs-5" class="form-label">Distance from Airport</div>
+                    <input type="text" class="form-control rounded distanceKm">
                   </div>
                   <div class="col-md-3 col-sm-12 mb-3">
-                    <div for="exampleFormControlInput1 fs-5" class="form-label input-required">Time from Airport</div>
-                    <input type="text" class="form-control rounded" value="">
+                    <div for="exampleFormControlInput1 fs-5" class="form-label">Time from Airport</div>
+                    <input type="text" class="form-control rounded timeAirPort" >
                   </div>
                   <div class="col-md-3 col-sm-12 mb-3">
-                    <div for="exampleFormControlInput1 fs-5" class="form-label input-required">Distance from City Center</div>
-                    <input type="text" class="form-control rounded" value="">
+                    <div for="exampleFormControlInput1 fs-5" class="form-label">Distance from City Center</div>
+                    <input type="text" class="form-control rounded distanceKm">
                   </div>
                   <div class="col-md-3 col-sm-12 mb-3">
-                    <div for="exampleFormControlInput1 fs-5" class="form-label input-required">Distance from Station</div>
-                    <input type="text" class="form-control rounded" value="">
+                    <div for="exampleFormControlInput1 fs-5" class="form-label">Distance from Station</div>
+                    <input type="text" class="form-control rounded distanceKm">
                   </div>
                   <div class="col-md-3 col-sm-12 mb-3">
                     <div for="exampleFormControlInput1 fs-5" class="form-label input-required">Check-in Time</div>
@@ -534,26 +534,43 @@
                     <input type="time" class="form-control rounded" value="">
                   </div>
                   <div class="col-md-6 col-sm-12">
-                    <div class="form-group">
-                      <!-- <label class="col-sm-4 control-label">Children Age<span style="color: red"><b>*</b></span></label> -->
-                      <div for="exampleFormControlInput1" class="form-label input-required me-1">Children Age</div>
-                      <div class="col-sm-6">
-                          <div class="row">
-                              <div class="col-sm-5">
-                                <input type="number" min="1" max="17" class="form-control rounded">
-                              </div>
-                              <div class="col-sm-1">
-                                  <span style="line-height: 30px"><b>-</b></span>
-                              </div>
-                              <div class="col-sm-5">
-                                <input type="number" min="1" max="17" class="form-control rounded">
-                              </div>
-                          </div>
+                    <div class="mb-3">
+                        <div class="form-label input-requiredtext-nowrap">Room Voltage</div>
+                        <input type="text" class="form-control rounded w-50" value="2020 volt">
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-label">Hotel Trip Advisor ID</div>
+                        <input type="text" class="form-control rounded w-50" value="2020 volt">
+                    </div>
+                    <div class="mb-3">
+                      <div for="exampleFormControlInput1 fs-5" class="form-label">Pets Allowed</div>
+                      <div class="form-check form-switch fnt13">
+                        <input class="form-check-input" type="checkbox">
+                        <div class="form-check-label" for="flexSwitchCheckDefault">No/Yes</div>
                       </div>
-                      <span style="line-height: 30px !important;">
-                          Years Old
-                      </span>
-                  </div>
+                    </div>
+                   
+                    <div class="form-group mb-3">
+                      <!-- <label class="col-sm-4 control-label">Children Age<span style="color: red"><b>*</b></span></label> -->
+                        <div for="exampleFormControlInput1" class="form-label input-required me-2 mt-3 input-required">Children Age</div>
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <div class="col-sm-5">
+                                  <input type="number" min="1" max="17" class="form-control rounded">
+                                </div>
+                                <div class="col-sm-1">
+                                    <span style="line-height: 30px"><b>-</b></span>
+                                </div>
+                                <div class="col-sm-5">
+                                  <input type="number" min="1" max="17" class="form-control rounded">
+                                </div>
+                            </div>
+                        </div>
+                        <span style="line-height: 30px !important;">
+                            Years Old
+                        </span>
+                    </div>
+                    
                   </div>
                   <!-- <div class="row col-md-6 col-sm-12 mb-3">
                     <div for="exampleFormControlInput1 fs-5" class="form-label input-required">Children Age</div>
@@ -569,12 +586,687 @@
               </div>
 						  </sectiontab>
 						  <sectiontab id="content4">
-							<p>
-							  Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken. Pork belly meatball t-bone bresaola tail filet mignon kevin turkey ribeye shank flank doner cow kielbasa shankle. Pig swine chicken hamburger, tenderloin turkey rump ball tip sirloin frankfurter meatloaf boudin brisket ham hock. Hamburger venison brisket tri-tip andouille pork belly ball tip short ribs biltong meatball chuck. Pork chop ribeye tail short ribs, beef hamburger meatball kielbasa rump corned beef porchetta landjaeger flank. Doner rump frankfurter meatball meatloaf, cow kevin pork pork loin venison fatback spare ribs salami beef ribs.
-							</p>
-							<p>
-							  Jerky jowl pork chop tongue, kielbasa shank venison. Capicola shank pig ribeye leberkas filet mignon brisket beef kevin tenderloin porchetta. Capicola fatback venison shank kielbasa, drumstick ribeye landjaeger beef kevin tail meatball pastrami prosciutto pancetta. Tail kevin spare ribs ground round ham ham hock brisket shoulder. Corned beef tri-tip leberkas flank sausage ham hock filet mignon beef ribs pancetta turkey.
-							</p>
+                <div class="row mb-3">
+                  <div class="col-md-1 col-sm-12 fw-bold">
+                    Facility
+                  </div>
+                  <div class="col-md-11 col-sm-12 text-nowrap">
+                    <ul class="row list-group list-group-horizontal">
+                      <li class="col-md-2 col-sm-12 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox">
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                              Banquet Room
+                          </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-2 col-sm-12 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox">
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                              Bars
+                          </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-2 col-sm-12 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox">
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                              Business Center
+                          </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-2 col-sm-12 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox">
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                              Car Parking
+                          </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-2 col-sm-12 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox">
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                              Casino
+                          </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-2 col-sm-12 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox">
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                              Clinic
+                          </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-2 col-sm-12 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox">
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                              Club Lounge
+                          </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-2 col-sm-12 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox">
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                              Coffee Shop
+                          </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-2 col-sm-12 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox">
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                              Departure Lounge
+                          </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-2 col-sm-12 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox">
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                              Disabled Facilities
+                          </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-2 col-sm-12 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox">
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                              Elevator
+                          </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-2 col-sm-12 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox">
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                              Gift Shop
+                          </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-2 col-sm-12 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox">
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                              Golf Course
+                          </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-2 col-sm-12 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox">
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                              Gym
+                          </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-2 col-sm-12 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox">
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                              Hair Salon
+                          </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-2 col-sm-12 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox">
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                              Jacuzzi
+                          </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-2 col-sm-12 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox">
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                              Karaoke Room
+                          </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-2 col-sm-12 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox">
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                              Kids Club
+                          </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-2 col-sm-12 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox">
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                              Kids Pool
+                          </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-2 col-sm-12 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox">
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                              Library
+                          </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-2 col-sm-12 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox">
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                              Luggage Room
+                          </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-2 col-sm-12 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox">
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                              Meeting Room
+                          </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-2 col-sm-12 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox">
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                              Night Club
+                          </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-2 col-sm-12 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox">
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                              Private Beach
+                          </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-2 col-sm-12 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox">
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                              Poolside Bar
+                          </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-2 col-sm-12 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox">
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                              Restaurant
+                          </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-2 col-sm-12 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox">
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                              Safety Box
+                          </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-2 col-sm-12 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox">
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                              Sauna
+                          </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-2 col-sm-12 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox">
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                              Spa
+                          </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-2 col-sm-12 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox">
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                              Squash Court
+                          </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-2 col-sm-12 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox">
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                              Steam Room
+                          </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-2 col-sm-12 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox">
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                              Swimming Pool
+                          </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-2 col-sm-12 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox">
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                              Tennis Court
+                          </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-md-2 col-sm-12 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox">
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                              Smoking Area
+                          </div>
+                        </div>
+                    </li>
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <div class="col-md-1 col-sm-12 fw-bold">
+                    Service
+                  </div>
+                  <div class="col-md-11 col-sm-12">
+                    <ul class="row list-group list-group-horizontal text-nowrap">
+                                                
+                        <li class="col-2 list-group-item mb-3 border-0">
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox">
+                            <div class="form-check-label" for="flexSwitchCheckDefault">
+                                24 Hour Room Service
+                            </div>
+                          </div>
+                        </li>
+
+                        <li class="col-2 list-group-item mb-3 border-0">
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox">
+                            <div class="form-check-label" for="flexSwitchCheckDefault">
+                                24 Hour Reception
+                            </div>
+                          </div>
+                        </li>
+
+                        <li class="col-2 list-group-item mb-3 border-0">
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox">
+                            <div class="form-check-label" for="flexSwitchCheckDefault">
+                                Airport Transfer
+                            </div>
+                          </div>
+                        </li>
+
+                        <li class="col-2 list-group-item mb-3 border-0">
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox">
+                            <div class="form-check-label" for="flexSwitchCheckDefault">
+                                Baby Sitter
+                            </div>
+                          </div>
+                        </li>
+
+                        <li class="col-2 list-group-item mb-3 border-0">
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox">
+                            <div class="form-check-label" for="flexSwitchCheckDefault">
+                                Butler
+                            </div>
+                          </div>
+                        </li>
+
+                        <li class="col-2 list-group-item mb-3 border-0">
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox">
+                            <div class="form-check-label" for="flexSwitchCheckDefault">
+                                Concierge
+                            </div>
+                          </div>
+                        </li>
+
+                        <li class="col-2 list-group-item mb-3 border-0">
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox">
+                            <div class="form-check-label" for="flexSwitchCheckDefault">
+                                Laundry
+                            </div>
+                          </div>
+                        </li>
+
+                        <li class="col-2 list-group-item mb-3 border-0">
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox">
+                            <div class="form-check-label" for="flexSwitchCheckDefault">
+                                Massage
+                            </div>
+                          </div>
+                        </li>
+
+                        <li class="col-2 list-group-item mb-3 border-0">
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox">
+                            <div class="form-check-label" for="flexSwitchCheckDefault">
+                                Money Changer
+                            </div>
+                          </div>
+                        </li>
+
+                        <li class="col-2 list-group-item mb-3 border-0">
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox">
+                            <div class="form-check-label" for="flexSwitchCheckDefault">
+                                Rental Baby Car
+                            </div>
+                          </div>
+                        </li>
+
+                        <li class="col-2 list-group-item mb-3 border-0">
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox">
+                            <div class="form-check-label" for="flexSwitchCheckDefault">
+                                Rental Bicycle
+                            </div>
+                          </div>
+                        </li>
+
+                        <li class="col-2 list-group-item mb-3 border-0">
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox">
+                            <div class="form-check-label" for="flexSwitchCheckDefault">
+                                Rental Muti Plug
+                            </div>
+                          </div>
+                        </li>
+
+                        <li class="col-2 list-group-item mb-3 border-0">
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox">
+                            <div class="form-check-label" for="flexSwitchCheckDefault">
+                                Rental Wheel Chair
+                            </div>
+                          </div>
+                        </li>
+
+                        <li class="col-2 list-group-item mb-3 border-0">
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox">
+                            <div class="form-check-label" for="flexSwitchCheckDefault">
+                                Room Service
+                            </div>
+                          </div>
+                        </li>
+
+                        <li class="col-2 list-group-item mb-3 border-0">
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox">
+                            <div class="form-check-label" for="flexSwitchCheckDefault">
+                                Shuttle
+                            </div>
+                          </div>
+                        </li>
+
+                        <li class="col-2 list-group-item mb-3 border-0">
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox">
+                            <div class="form-check-label" for="flexSwitchCheckDefault">
+                                Valet Parking
+                            </div>
+                          </div>
+                        </li>
+
+                        <li class="col-2 list-group-item mb-3 border-0">
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox">
+                            <div class="form-check-label" for="flexSwitchCheckDefault">
+                                Free Wi-fi
+                            </div>
+                          </div>
+                        </li>
+
+                        <li class="col-2 list-group-item mb-3 border-0">
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox">
+                            <div class="form-check-label" for="flexSwitchCheckDefault">
+                                Paid Wi-fi
+                            </div>
+                          </div>
+                        </li>
+
+                        <li class="col-2 list-group-item mb-3 border-0">
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox">
+                            <div class="form-check-label" for="flexSwitchCheckDefault">
+                                Japanese Staff
+                            </div>
+                          </div>
+                        </li>
+
+                        <li class="col-2 list-group-item mb-3 border-0">
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox">
+                            <div class="form-check-label" for="flexSwitchCheckDefault">
+                                English Staff
+                            </div>
+                          </div>
+                        </li>
+
+                        <li class="col-2 list-group-item mb-3 border-0">
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox">
+                            <div class="form-check-label" for="flexSwitchCheckDefault">
+                                Rental Baby Bed
+                            </div>
+                          </div>
+                        </li>
+
+                        <li class="col-2 list-group-item mb-3 border-0">
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox">
+                            <div class="form-check-label" for="flexSwitchCheckDefault">
+                                Rental Bed Guard
+                            </div>
+                          </div>
+                        </li>
+
+
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <div class="col-md-1 col-sm-12 fw-bold">Service</div>
+                  <div class="col-md-11 col-sm-12">
+                    <ul class="row list-group list-group-horizontal text-nowrap">
+                      <li class="col-2 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox" />
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                            Type A &nbsp;&nbsp;<img
+                              src="https://staging.hoterip.com/images/plug_types/plug_type_a.png"
+                              style="width: 18px"
+                            />
+                          </div>
+                        </div>
+                      </li>
+                
+                      <li class="col-2 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox" />
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                            Type B &nbsp;&nbsp;<img
+                              src="https://staging.hoterip.com/images/plug_types/plug_type_b.png"
+                              style="width: 18px"
+                            />
+                          </div>
+                        </div>
+                      </li>
+                
+                      <li class="col-2 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox" />
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                            Type C &nbsp;&nbsp;<img
+                              src="https://staging.hoterip.com/images/plug_types/plug_type_c.png"
+                              style="width: 25px"
+                            />
+                          </div>
+                        </div>
+                      </li>
+                
+                      <li class="col-2 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox" />
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                            Type SE &nbsp;&nbsp;<img
+                              src="https://staging.hoterip.com/images/plug_types/plug_type_se.png"
+                              style="width: 18px"
+                            />
+                          </div>
+                        </div>
+                      </li>
+                
+                      <li class="col-2 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox" />
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                            Type B3 &nbsp;&nbsp;<img
+                              src="https://staging.hoterip.com/images/plug_types/plug_type_b3.png"
+                              style="width: 20px"
+                            />
+                          </div>
+                        </div>
+                      </li>
+                
+                      <li class="col-2 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox" />
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                            Type BF &nbsp;&nbsp;<img
+                              src="https://staging.hoterip.com/images/plug_types/plug_type_bf.png"
+                              style="width: 20px"
+                            />
+                          </div>
+                        </div>
+                      </li>
+                
+                      <li class="col-2 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox" />
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                            Type O &nbsp;&nbsp;<img
+                              src="https://staging.hoterip.com/images/plug_types/plug_type_o.png"
+                              style="width: 18px"
+                            />
+                          </div>
+                        </div>
+                      </li>
+                
+                      <li class="col-2 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox" />
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                            Type O2 &nbsp;&nbsp;<img
+                              src="https://staging.hoterip.com/images/plug_types/plug_type_o2.png"
+                              style="width: 18px"
+                            />
+                          </div>
+                        </div>
+                      </li>
+                
+                      <li class="col-2 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox" />
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                            Type CB &nbsp;&nbsp;<img
+                              src="https://staging.hoterip.com/images/plug_types/plug_type_cb.png"
+                              style="width: 25px"
+                            />
+                          </div>
+                        </div>
+                      </li>
+                
+                      <li class="col-2 list-group-item mb-3 border-0">
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox" />
+                          <div class="form-check-label" for="flexSwitchCheckDefault">
+                            Multi-Plug
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                
+
+                <div class="row mb-3">
+                    <div class="mb-3">
+                      <div for="exampleFormControlInput1 fs-5" class="form-label">Remark
+                          <img src="./manage-room-edit_files/usa.png" style="width: 20px; margin-left: 5px;">
+                      </div>
+                      <textarea class="form-control rounded" rows="3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore aliquam veniam sequi, est odit id facere illo ipsa. Sint consectetur ratione voluptate, aliquam eum sunt maiores aut vel explicabo nisi.
+                      </textarea>
+                      <div class="formtext">
+                        Enter remark to describe the facility, service, or plug type.
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <div for="exampleFormControlInput1 fs-5" class="form-label">Remark
+                          <img src="./manage-room-edit_files/japan.png" style="width: 20px; margin-left: 5px;">
+                      </div>
+                      <textarea class="form-control rounded" rows="3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore aliquam veniam sequi, est odit id facere illo ipsa. Sint consectetur ratione voluptate, aliquam eum sunt maiores aut vel explicabo nisi.
+                      </textarea>
+                      <div class="formtext">
+                        Enter remark to describe the facility, service, or plug type.
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <div for="exampleFormControlInput1 fs-5" class="form-label">Remark
+                          <img src="./manage-room-edit_files/indo.png" style="width: 20px; margin-left: 5px;">
+                      </div>
+                      <textarea class="form-control rounded" rows="3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore aliquam veniam sequi, est odit id facere illo ipsa. Sint consectetur ratione voluptate, aliquam eum sunt maiores aut vel explicabo nisi.
+                      </textarea>
+                      <div class="formtext">
+                        Masukkan tanda untuk mendeskripsikan fasilitas, layanan, atau tipe steker.
+                      </div>
+                    </div>
+                </div>
 						  </sectiontab>
 						  <sectiontab id="content5">
 							  <p>
@@ -582,7 +1274,7 @@
 									<div class="form-group-col col1">Currency<span class="mandatorystar">*</span></div>
 									<div class="form-group-col col2">
 										<label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
-										<select class="form-select tab" id="inlineFormSelectPref">
+										<select class="form-select tab rounded" id="inlineFormSelectPref">
 											<option selected>Select...</option>
 											<option value="1">Rupiah</option>
 											<option value="2">US Dollar</option>
@@ -594,19 +1286,19 @@
 								</div>
 							  	<div class="form-group">
 									<div class="form-group-col col1">Sales Tax<span class="mandatorystar">*</span></div>
-									<div class="form-group-col col2"><input class="form-control tab percent" type="text"></div>
+									<div class="form-group-col col2"><input class="form-control tab percent rounded percentageInput" type="text"></div>
 								</div>
 							  	<div class="form-group">
 									<div class="form-group-col col1">Reward Point<span class="mandatorystar">*</span></div>
-									<div class="form-group-col col2"><input class="form-control tab" type="text"></div>
+									<div class="form-group-col col2"><input class="form-control tab rounded percentageInput" type="text"></div>
 								</div>
 							  	<div class="form-group">
 									<div class="form-group-col col1">Minimum Price<span class="mandatorystar">*</span></div>
-									<div class="form-group-col col2"><input class="form-control tab" type="text"></div>
+									<div class="form-group-col col2"><input class="form-control tab rounded mask-money" type="text"></div>
 								</div>
 							  	<div class="form-group">
 									<div class="form-group-col col1">Service Charge (Tax Applied)<span class="mandatorystar">*</span></div>
-									<div class="form-group-col col2"><input class="form-control tab" type="text"></div>
+									<div class="form-group-col col2"><input class="form-control tab rounded percentageInput" type="text"></div>
 								</div>
 							  </p>
 						  </sectiontab>
