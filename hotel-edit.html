@@ -1269,7 +1269,7 @@
                 </div>
 						  </sectiontab>
 						  <sectiontab id="content5">
-							  <p>
+							  <!-- <p>
 								<div class="form-group">
 									<div class="form-group-col col1">Currency<span class="mandatorystar">*</span></div>
 									<div class="form-group-col col2">
@@ -1284,23 +1284,60 @@
 										</select>
 									</div>
 								</div>
-							  	<div class="form-group">
-									<div class="form-group-col col1">Sales Tax<span class="mandatorystar">*</span></div>
-									<div class="form-group-col col2"><input class="form-control tab percent rounded percentageInput" type="text"></div>
+                <div class="form-group">
+                  <div class="form-group-col col1">Sales Tax<span class="mandatorystar">*</span></div>
+                  <div class="form-group-col col2"><input class="form-control tab percent rounded percentageInput" type="text"></div>
+                </div>
+                <div class="form-group">
+                  <div class="form-group-col col1">Reward Point<span class="mandatorystar">*</span></div>
+                  <div class="form-group-col col2"><input class="form-control tab rounded percentageInput" type="text"></div>
+                </div>
+                <div class="form-group">
+                  <div class="form-group-col col1">Minimum Price<span class="mandatorystar">*</span></div>
+                  <div class="form-group-col col2"><input class="form-control tab rounded mask-money" type="text"></div>
+                </div>
+                <div class="form-group">
+                  <div class="form-group-col col1">Service Charge (Tax Applied)<span class="mandatorystar">*</span></div>
+                  <div class="form-group-col col2"><input class="form-control tab rounded percentageInput" type="text"></div>
+                </div>
+							  </p> -->
+                <div class="mb-3">
+									<div for="exampleFormControlInput1 fs-5" class="form-label input-required w-25">Currency</div>
+										<label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+										<select class="form-select tab rounded" id="inlineFormSelectPref">
+											<option selected>Select...</option>
+											<option value="1">Rupiah</option>
+											<option value="2">US Dollar</option>
+											<option value="3">Taiwan Dollar</option>
+											<option value="3">Taiwan Dollar</option>
+											<option value="3">Singapore Dollar</option>
+										</select>
 								</div>
-							  	<div class="form-group">
-									<div class="form-group-col col1">Reward Point<span class="mandatorystar">*</span></div>
-									<div class="form-group-col col2"><input class="form-control tab rounded percentageInput" type="text"></div>
-								</div>
-							  	<div class="form-group">
-									<div class="form-group-col col1">Minimum Price<span class="mandatorystar">*</span></div>
-									<div class="form-group-col col2"><input class="form-control tab rounded mask-money" type="text"></div>
-								</div>
-							  	<div class="form-group">
-									<div class="form-group-col col1">Service Charge (Tax Applied)<span class="mandatorystar">*</span></div>
-									<div class="form-group-col col2"><input class="form-control tab rounded percentageInput" type="text"></div>
-								</div>
-							  </p>
+                <div class="mb-3">
+                    <div for="exampleFormControlInput1 fs-5" class="form-label input-required">Sales Tax</div>
+                    <div class="d-flex w-25">
+                        <input type="text" class="form-control rounded-input-addon">
+                        <span class="rounded-addon" style="background-color: rgb(227, 235, 235);">%</span>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div for="exampleFormControlInput1 fs-5" class="form-label input-required">Reward Point</div>
+                    <div class="d-flex w-25">
+                        <input type="text" class="form-control rounded-input-addon">
+                        <span class="rounded-addon" style="background-color: rgb(227, 235, 235);">%</span>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div for="exampleFormControlInput1 fs-5" class="form-label input-required">Minimum Price</div>
+                    <input type="text" class="form-control rounded-input-addon w-25">
+                </div>
+                <div class="mb-3">
+                  <div for="exampleFormControlInput1 fs-5" class="form-label input-required">Service Charge (Tax Applied)</div>
+                  <div class="d-flex w-25">
+                      <input type="text" class="form-control rounded-input-addon">
+                      <span class="rounded-addon" style="background-color: rgb(227, 235, 235);">%</span>
+                  </div>
+                </div>
 						  </sectiontab>
 						</maintab>
 					  <div class="form-group form-btn-right">
