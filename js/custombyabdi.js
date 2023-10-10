@@ -101,7 +101,7 @@ $(document).ready(function(){
   console.log('ready bookings'); 
 
   $(document).on('click', '.manageBookingDetails', function(){
-    window.location.href='manage-bookings-details.html', '_blank';
+    window.location.href='manage-booking-details.html', '_blank';
     // window.open('manage-bookings-details.html', '_blank');
   });
 
@@ -132,6 +132,10 @@ $(document).ready(function(){
 
     }
   }
+
+  $('#daterange-btn-checkin').on('click', function(){
+      $('#inputCheckinDateFilter').focus();
+  })
 
   $(document).on('change', '#checkboxCheckinDateFilter', function(){
     checkinDateFilterCheck();
@@ -547,6 +551,15 @@ $('#checkbox-shareStock').on('change', function(){
 Manage Promotions Page
 =====================*/
 $(document).ready(function(){
+  $('#daterange-inputStayDate').daterangepicker({
+    locale: {
+      format: 'YYYY/MM/DD'
+    }
+  });
+
+  $('#daterange-btn-stay-date').on('click', function(){
+      $('#daterange-inputStayDate').focus();
+   })
 $('#hideChecked').on('click', function(){
   var hideChecked = $('.checkboxSelected').is(':checked');
   $('.checkboxSelected').each(function(){

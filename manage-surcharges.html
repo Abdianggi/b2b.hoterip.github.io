@@ -214,12 +214,19 @@
                         <div for="exampleFormControlInput1 fs-5" class="form-label fw-bold">
                           From - To
                         </div>
-                        <div id="daterange-btn" class="daterange" style="margin: 0px; float: none;">
-                          <!-- <span class="material-symbols-outlined datepicker" style="cursor: pointer" >date_range</span> -->
+                        <div class="d-flex">
+                          <span id="daterange-btn" class="rounded-addon-left rounded-left btn-range c-pointer p-0">
+                            <i class="fa-solid fa-calendar-days mx-1" style="margin-top: 7px;"></i>
+                            <!-- <i id="daterange-btn" class="material-symbols-outlined">date_range</i> -->
+                          </span>
+                          <input type="text" class="form-control rounded-right daterange-input">
+                        </div>
+                        <!-- <div id="daterange-btn" class="daterange" style="margin: 0px; float: none;">
+                          <span class="material-symbols-outlined datepicker" style="cursor: pointer" >date_range</span>
                           <div class="datepicker">
                             <input id="datepickerchart" class="daterange-input form-control" name="chart_date_range" type="text">
                           </div>
-                        </div>
+                        </div> -->
                       </span>
                       <span>
                         <button class="btn btn-primary d-flex">

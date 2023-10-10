@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<!-- InstanceBeginEditable name="doctitle" -->
-  <title>HIS B2B - Announcement Edit</title>
+  <title>HIS B2B - Finance Report</title>
   <!-- InstanceEndEditable -->
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -29,6 +29,29 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
   </head>
   <body>
+    <div class="modal top fade"
+        id="modal-open"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+        data-mdb-backdrop="true"
+        data-mdb-keyboard="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content" style="background-image: url(https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1933&q=80);">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button id="modal-close" type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">...</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="page">
       <!-- Main Navbar-->
       <header class="header z-index-50">
@@ -175,11 +198,11 @@
                 <span class="material-symbols-outlined sidebar">payments</span>
 				<span class="navbar-text nav7">Manage Surcharges</span></a></li>
             <!-- InstanceBeginEditable name="nav-active-8" -->
-          <li class="sidebar-item active"><!-- InstanceEndEditable --><a class="sidebar-link" href="manage-announcements.html"> 
+          <li class="sidebar-item"><!-- InstanceEndEditable --><a class="sidebar-link" href="manage-announcements.html"> 
                 <span class="material-symbols-outlined sidebar">breaking_news</span>
 				<span class="navbar-text nav8">Manage Announcements</span></a></li>
             <!-- InstanceBeginEditable name="nav-active-9" -->
-          <li class="sidebar-item"><!-- InstanceEndEditable --><a class="sidebar-link" href="finance-reports.html"> 
+          <li class="sidebar-item active"><!-- InstanceEndEditable --><a class="sidebar-link" href="finance-reports.html"> 
                 <span class="material-symbols-outlined sidebar">finance</span>
 				<span class="navbar-text nav9">Finance Report</span></a></li>
             <!-- InstanceBeginEditable name="nav-active-10" -->
@@ -196,7 +219,7 @@
             <span><a class="material-symbols-outlined togglebtn" id="toggle-btn" href="#">menu</a></span>
           </div>
           <div class="container-fluid px-0">
-            <h4 class="mb-0 p-1 paddingtb-5">Manage Announcements</h4>
+            <h4 class="mb-0 p-1 paddingtb-5">Finance Report</h4>
           </div>
         </header>
         <!-- InstanceEndEditable -->
@@ -209,64 +232,6 @@
               <div class="row align-items-stretch">
                 <div class="col-lg-12">
                   <div class="card">
-                    <div class="card-body mt-3">
-                      <div class="form-check form-switch mb-3 fs-85">
-                          <input class="form-check-input" type="checkbox">
-                          <div class="form-check-label" for="flexSwitchCheckDefault">Announcements</div>
-                          <p><small>Check if announcement in this hotel active.</small></p>
-                      </div>
-                      <div class="row">
-                        <div class="col-md col-sm">
-                          <div class="mb-3">
-                              <div for="exampleFormControlInput1 fs-5" class="form-label">Announcement Title</div>
-                              <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2" style="border-radius: 5px;" value="Deposit Regulation">
-                          </div>
-                          <div class="mb-3">
-                              <div class="row">
-                                <div class="col-md col-sm">
-                                  <div for="exampleFormControlInput1 fs-5" class="form-label">Announcements Show Date</div>
-                                  <div class="d-flex">
-                                    <span id="daterange-btn" class="material-symbols-outlined datepicker rounded-input-addon" style="cursor: pointer;">date_range</span>
-                                    <input type="text" class="form-control daterange-input rounded-right">
-                                  </div>
-                                  <p><small>Announcements Show Period.</small></p>
-                                </div>
-                                <div class="col-md col-sm">
-                                  <div for="exampleFormControlInput1 fs-5" class="form-label">Announcements Due Date</div>
-                                  <div class="d-flex">
-                                    <span id="daterange-btn-announcementDueDate" class="material-symbols-outlined datepicker rounded-left" style="cursor: pointer;">date_range</span>
-                                    <input id="daterange-inputAnnouncementDueDate" type="text" class="form-control rounded-right">
-                                  </div>
-                                  <p><small>Announcements Show Period.</small></p>
-                                </div>
-                              </div>
-                          </div>
-                        </div>
-                        <div class="col-md col-sm">
-                          <div class="mb-3">
-                            <div for="exampleFormControlInput1 fs-5" class="form-label">Announcement Description
-                                <img src="./manage-room-edit_files/usa.png" style="width: 20px; margin-left: 5px;">
-                            </div>
-                            <textarea class="form-control rounded" rows="3">Upon check-in, guests will now be required to provide a credit card or cash deposit of Rp 1,000,000 for each night of stay for incidentals. Please note that the deposit is in addition to full payment of room and tax.
-                            </textarea>
-                          </div>
-                          <div class="mb-3">
-                            <div for="exampleFormControlInput1 fs-5" class="form-label">Announcement Description
-                                <img src="./manage-room-edit_files/japan.png" style="width: 20px; margin-left: 5px;">
-                            </div>
-                            <textarea class="form-control rounded" rows="3">Upon check-in, guests will now be required to provide a credit card or cash deposit of Rp 1,000,000 for each night of stay for incidentals. Please note that the deposit is in addition to full payment of room and tax.
-                            </textarea>
-                          </div>
-                          <div class="mb-3">
-                            <div for="exampleFormControlInput1 fs-5" class="form-label">Announcement Description
-                                <img src="./manage-room-edit_files/indo.png" style="width: 20px; margin-left: 5px;">
-                            </div>
-                            <textarea class="form-control rounded" rows="3">Pada saat check-in, tamu diwajibkan untuk menyerahkan kartu kredit atau deposit tunai sebesar Rp 1,000,000 untuk setiap malam untuk deposit tak terduga. Harap diperhatikan bahwa deposit merupakan tambahan dari total pembayaran untuk kamar dan pajak.
-                            </textarea>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -337,6 +302,15 @@
     <script src="js/charts-home.js"></script>
     <!-- Main File-->
     <script src="js/front.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('#modal-open').modal('show');
+
+        $(document).on('click', '#modal-close', function(){
+          $('#modal-open').modal('hide');
+        });
+      });
+    </script>
     <script>
       // ------------------------------------------------------- //
       //   Inject SVG Sprite - 
