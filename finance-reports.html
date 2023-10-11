@@ -228,15 +228,442 @@
         <section class="pb-0">
           <div class="container-fluid">
             <div class="row align-items-stretch">
-           
-              <div class="row align-items-stretch">
-                <div class="col-lg-12">
-                  <div class="card">
+              <div class="col-lg-8">
+                <div class="card">
+                  <div class="card-body p-25r pt-4">
+                    <div class="row">
+              
+                      <div class="col-md-12 col-sm-12 mb-3">
+                        <div for="exampleFormControlInput1 fs-5" class="form-label">Booking Date</div>
+                        <div class="form-check form-switch fnt13">
+                          <input id="checkboxBookingDateFilter" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked>
+                          <div class="form-check-label formtext" for="flexSwitchCheckDefault">Use booking date filter</div>
+                        </div>
+                        <div class="d-flex">
+                          <div class="d-flex w-50">
+                            <span id="daterange-btn" class="material-symbols-outlined datepicker rounded-left" style="cursor: pointer;">date_range</span>
+                            <input id="inputBookingDateFilter" type="text" class="form-control daterange-input rounded-right">
+                          </div>
+                        </div>
+                      </div>
+              
+                      <div class="col-md-12 margin-right-0 mb-3">
+                        <div for="exampleFormControlInput1 fs-5" class="form-label">Check-In Date</div>
+                        <div class="form-check form-switch fnt13">
+                          <input id="checkboxCheckinDateFilter" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                          <div class="form-check-label formtext" for="flexSwitchCheckDefault">Use check-in date filter</div>
+                        </div>
+                        <div class="d-flex">
+                          <div class="d-flex w-50">
+                            <span id="daterange-btn-checkin" class="material-symbols-outlined datepicker rounded-left" style="cursor: pointer;">date_range</span>
+                            <input id="inputCheckinDateFilter" type="text" class="form-control daterange-input rounded-right">
+                          </div>
+                          <!-- <input id="inputCheckinDateFilter" type="text" class="form-control rounded daterange-input" aria-label="Recipient's username" aria-describedby="basic-addon2"> -->
+                        </div>
+                      </div>
+                      
+                      <div class="col-md-12 margin-right-0 mb-3">
+                        <div for="exampleFormControlInput1 fs-5" class="form-label">Check-Out Date</div>
+                        <div class="form-check form-switch fnt13">
+                          <input id="checkboxCheckoutDateFilter" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                          <div class="form-check-label formtext" for="flexSwitchCheckDefault">Use check-out date filter</div>
+                        </div>
+                        <div class="d-flex">
+                          <div class="d-flex w-50">
+                            <span id="daterange-btn-checkout" class="material-symbols-outlined datepicker rounded-left" style="cursor: pointer;">date_range</span>
+                            <input id="inputCheckoutDateFilter" type="text" class="form-control daterange-input rounded-right">
+                          </div>
+                        </div>
+                      </div>
+              
+                    </div>
+                    <div class="form-group form-btn-left mb-0 mt-3 floet w-50">
+                      <button class="btn btn-primary float-end" type="submit">Search</button></div>
+                    </div>
                   </div>
+              </div>
+            </div>
+            
+            <div class="row align-items-stretch">
+              <div class="col-lg-12">
+                <div class="card">               
+                  <div class="card-body">
+                    <button class="btn btn-success mb-3" style="font-size: 13px;">
+                      Finance Report as CSV
+                    </button>
+                    <div class="row-custom">
+                      <div class="col-custom-entry">
+                        <div class="col-custom-float-left">
+                          <span class="margin-right-1">Show</span>
+                          <label class="visually-hidden float-left" for="inlineFormSelectPref">Preference</label>
+                          <select class="form-select pagination-entry margin-right-1" id="inlineFormSelectPref">
+                            <option selected>10</option>
+                            <option value="1">20</option>
+                            <option value="2">50</option>
+                            <option value="3">100</option>
+                          </select>
+                          <span class="margin-right-2">Entries</span>
+                          <span>Showing 1 to 3 of 3 entries</span>
+                        </div>
+                      </div>
+                      <div class="col-custom-entry">
+                        <div class="col-custom-float-right">
+                          <input class="form-control hotel-confirmation" type="text" placeholder="Search bookings...">
+                        </div>
+                      </div>
+                    </div>						
+                    <div class="table-responsive">
+                      <table class="table mb-0 table-custom">
+                        <thead>
+                          <tr>
+                            <th>Booking ID</th>
+                            <th>Room Name</th>
+                            <th>Booking Date</th>
+                            <th>Check-in Date</th>
+                            <th>Check-out Date</th>
+                            <th>Number of Rooms</th>
+                            <th>Number of Room Nights</th>
+                            <th>Number of Guests</th>
+                            <th>Hotel Revenue(IDR)</th>
+                            <th>Notes</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>109323</td>
+                            <td>Deluxe Room</td>
+                            <td>2023-09-18</td>
+                            <td>2023-11-01</td>
+                            <td>2023-11-02</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td >1,147,500.00</td>
+                            <td><button class="booking-notes btn btn-primary notification" data-bs-toggle="modal" data-bs-target="#myModal">Notes <span class="notification-badge bg-warning">2</span></button></td>
+                              <div class="modal fade text-start fs-85" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content rounded-4">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="myModalLabel">Notes ID : 109323</h5>
+                                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="modal-body p-5">
+                                    <form>
+                                    <div class="row">
+                                      <div class="col-md-12 col-sm-12 mb-5">
+                                        <div class="d-flex justify-content-between mb-1">
+                                          <span class="pull-left">Putu Abdi</span>
+                                          <span class="pull-right text-secondary">Oct 3, 2023 15:44</span>
+                                        </div>
+                                        <div class="p-1 w-50 float-end rounded text-white text-center" style="background-color: #0084cf;">Locked this booking</div>
+                                      </div>
+
+                                      <div class="col-md-12 col-sm-12 mb-4">
+                                        <div class="d-flex justify-content-between mb-1">
+                                          <span class="pull-left">Putu Pedungan</span>
+                                          <span class="pull-right text-secondary">Oct 5, 2023 11:04</span>
+                                        </div>
+                                        <div class="p-1 w-50 float-end rounded text-white text-center" style="background-color: #0084cf;">Unlocked this booking</div>
+                                      </div>
+                                    </div>
+                                    </form>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <input class="form-control rounded" id="modalInputPassword1" type="notes" placeholder="Please type a message">
+                                    <button class="btn btn-primary" type="button">Send</button>
+                                  </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </tr>
+                          <tr>
+                            <td>302884</td>
+                            <td>Deluxe Room</td>
+                            <td>2023-09-18</td>
+                            <td>2023-11-01</td>
+                            <td>2023-11-02</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td class="text-right">1,147,500.00</td>
+                            <td>
+                              <button class="booking-notes btn btn-primary notification" data-bs-toggle="modal" data-bs-target="#myModal">Notes <span class="notification-badge bg-warning">2</span></button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>302885</td>
+                            <td>Deluxe Room</td>
+                            <td>2023-09-18</td>
+                            <td>2023-11-01</td>
+                            <td>2023-11-02</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td class="text-right">1,147,500.00</td>
+                            <td>
+                              <button class="booking-notes btn btn-primary notification" data-bs-toggle="modal" data-bs-target="#myModal">Notes <span class="notification-badge bg-warning">2</span></button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>302886</td>
+                            <td>Deluxe Room</td>
+                            <td>2023-09-18</td>
+                            <td>2023-11-01</td>
+                            <td>2023-11-02</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td class="text-right">1,147,500.00</td>
+                            <td>
+                              <button class="booking-notes btn btn-primary notification" data-bs-toggle="modal" data-bs-target="#myModal">Notes <span class="notification-badge bg-warning">2</span></button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>302887</td>
+                            <td>Deluxe Room</td>
+                            <td>2023-09-18</td>
+                            <td>2023-11-01</td>
+                            <td>2023-11-02</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td class="text-right">1,147,500.00</td>
+                            <td>
+                              <button class="booking-notes btn btn-primary notification" data-bs-toggle="modal" data-bs-target="#myModal">Notes <span class="notification-badge bg-warning">2</span></button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>302888</td>
+                            <td>Deluxe Room</td>
+                            <td>2023-09-18</td>
+                            <td>2023-11-01</td>
+                            <td>2023-11-02</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td class="text-right">1,147,500.00</td>
+                            <td>
+                              <button class="booking-notes btn btn-primary notification" data-bs-toggle="modal" data-bs-target="#myModal">Notes <span class="notification-badge bg-warning">2</span></button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>302889</td>
+                            <td>Deluxe Room</td>
+                            <td>2023-09-18</td>
+                            <td>2023-11-01</td>
+                            <td>2023-11-02</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td class="text-right">1,147,500.00</td>
+                            <td>
+                              <button class="booking-notes btn btn-primary notification" data-bs-toggle="modal" data-bs-target="#myModal">Notes <span class="notification-badge bg-warning">2</span></button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>302890</td>
+                            <td>Deluxe Room</td>
+                            <td>2023-09-18</td>
+                            <td>2023-11-01</td>
+                            <td>2023-11-02</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td class="text-right">1,147,500.00</td>
+                            <td>
+                              <button class="booking-notes btn btn-primary notification" data-bs-toggle="modal" data-bs-target="#myModal">Notes <span class="notification-badge bg-warning">2</span></button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>302891</td>
+                            <td>Deluxe Room</td>
+                            <td>2023-09-18</td>
+                            <td>2023-11-01</td>
+                            <td>2023-11-02</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td class="text-right">1,147,500.00</td>
+                            <td>
+                              <button class="booking-notes btn btn-primary notification" data-bs-toggle="modal" data-bs-target="#myModal">Notes <span class="notification-badge bg-warning">2</span></button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>302893</td>
+                            <td>Deluxe Room</td>
+                            <td>2023-09-18</td>
+                            <td>2023-11-01</td>
+                            <td>2023-11-02</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td class="text-right">1,147,500.00</td>
+                            <td>
+                              <button class="booking-notes btn btn-primary notification" data-bs-toggle="modal" data-bs-target="#myModal">Notes <span class="notification-badge bg-warning">2</span></button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>302894</td>
+                            <td>Deluxe Room</td>
+                            <td>2023-09-22</td>
+                            <td>2023-11-01</td>
+                            <td>2023-11-02</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td class="text-right">1,032,750.00</td>
+                            <td>
+                              <button class="booking-notes btn btn-primary notification" data-bs-toggle="modal" data-bs-target="#myModal">Notes <span class="notification-badge bg-warning">2</span></button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>302895</td>
+                            <td>Deluxe Room</td>
+                            <td>2023-09-26</td>
+                            <td>2023-11-01</td>
+                            <td>2023-11-02</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td class="text-right">1,090,125.00</td>
+                            <td>
+                              <button class="booking-notes btn btn-primary notification" data-bs-toggle="modal" data-bs-target="#myModal">Notes <span class="notification-badge bg-warning">2</span></button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>302896</td>
+                            <td>Deluxe Room</td>
+                            <td>2023-09-26</td>
+                            <td>2023-10-20</td>
+                            <td>2023-10-21</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td class="text-right">2,907,000.00</td>
+                            <td>
+                              <button class="booking-notes btn btn-primary notification" data-bs-toggle="modal" data-bs-target="#myModal">Notes <span class="notification-badge bg-warning">2</span></button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>B302897</td>
+                            <td>Deluxe Room</td>
+                            <td>2023-09-26</td>
+                            <td>2023-10-20</td>
+                            <td>2023-10-21</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td class="text-right">3,120,000.00</td>
+                            <td>
+                              <button class="booking-notes btn btn-primary notification" data-bs-toggle="modal" data-bs-target="#myModal">Notes <span class="notification-badge bg-warning">2</span></button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>302898</td>
+                            <td>Deluxe Room</td>
+                            <td>2023-10-09</td>
+                            <td>2023-11-01</td>
+                            <td>2023-11-02</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td class="text-right">3,009,000.00</td>
+                            <td>
+                              <button class="booking-notes btn btn-primary notification" data-bs-toggle="modal" data-bs-target="#myModal">Notes <span class="notification-badge bg-warning">2</span></button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>302899</td>
+                            <td>Deluxe Room</td>
+                            <td>2023-10-09</td>
+                            <td>2023-11-01</td>
+                            <td>2023-11-02</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td class="text-right">3,009,000.00</td>
+                            <td>
+                              <button class="booking-notes btn btn-primary notification" data-bs-toggle="modal" data-bs-target="#myModal">Notes <span class="notification-badge bg-warning">2</span></button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>302901</td>
+                            <td>Deluxe Room</td>
+                            <td>2023-10-10</td>
+                            <td>2023-11-01</td>
+                            <td>2023-11-02</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td class="text-right">3,009,000.00</td>
+                            <td>
+                              <button class="booking-notes btn btn-primary notification" data-bs-toggle="modal" data-bs-target="#myModal">Notes <span class="notification-badge bg-warning">2</span></button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>302902</td>
+                            <td>Deluxe Room</td>
+                            <td>2023-10-10</td>
+                            <td>2023-11-01</td>
+                            <td>2023-11-02</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td class="text-right">3,009,000.00</td>
+                            <td>
+                              <button class="booking-notes btn btn-primary notification" data-bs-toggle="modal" data-bs-target="#myModal">Notes <span class="notification-badge bg-warning">2</span></button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>302907</td>
+                            <td>Deluxe Room</td>
+                            <td>2023-10-10</td>
+                            <td>2023-11-01</td>
+                            <td>2023-11-02</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td class="text-right">3,009,000.00</td>
+                            <td>
+                              <button class="booking-notes btn btn-primary notification" data-bs-toggle="modal" data-bs-target="#myModal">Notes <span class="notification-badge bg-warning">2</span></button>
+                            </td>
+                          </tr>
+
+                        </tbody>
+                        <tfoot>
+                          <tr>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th>Total</th>
+                            <th>:</th>
+                            <th>IDR 34,669,875.00	</th>
+                            <th></th>
+                          </tr>
+                        </tfoot>
+                      </table>
+                    </div>
+                    <div class="pagination-container">
+                      <div class="pagination1-align-right">
+                        <div class="pagination1">
+                        <a href="#">Prev</a>
+                        <a href="#">1</a>
+                        <a href="#" class="active">2</a>
+                        <a>...</a>
+                        <a href="#">Next</a>
+                        </div>
+                      </div>   
+                    </div>
+                  </div> 
                 </div>
               </div>
             </div>
-        </section>
+          </div>
+    </section>
+       
         <!-- <div class="his-modal-bg"></div>
         <div class="his-modal">
           <div class="card w-100">
@@ -253,25 +680,6 @@
         </div> -->
         <!-- Modal  -->
         <!-- Button trigger modal -->
-
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Deluxe Special Room Edit</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div id="his-modal-body" class="modal-body">
-                ...
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
-            </div>
-          </div>
-        </div>
         <!-- InstanceEndEditable -->
           <!-- Page Footer-->
           <footer class="position-absolute bottom-0 bg-darkBlue text-white text-center py-3 w-100 text-xs footer-color" id="footer">
@@ -302,15 +710,6 @@
     <script src="js/charts-home.js"></script>
     <!-- Main File-->
     <script src="js/front.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function(){
-        $('#modal-open').modal('show');
-
-        $(document).on('click', '#modal-close', function(){
-          $('#modal-open').modal('hide');
-        });
-      });
-    </script>
     <script>
       // ------------------------------------------------------- //
       //   Inject SVG Sprite - 

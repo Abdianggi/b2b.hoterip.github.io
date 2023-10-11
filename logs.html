@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<!-- InstanceBeginEditable name="doctitle" -->
-  <title>HIS B2B - Manage surcharges</title>
+  <title>HIS B2B - Logs</title>
   <!-- InstanceEndEditable -->
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -171,7 +171,7 @@
                 <span class="material-symbols-outlined sidebar">campaign</span>
 				<span class="navbar-text nav6">Manage Promotions</span></a></li>
             <!-- InstanceBeginEditable name="nav-active-7" -->
-          <li class="sidebar-item active"><!-- InstanceEndEditable --><a class="sidebar-link" href="manage-surcharges.html"> 
+          <li class="sidebar-item"><!-- InstanceEndEditable --><a class="sidebar-link" href="manage-surcharges.html"> 
                 <span class="material-symbols-outlined sidebar">payments</span>
 				<span class="navbar-text nav7">Manage Surcharges</span></a></li>
             <!-- InstanceBeginEditable name="nav-active-8" -->
@@ -183,7 +183,7 @@
                 <span class="material-symbols-outlined sidebar">finance</span>
 				<span class="navbar-text nav9">Finance Report</span></a></li>
             <!-- InstanceBeginEditable name="nav-active-10" -->
-          <li class="sidebar-item"><!-- InstanceEndEditable --><a class="sidebar-link" href="logs.html"> 
+          <li class="sidebar-item active"><!-- InstanceEndEditable --><a class="sidebar-link" href="logs.html"> 
                 <span class="material-symbols-outlined sidebar">web_stories</span>
 				<span class="navbar-text nav10">Logs</span></a></li>
 		  </ul>
@@ -196,7 +196,7 @@
             <span><a class="material-symbols-outlined togglebtn" id="toggle-btn" href="#">menu</a></span>
           </div>
           <div class="container-fluid px-0">
-            <h4 class="mb-0 p-1 paddingtb-5">Manage Surcharges</h4>
+            <h4 class="mb-0 p-1 paddingtb-5">Logs</h4>
           </div>
         </header>
         <!-- InstanceEndEditable -->
@@ -212,7 +212,7 @@
                     <div class="card-header">
                       <span class="mb-3 mx-1">
                         <div for="exampleFormControlInput1 fs-5" class="form-label fw-bold">
-                          From - To
+                          Date Range - Filter
                         </div>
                         <div class="d-flex">
                           <span id="daterange-btn" class="rounded-addon-left rounded-left btn-range c-pointer p-1">
@@ -229,12 +229,31 @@
                         </div> -->
                       </span>
                       <span>
-                        <button class="btn btn-primary d-flex">
-                          <div class="my-auto">Search</div> 
+                        <button class="btn btn-primary">
+                          Search
+                        </button>
+                        <button class="btn btn-success" style="font-size: 13px;">
+                          Export Excel
                         </button>
                       </span>
                     </div>
                     <div class="card-body">
+                      <div class="row-custom">
+                        <div class="col-custom-entry">
+                          <div class="col-custom-float-left">
+                            <span class="margin-right-1">Show</span>
+                            <label class="visually-hidden float-left" for="inlineFormSelectPref">Preference</label>
+                            <select class="form-select pagination-entry margin-right-1" id="inlineFormSelectPref">
+                              <option selected="">10</option>
+                              <option value="1">20</option>
+                              <option value="2">50</option>
+                              <option value="3">100</option>
+                            </select>
+                            <span class="margin-right-2">Entries</span>
+                            <span>Showing 1 to 3 of 3 entries</span>
+                          </div>
+                        </div>
+                      </div>
                       <div class="table-responsive">
                         <table class="table mb-0 table-custom manageroom">
                           <thead>
@@ -242,218 +261,105 @@
                               <!-- <th>
                                   <input id="checkboxAll" class="form-check-input" type="checkbox" style="cursor: pointer;" value="" id="flexCheckDefault">
                               </th> -->
-                              <th>Day</th>
-                              <th>Date</th>
-                              <th>Adult Price</th>
-                              <th>Child Price</th>
+                              <th>Admin</th>
+                              <th>Action</th>
                               <th>Description</th>
+                              <th>Created At</th>
                             </tr>
                           </thead>
                           <tbody>
-                            <tr>
-                              <!-- <td>
-                                <input class="form-check-input checkboxSelected" type="checkbox" style="cursor: pointer;" value="" id="flexCheckDefault">
-                              </td> -->
-                              <td>Monday</td>
-                              <td>2023-10-02</td>
+                            <tr role="row" class="odd">
+                              <td>staah</td>
+                              <td>Edited Item</td>
                               <td>
-                                <input type="text" class="form-control fs-85 rounded">
+                                Data ID: 80416435. Room ID: 73245. Date: 2023-12-24. Price: 3399000.00
+                                -&gt; 3399000.
                               </td>
-                              <td>
-                                <input type="text" class="form-control fs-85 rounded">
-                              </td>
-                              <td>
-                                <select id="typePromotion" class="form-select fs-85 borderadius" aria-label="Default select example">
-                                  <option selected>Choose Description</option>
-
-                                  <option value="">
-                                    Additional Extra Charge
-                                  </option>   
-
-                                  <option value="">
-                                    Chinese New Year
-                                  </option>   
-
-                                  <option value="">
-                                    Christmas Eve Gala Dinner
-                                  </option>  
-
-                                  <option value="">
-                                    Easter
-                                  </option>  
-
-                                  <option value="">
-                                    Gala Dinner
-                                  </option>  
-
-                                  <option value="">
-                                    Loy Kratong Gala Dinner
-                                  </option>  
-
-                                  <option value="">
-                                    Mardi Gras
-                                  </option>  
-
-                                  <option value="">
-                                    New Year Eve Gala Dinner
-                                  </option>  
-
-                                  <option value="">
-                                    New Year Surcharge
-                                  </option>  
-
-                                  <option value="">
-                                    SongKran Gala Dinner
-                                  </option>  
-
-                                  <option value="">
-                                    Valentine Day Gala Dinner
-                                  </option>  
-
-
-                              </select>
-                              </td>
+                              <td>2023-10-11 13:24:50</td>
                             </tr>
-                            <tr>
-                              <td>Tuesday</td>
-                              <td>2023-10-03</td>
+                            <tr role="row" class="even">
+                              <td>staah</td>
+                              <td>Edited Item</td>
                               <td>
-                                <input type="text" class="form-control fs-85 rounded">
+                                Data ID: 80416434. Room ID: 73245. Date: 2023-12-23. Price: 3199000.00
+                                -&gt; 3199000.
                               </td>
-                              <td>
-                                <input type="text" class="form-control fs-85 rounded">
-                              </td>
-                              <td>
-                                <select id="typePromotion" class="form-select fs-85 borderadius" aria-label="Default select example">
-                                  <option selected>Choose Description</option>
-
-                                  <option value="">
-                                    Additional Extra Charge
-                                  </option>   
-
-                                  <option value="">
-                                    Chinese New Year
-                                  </option>   
-
-                                  <option value="">
-                                    Christmas Eve Gala Dinner
-                                  </option>  
-
-                                  <option value="">
-                                    Easter
-                                  </option>  
-
-                                  <option value="">
-                                    Gala Dinner
-                                  </option>  
-
-                                  <option value="">
-                                    Loy Kratong Gala Dinner
-                                  </option>  
-
-                                  <option value="">
-                                    Mardi Gras
-                                  </option>  
-
-                                  <option value="">
-                                    New Year Eve Gala Dinner
-                                  </option>  
-
-                                  <option value="">
-                                    New Year Surcharge
-                                  </option>  
-
-                                  <option value="">
-                                    SongKran Gala Dinner
-                                  </option>  
-
-                                  <option value="">
-                                    Valentine Day Gala Dinner
-                                  </option>  
-
-
-                              </select>
-                              </td>
+                              <td>2023-10-11 13:24:50</td>
                             </tr>
-                            <tr>
-                              <td>Wednesday</td>
-                              <td>2023-10-04</td>
+                            <tr role="row" class="odd">
+                              <td>staah</td>
+                              <td>Edited Item</td>
                               <td>
-                                <input type="text" class="form-control fs-85 rounded">
+                                Data ID: 80416433. Room ID: 73245. Date: 2023-12-22. Price: 3199000.00
+                                -&gt; 3199000.
                               </td>
+                              <td>2023-10-11 13:24:50</td>
+                            </tr>
+                            <tr role="row" class="even">
+                              <td>staah</td>
+                              <td>Edited Item</td>
                               <td>
-                                <input type="text" class="form-control fs-85 rounded">
+                                Data ID: 80416432. Room ID: 73245. Date: 2023-12-21. Price: 2999000.00
+                                -&gt; 2999000.
                               </td>
+                              <td>2023-10-11 13:24:50</td>
+                            </tr>
+                            <tr role="row" class="odd">
+                              <td>staah</td>
+                              <td>Edited Item</td>
                               <td>
-                                <select id="typePromotion" class="form-select fs-85 borderadius" aria-label="Default select example">
-                                  <option selected>Choose Description</option>
-
-                                  <option value="">
-                                    Additional Extra Charge
-                                  </option>   
-
-                                  <option value="">
-                                    Chinese New Year
-                                  </option>   
-
-                                  <option value="">
-                                    Christmas Eve Gala Dinner
-                                  </option>  
-
-                                  <option value="">
-                                    Easter
-                                  </option>  
-
-                                  <option value="">
-                                    Gala Dinner
-                                  </option>  
-
-                                  <option value="">
-                                    Loy Kratong Gala Dinner
-                                  </option>  
-
-                                  <option value="">
-                                    Mardi Gras
-                                  </option>  
-
-                                  <option value="">
-                                    New Year Eve Gala Dinner
-                                  </option>  
-
-                                  <option value="">
-                                    New Year Surcharge
-                                  </option>  
-
-                                  <option value="">
-                                    SongKran Gala Dinner
-                                  </option>  
-
-                                  <option value="">
-                                    Valentine Day Gala Dinner
-                                  </option>  
-
-
-                              </select>
+                                Data ID: 80416431. Room ID: 73245. Date: 2023-12-20. Price: 2999000.00
+                                -&gt; 2999000.
                               </td>
+                              <td>2023-10-11 13:24:50</td>
+                            </tr>
+                            <tr role="row" class="even">
+                              <td>staah</td>
+                              <td>Edited Item</td>
+                              <td>
+                                Data ID: 80416430. Room ID: 73245. Date: 2023-12-19. Price: 2799000.00
+                                -&gt; 2799000.
+                              </td>
+                              <td>2023-10-11 13:24:50</td>
+                            </tr>
+                            <tr role="row" class="odd">
+                              <td>staah</td>
+                              <td>Deleted Hotel No Departure</td>
+                              <td>Date: 2023-12-24.</td>
+                              <td>2023-10-11 13:24:49</td>
+                            </tr>
+                            <tr role="row" class="even">
+                              <td>staah</td>
+                              <td>Deleted Hotel No Arrival</td>
+                              <td>Date: 2023-12-24.</td>
+                              <td>2023-10-11 13:24:49</td>
+                            </tr>
+                            <tr role="row" class="odd">
+                              <td>staah</td>
+                              <td>Deleted Hotel No Departure</td>
+                              <td>Date: 2023-12-23.</td>
+                              <td>2023-10-11 13:24:49</td>
+                            </tr>
+                            <tr role="row" class="even">
+                              <td>staah</td>
+                              <td>Deleted Hotel No Arrival</td>
+                              <td>Date: 2023-12-23.</td>
+                              <td>2023-10-11 13:24:49</td>
                             </tr>
                           </tbody>
-                          <tfoot>
-                            <tr>
-                              <!-- <th>
-                                  <input id="checkboxAll" class="form-check-input" type="checkbox" style="cursor: pointer;" value="" id="flexCheckDefault">
-                              </th> -->
-                              <th>Day</th>
-                              <th>Date</th>
-                              <th>Adult Price</th>
-                              <th>Child Price</th>
-                              <th>Description</th>
-                            </tr>
-                          </tfoot>
                         </table>
                       </div>
-                    </div>
-                    <div class="card-footer">
-                      <button class="btn btn-primary float-end fs-85">Submit</button>
+                      <div class="pagination-container">
+                        <div class="pagination1-align-right">
+                          <div class="pagination1">
+                            <a href="#">Prev</a>
+                            <a href="#" class="active">1</a>
+                            <a href="#">2</a>
+                            <a>...</a>
+                            <a href="#">Next</a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

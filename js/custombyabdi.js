@@ -143,6 +143,27 @@ $(document).ready(function(){
 
   checkinDateFilterCheck()
 
+  var checkoutDateFilterCheck = function(){
+      if ($('#checkboxCheckoutDateFilter').is(':checked')) {
+        $('#inputCheckoutDateFilter').prop('disabled', false);
+        $('#inputCheckoutDateFilter').css('cursor', '');
+      }else{  
+        $('#inputCheckoutDateFilter').prop('disabled', true);
+        $('#inputCheckoutDateFilter').css('cursor', 'not-allowed');
+
+      }
+    }
+
+    $('#daterange-btn-checkout').on('click', function(){
+        $('#inputCheckoutDateFilter').focus();
+    })
+
+    $(document).on('change', '#checkboxCheckoutDateFilter', function(){
+      checkoutDateFilterCheck();
+    });
+
+    checkoutDateFilterCheck()
+
   $('.lock').css('cursor', 'pointer');
 
   $(document).on('click', '.lock', function(){
@@ -1204,7 +1225,7 @@ $(document).on('click', '.deleteBenefit', function(){
 })
 
 $('.room-night').inputmask({"mask": "999[Night]" });
-$('.room-book').inputmask({"mask": "999[Room]" });
+$('.room-book').inputmask({"mask": "999" });
 $('.benefit-get').inputmask({"mask": "999[%]" });
 });
 
