@@ -463,8 +463,8 @@
                         <div class="mb-3">
                             <div for="exampleFormControlInput1 fs-5" class="form-label input-required">Stay at least</div>
                             <div class="d-flex">
-                                <input type="text" class="form-control rounded-input-addon">
-                                <span class="rounded-addon" style="background-color: rgb(227, 235, 235);">Night</span>
+                                <input id="inputStayAtLeast" type="number" class="form-control rounded-input-addon">
+                                <span id="titleStayAtLeast" class="rounded-addon" style="background-color: rgb(227, 235, 235);">Night</span>
                             </div>
                             <!-- <label class="input-group-text">IDR</label> -->
                         </div>
@@ -487,8 +487,8 @@
                         <div class="mb-3">
                           <div for="exampleFormControlInput1 fs-5" class="form-label input-required">Book at least</div>
                           <div class="d-flex">
-                              <input type="text" class="form-control rounded-input-addon">
-                              <span class="rounded-addon" style="background-color: rgb(227, 235, 235);">Room</span>
+                              <input id="inputBookAtLeast" type="number" class="form-control rounded-input-addon">
+                              <span id="titleBookAtLeast" class="rounded-addon" style="background-color: rgb(227, 235, 235);">Room</span>
                           </div>
                           <!-- <label class="input-group-text">IDR</label> -->
                       </div>
@@ -630,8 +630,8 @@
                         <div class="mb-3">
                             <div for="exampleFormControlInput1 fs-5" class="form-label input-required">Benefit Get</div>
                             <div class="d-flex">
-                                <input type="text" class="form-control rounded-input-addon">
-                                <span class="rounded-addon" style="background-color: rgb(227, 235, 235);">%</span>
+                                <input type="text" class="form-control rounded-input-addon room-book">
+                                <span id="titleBenefitGet" class="rounded-addon" style="background-color: rgb(227, 235, 235);">%</span>
                             </div>
                             <!-- <label class="input-group-text">IDR</label> -->
                         </div>
@@ -643,10 +643,10 @@
                       <div class="col-md col-sm">
                         <div class="mb-3">
                           <div for="exampleFormControlInput1 fs-5" class="form-label">&nbsp;</div>
-                          <select class="form-select fs-85 borderadius" aria-label="Default select example">
-                              <option selected>% Discount (Per Night)</option>
-                              <option >Discount (Per Night)</option>
-                              <option >Free Night</option>
+                          <select id="benefitGet" class="form-select fs-85 borderadius" aria-label="Default select example">
+                              <option id="percentage" selected>% Discount (Per Night)</option>
+                              <option id="IDR" >Discount (Per Night)</option>
+                              <option id="Night" >Free Night</option>
                           </select>
                         </div>
                       </div>

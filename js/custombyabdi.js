@@ -53,7 +53,6 @@ $(document).ready(function(){
   });
 
   $('.btn-edit-modal').on('click', function(){
-    console.log('show modal');
     window.location.href='manage-room-edit.html';
   });
 
@@ -572,6 +571,37 @@ $('#checkbox-shareStock').on('change', function(){
 Manage Promotions Page
 =====================*/
 $(document).ready(function(){
+
+  $(document).on('change', '#benefitGet', function(){
+    var optionSelected = $("option:selected", this).attr('id');
+    console.log(optionSelected);
+    if (optionSelected == 'percentage') {
+      $('#titleBenefitGet').text('%');
+    } else if(optionSelected == 'IDR'){
+      $('#titleBenefitGet').text('IDR');
+    } else if(optionSelected == 'Night'){
+      $('#titleBenefitGet').text('Night');
+    }
+  });
+
+  $(document).on('change, keyup', '#inputBookAtLeast', function(){
+    var value = $(this).val();
+    if (value > 1) {
+      $('#titleBookAtLeast').text('Rooms')
+    }else{
+      $('#titleBookAtLeast').text('Room')
+    }
+  });
+
+  $(document).on('change, keyup', '#inputStayAtLeast', function(){
+    var value = $(this).val();
+    if (value > 1) {
+      $('#titleStayAtLeast').text('Nights')
+    }else{
+      $('#titleStayAtLeast').text('Night')
+    }
+  });
+
   $('#daterange-inputStayDate').daterangepicker({
     locale: {
       format: 'YYYY/MM/DD'
@@ -704,7 +734,6 @@ $(document).on('change', '#cancellationPolicy', function(){
 })
 
 $('.btn-promotion-edit').on('click', function(){
-  console.log('show modal');
   window.location.href='manage-promotion-edit.html';
 });
 
@@ -1223,6 +1252,7 @@ $(document).on('click', '.deleteBenefit', function(){
     $(this).closest('.tr-benefit').remove();
   }
 })
+
 
 $('.room-night').inputmask({"mask": "999[Night]" });
 $('.room-book').inputmask({"mask": "999" });

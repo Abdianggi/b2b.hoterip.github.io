@@ -271,6 +271,13 @@
 	border-radius: 0 5px 5px 0 !important;
 }
 
+.numofperson {	
+	border: 1px solid #a9a9a9;
+    padding: 2px;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
 .table-rsv-overview {
 	width: 100% !important;
 	font-size: 12px;
@@ -302,6 +309,18 @@
 .paddingtb-5 {
 	padding-top: 6px !important;
 	padding-bottom: 6px !important;
+}
+
+.paddingx2y1-2 {
+	padding: 2rem 2rem 0 2rem;
+}
+
+.paddingx2-2 {
+	padding: 1rem 2rem 2rem 2rem;
+}
+
+.padding2rem {
+	padding: 2rem;
 }
 
 .hotel-select {
@@ -609,7 +628,8 @@
 	font-size: 14px;
 }
 
-.manageroom thead th {}
+.manageroom thead th {
+}
 
 .borderadius {
 	border-radius: 5px !important;
@@ -939,6 +959,11 @@ STYLE CUSTOM BY PUTUABDI
 
 	.dropzone{
 		border: 1px solid rgba(0,0,0,.3) !important;
+	}
+
+	input[type="month"]:focus{
+		
+		outline: 0 none;
 	}
 
 	
