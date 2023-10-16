@@ -584,12 +584,30 @@ $(document).ready(function(){
     }
   });
 
-  $(document).on('change, keyup', '#inputBookAtLeast', function(){
+  $(document).on('change, keyup', '.numberOfRoom', function(){
     var value = $(this).val();
     if (value > 1) {
-      $('#titleBookAtLeast').text('Rooms')
+      $('.titleNumberOfRoom').text('Rooms');
     }else{
-      $('#titleBookAtLeast').text('Room')
+      $('.titleNumberOfRoom').text('Room');
+    }
+  });
+  
+  $(document).on('change, keyup', '.numberOfFloor', function(){
+    var value = $(this).val();
+    if (value > 1) {
+      $('.titleNumberOfFloor').text('Floors');
+    }else{
+      $('.titleNumberOfFloor').text('Floor');
+    }
+  });
+  
+  $(document).on('change, keyup', '.numberOfMinute', function(){
+    var value = $(this).val();
+    if (value > 1) {
+      $('.titleNumberOfMinute').text('Minutes');
+    }else{
+      $('.titleNumberOfMinute').text('Minute');
     }
   });
 
@@ -1285,7 +1303,7 @@ Manage Hotel Edit
 =====================*/
 $(document).ready (function(){
   console.log('Hotel Edit Ready');
-  $('.numberOfRoom').inputmask({"mask": "999[Room]" });
+  // $('.numberOfRoom').inputmask({"mask": "999[Room]" });
   $('.numberOfFloors').inputmask({"mask": "99[Floor]" });
   $('.distanceKm').inputmask({"mask": "999[Km]" });
   $('.timeAirPort').inputmask({"mask": "999[Minute]" });

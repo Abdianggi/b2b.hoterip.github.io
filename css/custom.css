@@ -521,7 +521,7 @@
 }
 
 .redbg {
-	background-color: #ffe7e7 !important;
+	background-color: #fff2f2 !important;
 }
 
 .hotel-confirmation {
@@ -657,7 +657,7 @@
 	}
 }
 
-@media (max-width: 1700px) {
+@media (max-width: 1600px) {
 	.btn-re:last-child {
 		margin-top: 0.3rem;
 	}
@@ -905,7 +905,7 @@ STYLE CUSTOM BY PUTUABDI
 .input-required:after {
 	content: "*";
 	font-weight: bold;
-	margin-left: 3px;
+	margin-left: 2px;
 	color: rgb(199, 0, 0);
 }
 

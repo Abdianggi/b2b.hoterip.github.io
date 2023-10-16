@@ -224,9 +224,8 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mb-3">
-                            <div for="exampleFormControlInput1 fs-5" class="form-label">Hotel Name
+                            <div for="exampleFormControlInput1 fs-5" class="form-label input-required">Hotel Name
                                 <img src="./manage-room-edit_files/usa.png" style="width: 20px; margin-left: 5px;">
-                                <span class="mandatorystar">*</span>
                             </div>
                             <input type="text" class="form-control" style="border-radius: 5px;" value="Mockup Hotel & Spa Jimbaran">
                             <div class="formtext margin-top">
@@ -234,9 +233,8 @@
                             </div>
                         </div>
                         <div class="mb-3">
-                            <div for="exampleFormControlInput1 fs-5" class="form-label">Hotel Name
+                            <div for="exampleFormControlInput1 fs-5" class="form-label input-required">Hotel Name
                                 <img src="./manage-room-edit_files/japan.png" style="width: 20px; margin-left: 5px;">
-                                <span class="mandatorystar">*</span>
                             </div>
                             <input type="text" class="form-control" style="border-radius: 5px;" value="モックアップ ホテル & スパ ジンバラン">
                             <div class="formtext margin-top">
@@ -244,9 +242,8 @@
                             </div>
                         </div>
                         <div class="mb-3">
-                            <div for="exampleFormControlInput1 fs-5" class="form-label">Hotel Name
+                            <div for="exampleFormControlInput1 fs-5" class="form-label input-required">Hotel Name
                                 <img src="./manage-room-edit_files/indo.png" style="width: 20px; margin-left: 5px;">
-                                <span class="mandatorystar">*</span>
                             </div>
                             <input type="text" class="form-control" style="border-radius: 5px;" value="Mockup Hotel & Spa Jimbaran">
                             <div class="formtext margin-top">
@@ -256,9 +253,8 @@
                     </div>
                     <div class="col-md-12">
                         <div class="mb-3">
-                            <div for="exampleFormControlInput1 fs-5" class="form-label">Hotel Description
+                            <div for="exampleFormControlInput1 fs-5" class="form-label input-required">Hotel Description
                                 <img src="./manage-room-edit_files/usa.png" style="width: 20px; margin-left: 5px;">
-                                <span class="mandatorystar">*</span>
                             </div>
                             <textarea type="text" class="form-control fnt13" rows="6" style="resize: none; overflow: hidden; overflow-wrap: break-word; height: 134px; border-radius: 5px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
                             <div class="formtext margin-top">
@@ -493,19 +489,19 @@
                     <div for="exampleFormControlInput1 fs-5" class="form-label input-required">Fax</div>
                     <input type="number" class="form-control rounded" value="6281353040851">
                   </div>
-                  <div class="col-md-6 col-sm-12 mb-3">
+                  <div class="col-md-3 col-sm-12 mb-3">
                     <div for="exampleFormControlInput1 fs-5" class="form-label input-required">Opening Month - Year </div>
                     <input type="month" class="form-control rounded dateMonth" value="2009-01">
                   </div>
-                  <div class="col-md-6 col-sm-12 mb-3">
+                  <div class="col-md-3 col-sm-12 mb-3">
                     <div for="exampleFormControlInput1 fs-5" class="form-label input-required">Renovation Month - Year </div>
                     <input type="month" class="form-control rounded dateMonth" value="2018-10">
                   </div>
                   <div class="col-md-3 col-sm-12 mb-3">
                       <div for="exampleFormControlInput1 fs-5" class="form-label ">Number of Rooms</div>
                       <div class="d-flex">
-                          <input type="text" class="form-control rounded-input-addon room-book">
-                          <span class="rounded-addon" style="background-color: rgb(227, 235, 235);">Room</span>
+                          <input type="number" class="form-control rounded-input-addon numberOfRoom">
+                          <span class="rounded-addon titleNumberOfRoom" style="background-color: rgb(227, 235, 235);">Room</span>
                       </div>
                     <!-- <div for="exampleFormControlInput1 fs-5" class="form-label">Number of Rooms</div>
                     <input type="text" class="form-control rounded room-book" value=""> -->
@@ -513,8 +509,8 @@
                   <div class="col-md-3 col-sm-12 mb-3">
                     <div for="exampleFormControlInput1 fs-5" class="form-label ">Number of Floors</div>
                     <div class="d-flex">
-                        <input type="text" class="form-control rounded-input-addon room-book">
-                        <span class="rounded-addon" style="background-color: rgb(227, 235, 235);">Floor</span>
+                        <input type="number" class="form-control rounded-input-addon room-book numberOfFloor">
+                        <span class="rounded-addon titleNumberOfFloor" style="background-color: rgb(227, 235, 235);">Floor</span>
                     </div>
                     <!-- <div for="exampleFormControlInput1 fs-5" class="form-label">Number of Floors</div> -->
                     <!-- <input type="text" class="form-control rounded numberOfFloors" value=""> -->
@@ -531,8 +527,8 @@
                   <div class="col-md-3 col-sm-12 mb-3">
                     <div for="exampleFormControlInput1 fs-5" class="form-label ">Time from Airport</div>
                     <div class="d-flex">
-                        <input type="text" class="form-control rounded-input-addon room-book">
-                        <span class="rounded-addon" style="background-color: rgb(227, 235, 235);">Minute</span>
+                        <input type="number" class="form-control rounded-input-addon numberOfMinute">
+                        <span class="rounded-addon titleNumberOfMinute" style="background-color: rgb(227, 235, 235);">Minute</span>
                     </div>
                     <!-- <div for="exampleFormControlInput1 fs-5" class="form-label">Time from Airport</div>
                     <input type="text" class="form-control rounded timeAirPort" > -->
