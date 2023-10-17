@@ -237,7 +237,7 @@
 								<div class="datepicker">							
 									<input id="datepickerchart" class="daterange-input form-control input-sm" placeholder="Choose date range" name="chart_date_range" type="text">
 								</div>
-								<button class="btn btn-primary border-radius-right" type="submit">Refresh Date</button>
+								<button class="btn btn-primary border-radius-right text-nowrap" type="submit">Refresh Date</button>
 							</div>
 						</div>
 					  </div>
@@ -261,7 +261,7 @@
 				<div class="container-fluid" style="margin-top: -39px;">
 				  <div class="row align-items-stretch">
 					<!-- Private Sales & Hot Deals -->
-					<div class="col-lg-3 col-12">
+					<div class="col-lg-3 col-12 mb-3">
 					  <div class="card mb-0">
 						<div class="card-header">
 						  <div class="card-close">
@@ -285,7 +285,7 @@
 					  </div>
 					</div>
 					<!-- Rate Plan Distribution -->
-					<div class="col-lg-3 col-12 col-50">
+					<div class="col-lg col-sm-12">
 					  <div class="card mb-0">
 						<div class="card-header">
 						  <div class="card-close">
@@ -294,16 +294,65 @@
 							  <span class="material-symbols-outlined sidebar material-sbl-page">tenancy</span><h3 class="h4 mb-0">Rate Plan & Channel Distribution</h3>
 						  </div>
 						</div>
-						<div class="card-body p-0">
-						  <div class="row g-0 border-bottom border-gray-200">
-						  </div>
-						  <div class="row g-0">
-							<div class="col-sm-4 col-3 text-end rate-plan-channel-title">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-md-3 col-sm-12 mb-3">
+									<div class="mt-2">
+										Market Segment B2B :
+									</div>
+								</div>
+								<div class="col-md col-sm-12 row mb-3">
+									<div class="col-md col-sm-12">
+										<div class="market-segment-checkbox">
+											<input class="form-check-input sale-deal-checkbox" id="" type="checkbox">
+											<span class="market-segment-col-text">All Market</span>
+										</div>
+										<div class="market-segment-checkbox">
+											<input class="form-check-input sale-deal-checkbox" id="" type="checkbox">
+											<span class="market-segment-col-text">Japan</span>
+										</div>
+										<div class="market-segment-checkbox">
+											<input class="form-check-input sale-deal-checkbox" id="" type="checkbox">
+											<span class="market-segment-col-text">China</span>
+										</div>
+									</div>
+									<div class="col-md col-sm-12">
+										<div class="market-segment-checkbox">
+											<input class="form-check-input sale-deal-checkbox" id="" type="checkbox">
+											<span class="market-segment-col-text">Korea</span>
+										</div>
+										<div class="market-segment-checkbox">
+											<input class="form-check-input sale-deal-checkbox" id="" type="checkbox">
+											<span class="market-segment-col-text">Europe</span>
+										</div>
+										<div class="market-segment-checkbox">
+											<input class="form-check-input sale-deal-checkbox" id="" type="checkbox">
+											<span class="market-segment-col-text">Middle East</span>
+										</div>
+									</div>
+									<div class="col-md col-sm-12">
+										<div class="market-segment-checkbox">
+											<input class="form-check-input sale-deal-checkbox" id="" type="checkbox">
+											<span class="market-segment-col-text">Domestic</span>
+										</div>
+										<div class="market-segment-checkbox">
+											<input class="form-check-input sale-deal-checkbox" id="" type="checkbox">
+											<span class="market-segment-col-text text-wrap">Asia (Singapore, Malaysia, etc)</span></div>
+										<div class="market-segment-checkbox">
+											<input class="form-check-input sale-deal-checkbox" id="" type="checkbox">
+											<span class="market-segment-col-text">Others</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<button class="btn btn-primary float-end" type="submit">Save Changes</button>
+						  <!-- <div class="row ">
+							<div class="col-md-4 col-sm-12 text-end rate-plan-channel-title">
 							  <ul class="list-inline mb-0">
-								<div class="text-bold sale-deal-ttl">Market Segment B2B</div>
+								<div class="text-bold sale-deal-ttl text-nowrap">Market Segment B2B</div>
 							  </ul>
 							</div>
-							<div class="col-sm-8 col-9 border-start border-gray-200 p-3 market-segment-container">
+							<div class="col-md-8 col-sm-12 border-start border-gray-200 p-3 market-segment-container">
 								<div class="market-segment-col">
 									<div class="market-segment-checkbox">
 										<input class="form-check-input sale-deal-checkbox" id="" type="checkbox">
@@ -347,7 +396,7 @@
 								</div>
 								<button class="btn btn-primary" type="submit">Save Changes</button>
 							</div>
-						  </div>
+						  </div> -->
 						</div>
 					  </div>
 					</div>
@@ -357,157 +406,160 @@
 			  <!-- Feeds Section-->
 			  <section>
 				<div class="container-fluid">
-				  <div class="row gy-4">
-					<!-- Booking Information-->
-					<div class="col-lg-6 rsvov1">
-					  <div class="card mb-0">
-						<div class="card-header position-relative">
-						  <div class="card-close">
-						  </div>
-						  <div class="title-sub">
-							  <span class="material-symbols-outlined sidebar material-sbl-page">post_add</span><h2 class="h3 mb-0 d-flex align-items-center">Latest Booking<span class="badge rounded-pill bg-light-blue ms-2 text-xs">3 New</span></h2>
-						  </div>
+					<div class="row">
+						<div class="col-md-7 col-sm-12">
+							<div class="card mb-0">
+								<div class="card-header position-relative">
+								  <div class="card-close">
+								  </div>
+								  <div class="title-sub">
+									  <span class="material-symbols-outlined sidebar material-sbl-page">post_add</span><h2 class="h3 mb-0 d-flex align-items-center">Latest Booking<span class="badge rounded-pill bg-light-blue ms-2 text-xs">3 New</span></h2>
+								  </div>
+								</div>
+								<div class="card-body table-responsive">
+									
+								<table class="table table-borderless">
+									<tr class="new-book">
+									<td class="text-nowrap">
+										<div class="ms-3 latest-book-item">
+										<a class="d-block latest-book-guestname" href="#">
+										<img class="me-2 flag-floatleft" src="img/flags/16/GB.png" alt="English"><h3 class="h5 fw-normal text-dark mb-0">Jay Weinberg</h3></a>
+											<span class="text-gray-500 float-left latest-book-item-detail latest-book-bookingnumber">16714707225996C</span>
+											<span class="text-gray-500 float-left latest-book-item-detail">Deluxe Room</span>
+										</div>
+									</td>
+									<td class="text-nowrap">
+										<div class="ms-3 latest-book-item">
+										<small class="text-gray-500 float-left latest-book-item-detail">Aug 2, 2023 - Aug 7, 2023</small><small class="text-gray-500 float-left latest-book-item-detail">5 nights - 2 guests</small>
+										</div>
+									</td>
+									<td class="text-nowrap">
+										<div class="ms-3 latest-book-item">
+										<small class="text-gray-500 float-left latest-book-item-detail"><span class="price-text-bold">IDR 4,845,500.00</span></small><small class="text-gray-500 float-left latest-book-item-detail">Jul 7, 2023</small>
+										</div>
+									</td>
+									</tr>
+									<tr class="new-book">
+									<td class="text-nowrap">
+										<div class="ms-3 latest-book-item">
+										<a class="d-block latest-book-guestname" href="#">
+										<img class="me-2 flag-floatleft" src="img/flags/16/CN.png" alt="China"><h3 class="h5 fw-normal text-dark mb-0">Linnwei Kan&nbsp;</h3>
+										</a>
+											<span class="text-gray-500 float-left latest-book-item-detail latest-book-bookingnumber">16714707224856C</span>
+											<span class="text-gray-500 float-left latest-book-item-detail">Deluxe Room</span>
+										</div>
+									</td>
+									<td class="text-nowrap">
+										<div class="ms-3 latest-book-item">
+										<small class="text-gray-500 float-left latest-book-item-detail">Aug 6, 2023 - Aug 10, 2023</small><small class="text-gray-500 float-left latest-book-item-detail">4 nights - 2 guests</small>
+										</div>
+									</td>
+									<td class="text-nowrap">
+										<div class="ms-3 latest-book-item">
+										<small class="text-gray-500 float-left latest-book-item-detail"><span class="price-text-bold">IDR 3,910,000.00</span></small><small class="text-gray-500 float-left latest-book-item-detail">Jul 7, 2023</small>
+										</div>
+									</td>
+									</tr>
+									<tr class="new-book">
+									<td class="text-nowrap">
+										<div class="ms-3 latest-book-item">
+										<a class="d-block latest-book-guestname" href="#">
+										<img class="me-2 flag-floatleft" src="img/flags/16/ID.png" alt="Indonesia"><h3 class="h5 fw-normal text-dark mb-0">Dessy Pracita Sari</h3>
+										</a>
+											<span class="text-gray-500 float-left latest-book-item-detail latest-book-bookingnumber">16714707157526C</span>
+											<span class="text-gray-500 float-left latest-book-item-detail">Deluxe Room</span>
+										</div>
+									</td>
+									<td class="text-nowrap">
+										<div class="ms-3 latest-book-item">
+										<small class="text-gray-500 float-left latest-book-item-detail">Jul 27, 2023 - Jul 31, 2023</small><small class="text-gray-500 float-left latest-book-item-detail">4 nights - 2 guests</small>
+										</div>
+									</td>
+									<td class="text-nowrap">
+										<div class="ms-3 latest-book-item">
+										<small class="text-gray-500 float-left latest-book-item-detail"><span class="price-text-bold">IDR 4,845,500.00</span></small><small class="text-gray-500 float-left latest-book-item-detail">Jul 7, 2023</small>
+										</div>
+									</td>
+									</tr>
+									<tr >
+									<td class="text-nowrap">
+										<div class="ms-3 latest-book-item">
+										<a class="d-block latest-book-guestname" href="#">
+										<img class="me-2 flag-floatleft" src="img/flags/16/NL.png" alt="Germany"><h3 class="h5 fw-normal text-dark mb-0">Wayne Guttenberg</h3>
+										</a>
+											<span class="text-gray-500 float-left latest-book-item-detail latest-book-bookingnumber">16714703057537C</span>
+											<span class="text-gray-500 float-left latest-book-item-detail">Suite Room</span>
+										</div>
+									</td>
+									<td class="text-nowrap">
+										<div class="ms-3 latest-book-item">
+										<small class="text-gray-500 float-left latest-book-item-detail">Jul 20, 2023 - Jul 26, 2023</small><small class="text-gray-500 float-left latest-book-item-detail">6 nights - 2 guests</small>
+										</div>
+									</td>
+									<td class="text-nowrap">
+										<div class="ms-3 latest-book-item">
+										<small class="text-gray-500 float-left latest-book-item-detail"><span class="price-text-bold">IDR 10,205,000.00</span></small><small class="text-gray-500 float-left latest-book-item-detail">Jul 7, 2023</small>
+										</div>
+									</td>
+									</tr>
+									<tr>
+									<td class="text-nowrap">
+										<div class="ms-3 latest-book-item">
+										<a class="d-block latest-book-guestname" href="#">
+										<img class="me-2 flag-floatleft" src="img/flags/16/AU.png" alt="Australia"><h3 class="h5 fw-normal text-dark mb-0">Vanessa Taylor</h3>
+										</a>
+											<span class="text-gray-500 float-left latest-book-item-detail latest-book-bookingnumber">16714502387727C</span>
+											<span class="text-gray-500 float-left latest-book-item-detail">One Bedroom Villa</span>
+										</div>
+									</td>
+									<td class="text-nowrap">
+										<div class="ms-3 latest-book-item">
+										<small class="text-gray-500 float-left latest-book-item-detail">Jul 12, 2023 - Jul 16, 2023</small><small class="text-gray-500 float-left latest-book-item-detail">4 nights - 2 guests</small>
+										</div>
+									</td>
+									<td class="text-nowrap">
+										<div class="ms-3 latest-book-item">
+										<small class="text-gray-500 float-left latest-book-item-detail"><span class="price-text-bold">IDR 9,120,000.00</span></small><small class="text-gray-500 float-left latest-book-item-detail">Jul 5, 2023</small>
+										</div>
+									</td>
+									</tr>
+								</table>
+
+								</div>
+							  </div>
 						</div>
-						<div class="card-body p-0">
-						  <div class="latest-book-container new-book">
-							<div class="p-3 d-flex align-items-center latest-book-container-part">
-							  <div class="ms-3 latest-book-item">
-								<a class="d-block latest-book-guestname" href="#">
-								<img class="me-2 flag-floatleft" src="img/flags/16/GB.png" alt="English"><h3 class="h5 fw-normal text-dark mb-0">Jay Weinberg</h3></a>
-								  <span class="text-gray-500 float-left latest-book-item-detail latest-book-bookingnumber">16714707225996C</span>
-								  <span class="text-gray-500 float-left latest-book-item-detail">Deluxe Room</span>
+						<div class="col-md col-sm-12">
+							<div class="card mb-0">
+								<div class="card-header position-relative">
+								  <div class="title-sub">
+									  <span class="material-symbols-outlined sidebar material-sbl-page">overview</span><h2 class="h3 mb-0 d-flex align-items-center">Reservation Overview</h2>
+								  </div>
+								</div>
+								<div class="card-body p-0">
+								  <div class="d-flex align-items-center">
+									<div class="table-responsive table-rsv-overview">
+									<table class="table mb-0 table-rsv-overview">
+									  <tbody>
+										<tr>
+										  <th class="rsv-overview-col1">Check-In Today</th>
+										  <td class="rsv-overview-col2">23</td>
+										</tr>
+										<tr>
+										  <th class="rsv-overview-col1">Check-Out Today</th>
+										  <td class="rsv-overview-col2">16</td>
+										</tr>
+										<tr>
+										  <th class="border-bottom-0 rsv-overview-col1">Stay Over</th>
+										  <td class="border-bottom-0 rsv-overview-col2">0</td>
+										</tr>
+									  </tbody>
+									</table>
+								  </div>
+								  </div>
+								</div>
 							  </div>
-							</div>
-							<div class="p-3 d-flex align-items-center latest-book-container-part">
-							  <div class="ms-3 latest-book-item">
-								<small class="text-gray-500 float-left latest-book-item-detail">Aug 2, 2023 - Aug 7, 2023</small><small class="text-gray-500 float-left latest-book-item-detail">5 nights - 2 guests</small>
-							  </div>
-							</div>
-							<div class="p-3 d-flex align-items-center latest-book-container-part">
-							  <div class="ms-3 latest-book-item">
-								<small class="text-gray-500 float-left latest-book-item-detail"><span class="price-text-bold">IDR 4,845,500.00</span></small><small class="text-gray-500 float-left latest-book-item-detail">Jul 7, 2023</small>
-							  </div>
-							</div>
-						  </div>
-						  <div class="latest-book-container new-book">
-							<div class="p-3 d-flex align-items-center latest-book-container-part">
-							  <div class="ms-3 latest-book-item">
-								<a class="d-block latest-book-guestname" href="#">
-								<img class="me-2 flag-floatleft" src="img/flags/16/CN.png" alt="China"><h3 class="h5 fw-normal text-dark mb-0">Linnwei Kan&nbsp;</h3>
-								</a>
-								  <span class="text-gray-500 float-left latest-book-item-detail latest-book-bookingnumber">16714707224856C</span>
-								  <span class="text-gray-500 float-left latest-book-item-detail">Deluxe Room</span>
-							  </div>
-							</div>
-							<div class="p-3 d-flex align-items-center latest-book-container-part">
-							  <div class="ms-3 latest-book-item">
-								<small class="text-gray-500 float-left latest-book-item-detail">Aug 6, 2023 - Aug 10, 2023</small><small class="text-gray-500 float-left latest-book-item-detail">4 nights - 2 guests</small>
-							  </div>
-							</div>
-							<div class="p-3 d-flex align-items-center latest-book-container-part">
-							  <div class="ms-3 latest-book-item">
-								<small class="text-gray-500 float-left latest-book-item-detail"><span class="price-text-bold">IDR 3,910,000.00</span></small><small class="text-gray-500 float-left latest-book-item-detail">Jul 7, 2023</small>
-							  </div>
-							</div>
-						  </div>
-						  <div class="latest-book-container new-book">
-							<div class="p-3 d-flex align-items-center latest-book-container-part">
-							  <div class="ms-3 latest-book-item">
-								<a class="d-block latest-book-guestname" href="#">
-								<img class="me-2 flag-floatleft" src="img/flags/16/ID.png" alt="Indonesia"><h3 class="h5 fw-normal text-dark mb-0">Dessy Pracita Sari</h3>
-								</a>
-								  <span class="text-gray-500 float-left latest-book-item-detail latest-book-bookingnumber">16714707157526C</span>
-								  <span class="text-gray-500 float-left latest-book-item-detail">Deluxe Room</span>
-							  </div>
-							</div>
-							<div class="p-3 d-flex align-items-center latest-book-container-part">
-							  <div class="ms-3 latest-book-item">
-								<small class="text-gray-500 float-left latest-book-item-detail">Jul 27, 2023 - Jul 31, 2023</small><small class="text-gray-500 float-left latest-book-item-detail">4 nights - 2 guests</small>
-							  </div>
-							</div>
-							<div class="p-3 d-flex align-items-center latest-book-container-part">
-							  <div class="ms-3 latest-book-item">
-								<small class="text-gray-500 float-left latest-book-item-detail"><span class="price-text-bold">IDR 4,845,500.00</span></small><small class="text-gray-500 float-left latest-book-item-detail">Jul 7, 2023</small>
-							  </div>
-							</div>
-						  </div>
-						  <div class="latest-book-container">
-							<div class="p-3 d-flex align-items-center latest-book-container-part">
-							  <div class="ms-3 latest-book-item">
-								<a class="d-block latest-book-guestname" href="#">
-								<img class="me-2 flag-floatleft" src="img/flags/16/NL.png" alt="Germany"><h3 class="h5 fw-normal text-dark mb-0">Wayne Guttenberg</h3>
-								</a>
-								  <span class="text-gray-500 float-left latest-book-item-detail latest-book-bookingnumber">16714703057537C</span>
-								  <span class="text-gray-500 float-left latest-book-item-detail">Suite Room</span>
-							  </div>
-							</div>
-							<div class="p-3 d-flex align-items-center latest-book-container-part">
-							  <div class="ms-3 latest-book-item">
-								<small class="text-gray-500 float-left latest-book-item-detail">Jul 20, 2023 - Jul 26, 2023</small><small class="text-gray-500 float-left latest-book-item-detail">6 nights - 2 guests</small>
-							  </div>
-							</div>
-							<div class="p-3 d-flex align-items-center latest-book-container-part">
-							  <div class="ms-3 latest-book-item">
-								<small class="text-gray-500 float-left latest-book-item-detail"><span class="price-text-bold">IDR 10,205,000.00</span></small><small class="text-gray-500 float-left latest-book-item-detail">Jul 7, 2023</small>
-							  </div>
-							</div>
-						  </div>
-						  <div class="latest-book-container noborder">
-							<div class="p-3 d-flex align-items-center latest-book-container-part">
-							  <div class="ms-3 latest-book-item">
-								<a class="d-block latest-book-guestname" href="#">
-								<img class="me-2 flag-floatleft" src="img/flags/16/AU.png" alt="Australia"><h3 class="h5 fw-normal text-dark mb-0">Vanessa Taylor</h3>
-								</a>
-								  <span class="text-gray-500 float-left latest-book-item-detail latest-book-bookingnumber">16714502387727C</span>
-								  <span class="text-gray-500 float-left latest-book-item-detail">One Bedroom Villa</span>
-							  </div>
-							</div>
-							<div class="p-3 d-flex align-items-center latest-book-container-part">
-							  <div class="ms-3 latest-book-item">
-								<small class="text-gray-500 float-left latest-book-item-detail">Jul 12, 2023 - Jul 16, 2023</small><small class="text-gray-500 float-left latest-book-item-detail">4 nights - 2 guests</small>
-							  </div>
-							</div>
-							<div class="p-3 d-flex align-items-center latest-book-container-part">
-							  <div class="ms-3 latest-book-item">
-								<small class="text-gray-500 float-left latest-book-item-detail"><span class="price-text-bold">IDR 9,120,000.00</span></small><small class="text-gray-500 float-left latest-book-item-detail">Jul 5, 2023</small>
-							  </div>
-							</div>
-						  </div>
 						</div>
-					  </div>
 					</div>
-					<div class="col-lg-6 rsvov2">
-					  <div class="card mb-0">
-						<div class="card-header position-relative">
-						  <div class="title-sub">
-							  <span class="material-symbols-outlined sidebar material-sbl-page">overview</span><h2 class="h3 mb-0 d-flex align-items-center">Reservation Overview</h2>
-						  </div>
-						</div>
-						<div class="card-body p-0">
-						  <div class="d-flex align-items-center">
-							<div class="table-responsive table-rsv-overview">
-							<table class="table mb-0 table-rsv-overview">
-							  <tbody>
-								<tr>
-								  <th class="rsv-overview-col1">Check-In Today</th>
-								  <td class="rsv-overview-col2">23</td>
-								</tr>
-								<tr>
-								  <th class="rsv-overview-col1">Check-Out Today</th>
-								  <td class="rsv-overview-col2">16</td>
-								</tr>
-								<tr>
-								  <th class="border-bottom-0 rsv-overview-col1">Stay Over</th>
-								  <td class="border-bottom-0 rsv-overview-col2">0</td>
-								</tr>
-							  </tbody>
-							</table>
-						  </div>
-						  </div>
-						</div>
-					  </div>
-					</div>
-				  </div>
 				</div>
 				</section>
 		  <!-- InstanceEndEditable -->
