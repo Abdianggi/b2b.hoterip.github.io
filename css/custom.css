@@ -130,6 +130,30 @@
 	display: none;
 }
 
+.navbar-text.nav11 {
+	display: inherit;
+}
+
+.navbar-text.nav11.hidden {
+	display: none;
+}
+
+.navbar-text.nav12 {
+	display: inherit;
+}
+
+.navbar-text.nav12.hidden {
+	display: none;
+}
+
+.navbar-text.nav13 {
+	display: inherit;
+}
+
+.navbar-text.nav13.hidden {
+	display: none;
+}
+
 .badge.bg-blue.badge-corner.fw-normal {
 	background-color: #52b8ff;
 }

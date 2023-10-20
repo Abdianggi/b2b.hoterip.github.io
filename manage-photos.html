@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<!-- InstanceBeginEditable name="doctitle" -->
-  <title>HIS B2B - Manage surcharges</title>
+  <title>HIS B2B - Manage Photos </title>
   <!-- InstanceEndEditable -->
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -158,7 +158,7 @@
           <li class="sidebar-item"><!-- InstanceEndEditable --><a class="sidebar-link" href="hotel-edit.html">
                 <span class="material-symbols-outlined sidebar">apartment</span>
 				<span class="navbar-text nav3">Hotel Edit</span></a></li>
-            <!-- InstanceBeginEditable name="nav-active-3" --><li class="sidebar-item"><!-- InstanceEndEditable --><a class="sidebar-link" href="manage-photos.html">
+            <!-- InstanceBeginEditable name="nav-active-3" --><li class="sidebar-item active"><!-- InstanceEndEditable --><a class="sidebar-link" href="manage-photos.html">
                 <span class="material-symbols-outlined sidebar">imagesmode</span>
 				<span class="navbar-text nav4">Manage Photos</span></a></li>
             <!-- InstanceBeginEditable name="nav-active-4" -->
@@ -177,12 +177,12 @@
                 <span class="material-symbols-outlined sidebar">campaign</span>
 				<span class="navbar-text nav8">Manage Promotions</span></a></li>
             <!-- InstanceBeginEditable name="nav-active-7" -->
-          <li class="sidebar-item active"><!-- InstanceEndEditable --><a class="sidebar-link" href="manage-surcharges.html"> 
+          <li class="sidebar-item"><!-- InstanceEndEditable --><a class="sidebar-link" href="manage-surcharges.html"> 
                 <span class="material-symbols-outlined sidebar">payments</span>
 				<span class="navbar-text nav9">Manage Surcharges</span></a></li>
-              <li class="sidebar-item"><!-- InstanceEndEditable --><a class="sidebar-link" href="manage-restrictions.html"> 
+          <li class="sidebar-item"><!-- InstanceEndEditable --><a class="sidebar-link" href="manage-restrictions.html"> 
                 <span class="material-symbols-outlined sidebar">enhanced_encryption</span>
-        <span class="navbar-text nav10">Manage Restrictions</span></a></li>
+				<span class="navbar-text nav10">Manage Restrictions</span></a></li>
             <!-- InstanceBeginEditable name="nav-active-8" -->
           <li class="sidebar-item"><!-- InstanceEndEditable --><a class="sidebar-link" href="manage-announcements.html"> 
                 <span class="material-symbols-outlined sidebar">breaking_news</span>
@@ -205,7 +205,7 @@
             <span><a class="material-symbols-outlined togglebtn" id="toggle-btn" href="#">menu</a></span>
           </div>
           <div class="container-fluid px-0">
-            <h4 class="mb-0 p-1 paddingtb-5">Manage Surcharges</h4>
+            <h4 class="mb-0 p-1 paddingtb-5">Manage Photos</h4>
           </div>
         </header>
         <!-- InstanceEndEditable -->
@@ -218,251 +218,122 @@
               <div class="row align-items-stretch">
                 <div class="col-lg-12">
                   <div class="card">
-                    <div class="card-header paddingx2y1-2">
-                      <span class="mb-3 mx-1">
-                        <div for="exampleFormControlInput1 fs-5" class="form-label fw-bold">
-                          From - To
+                    <div class="card-body">
+                      <div class="card">
+                        <div class="card-header fw-bold">Main Photo</div>
+                        <div class="card-body">
+                          <img id="mainPhoto" src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid" alt="Responsive image" style="
+                            object-fit: none; /* Do not scale the image */
+                            object-position: center; /* Center the image within the element */
+                            width: 100%;
+                            max-height: 250px;
+                            ">
                         </div>
-                        <div class="d-flex">
-                          <span id="daterange-btn" class="rounded-addon-left rounded-left btn-range c-pointer p-1">
-                            <i class="fa-solid fa-calendar-days fa-xs mx-1" style="margin-top: 7px;"></i>
-                            <!-- <i id="daterange-btn" class="material-symbols-outlined">date_range</i> -->
-                          </span>
-                          <input type="text" class="form-control rounded-right daterange-input">
+                      </div>
+                      <span class="mx-2">
+                        <div class="form-check form-switch fs-85">
+                          Check All
+                          <input id="checkboxAll" class="form-check-input" type="checkbox" >
                         </div>
-                        <!-- <div id="daterange-btn" class="daterange" style="margin: 0px; float: none;">
-                          <span class="material-symbols-outlined datepicker" style="cursor: pointer" >date_range</span>
-                          <div class="datepicker">
-                            <input id="datepickerchart" class="daterange-input form-control" name="chart_date_range" type="text">
-                          </div>
-                        </div> -->
                       </span>
                       <span>
-                        <button class="btn btn-primary d-flex">
-                          <div class="my-auto">Search</div> 
-                        </button>
+                        <!-- <button class="btn btn-primary">+ Add New Room</button> -->
+                        <button style="font-size: 12px !important;" id="deleteChecked" class="btn btn-danger d-flex mx-1 text-13" disabled="disabled"><div class="my-auto">Delete Checked</div></button>
                       </span>
-                    </div>
-                    <div class="card-body paddingx2-2">
-                      <div class="table-responsive">
-                        <table class="table mb-0 table-custom manageroom">
-                          <thead>
-                            <tr>
-                              <!-- <th>
-                                  <input id="checkboxAll" class="form-check-input" type="checkbox" style="cursor: pointer;" value="" id="flexCheckDefault">
-                              </th> -->
-                              <th>Day</th>
-                              <th>Date</th>
-                              <th>Adult Price</th>
-                              <th>Child Price</th>
-                              <th>Description</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <!-- <td>
-                                <input class="form-check-input checkboxSelected" type="checkbox" style="cursor: pointer;" value="" id="flexCheckDefault">
-                              </td> -->
-                              <td>Monday</td>
-                              <td>2023-10-02</td>
-                              <td>
-                                <input type="text" class="form-control fs-85 rounded">
-                              </td>
-                              <td>
-                                <input type="text" class="form-control fs-85 rounded">
-                              </td>
-                              <td>
-                                <select id="typePromotion" class="form-select fs-85 borderadius" aria-label="Default select example">
-                                  <option selected>Choose Description</option>
+                      <div class="my-3 mx-3 dropzone rounded">
+                        <div class="rounded border-1 dz-clickable dropZoneManagePhotos">
+                          <div class="dz-default dz-message">
+                            <button class="dz-button" type="button">Drop files here to upload</button>
+                          </div>
+                          <div class="row" id="previews">
+                            <div id="photoTemplate" class="col-md-4 col-sm-12">
+                              <div class="card mb-3" style="max-width: 540px;">
+                                <div class="row g-0">
+                                  <div class="col-md-4">
+                                    <!-- <img data-dz-thumbnail> -->
+                                    <div class="dz-preview dz-processing dz-error dz-complete dz-image-preview">
+                                      <div class="dz-image">
+                                        <img class="photosImg"
+                                          data-dz-thumbnail
+                                        />
+                                      </div>
+                                      <div class="dz-progress">
+                                      </div>
+                                      <div class="dz-error-message">
+                                        <span data-dz-errormessage></span>
+                                      </div>
+                                      <div class="dz-success-mark">
+                                        <svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <title>Check</title> <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <path d="M23.5,31.8431458 L17.5852419,25.9283877 C16.0248253,24.3679711 13.4910294,24.366835 11.9289322,25.9289322 C10.3700136,27.4878508 10.3665912,30.0234455 11.9283877,31.5852419 L20.4147581,40.0716123 C20.5133999,40.1702541 20.6159315,40.2626649 20.7218615,40.3488435 C22.2835669,41.8725651 24.794234,41.8626202 26.3461564,40.3106978 L43.3106978,23.3461564 C44.8771021,21.7797521 44.8758057,19.2483887 43.3137085,17.6862915 C41.7547899,16.1273729 39.2176035,16.1255422 37.6538436,17.6893022 L23.5,31.8431458 Z M27,53 C41.3594035,53 53,41.3594035 53,27 C53,12.6405965 41.3594035,1 27,1 C12.6405965,1 1,12.6405965 1,27 C1,41.3594035 12.6405965,53 27,53 Z" stroke-opacity="0.198794158" stroke="#747474" fill-opacity="0.816519475" fill="#FFFFFF"></path> </g> </svg>
+                                      </div>
+                                      <div class="dz-error-mark">
+                                        <svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <title>Error</title> <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g stroke="#747474" stroke-opacity="0.198794158" fill="#FFFFFF" fill-opacity="0.816519475"> <path d="M32.6568542,29 L38.3106978,23.3461564 C39.8771021,21.7797521 39.8758057,19.2483887 38.3137085,17.6862915 C36.7547899,16.1273729 34.2176035,16.1255422 32.6538436,17.6893022 L27,23.3431458 L21.3461564,17.6893022 C19.7823965,16.1255422 17.2452101,16.1273729 15.6862915,17.6862915 C14.1241943,19.2483887 14.1228979,21.7797521 15.6893022,23.3461564 L21.3431458,29 L15.6893022,34.6538436 C14.1228979,36.2202479 14.1241943,38.7516113 15.6862915,40.3137085 C17.2452101,41.8726271 19.7823965,41.8744578 21.3461564,40.3106978 L27,34.6568542 L32.6538436,40.3106978 C34.2176035,41.8744578 36.7547899,41.8726271 38.3137085,40.3137085 C39.8758057,38.7516113 39.8771021,36.2202479 38.3106978,34.6538436 L32.6568542,29 Z M27,53 C41.3594035,53 53,41.3594035 53,27 C53,12.6405965 41.3594035,1 27,1 C12.6405965,1 1,12.6405965 1,27 C1,41.3594035 12.6405965,53 27,53 Z"></path> </g> </g> </svg>
+                                      </div>
+                                    </div>
+                                    <!-- <div class="d-flex">
+                                      <div id="total-progress" class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                                        <div class="progress-bar progress-bar-success" style="width:0%;" data-dz-uploadprogress></div>
+                                      </div>
+                                    </div> -->
+                                    <div data-dz-size style="font-size: 12px;" class="ms-3"></div>
+                                    
+                                    <!-- <button class="btn btn-primary ms-3" style="font-size: 10px">
+                                      <i class="fa-solid fa-upload me-1"></i>
+                                      Upload
+                                    </button> -->
+                                    
+                                  </div>
+                                  <div class="col-md">
+                                    <div class="card-body">
+                                      <div class="card-title d-flex">
+                                        <!-- <div data-dz-size style="font-size: 12px;"></div> -->
+                                        <!-- <select class="form-control rounded me-1">
+                                            <option value="">Grand Deluxe Special Room</option>
+                                            <option value="">Deluxe Room</option>
+                                        </select> -->
+                                        <button class="btn btn-primary me-1 mainPhotosBtn" style="font-size: 10px">
+                                          <i class="fa-solid fa-panorama"></i>
+                                          Main Photo
+                                        </button>
+                                        <button class="btn btn-primary me-1 photoUploadBtn" style="font-size: 10px">
+                                          <i class="fa-solid fa-upload me-1"></i>
+                                          Upload
+                                        </button>
+                                        <button class="btn btn-danger deleteBenefit" style="font-size: 0.85rem;" data-dz-remove>
+                                          <i class="fa-regular fa-trash-can"></i>
+                                        </button>
+                                        <div class="ms-auto">
+                                          <input class="form-check-input checkboxSelected ms-auto" type="checkbox" style="cursor: pointer;">
+                                        </div>
+                                      </div>
+                                        <div class="mb-2">
+                                            <div class="form-label input-required">Photo Name
+                                                <img src="./manage-room-edit_files/usa.png" style="width: 20px; margin-left: 5px;">
+                                            </div>
+                                            <input type="text" class="form-control" style="border-radius: 5px; font-size: 12px;">
+                                        </div>
+                                        <div class="mb-2">
+                                            <div class="form-label input-required">Photo Name
+                                                <img src="./manage-room-edit_files/japan.png" style="width: 20px; margin-left: 5px;">
+                                            </div>
+                                            <input type="text" class="form-control" style="border-radius: 5px; font-size: 12px;">
+                                        </div>
+                                        <div class="mb-2">
+                                            <div class="form-label input-required">Photo Name
+                                                <img src="./manage-room-edit_files/indo.png" style="width: 20px; margin-left: 5px;">
+                                            </div>
+                                            <input type="text" class="form-control" style="border-radius: 5px; font-size: 12px;">
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- <div class="alert alert-danger" role="alert" data-dz-errormessage>
+                                </div> -->
+                              </div>
+                            </div>
 
-                                  <option value="">
-                                    Additional Extra Charge
-                                  </option>   
-
-                                  <option value="">
-                                    Chinese New Year
-                                  </option>   
-
-                                  <option value="">
-                                    Christmas Eve Gala Dinner
-                                  </option>  
-
-                                  <option value="">
-                                    Easter
-                                  </option>  
-
-                                  <option value="">
-                                    Gala Dinner
-                                  </option>  
-
-                                  <option value="">
-                                    Loy Kratong Gala Dinner
-                                  </option>  
-
-                                  <option value="">
-                                    Mardi Gras
-                                  </option>  
-
-                                  <option value="">
-                                    New Year Eve Gala Dinner
-                                  </option>  
-
-                                  <option value="">
-                                    New Year Surcharge
-                                  </option>  
-
-                                  <option value="">
-                                    SongKran Gala Dinner
-                                  </option>  
-
-                                  <option value="">
-                                    Valentine Day Gala Dinner
-                                  </option>  
-
-
-                              </select>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>Tuesday</td>
-                              <td>2023-10-03</td>
-                              <td>
-                                <input type="text" class="form-control fs-85 rounded">
-                              </td>
-                              <td>
-                                <input type="text" class="form-control fs-85 rounded">
-                              </td>
-                              <td>
-                                <select id="typePromotion" class="form-select fs-85 borderadius" aria-label="Default select example">
-                                  <option selected>Choose Description</option>
-
-                                  <option value="">
-                                    Additional Extra Charge
-                                  </option>   
-
-                                  <option value="">
-                                    Chinese New Year
-                                  </option>   
-
-                                  <option value="">
-                                    Christmas Eve Gala Dinner
-                                  </option>  
-
-                                  <option value="">
-                                    Easter
-                                  </option>  
-
-                                  <option value="">
-                                    Gala Dinner
-                                  </option>  
-
-                                  <option value="">
-                                    Loy Kratong Gala Dinner
-                                  </option>  
-
-                                  <option value="">
-                                    Mardi Gras
-                                  </option>  
-
-                                  <option value="">
-                                    New Year Eve Gala Dinner
-                                  </option>  
-
-                                  <option value="">
-                                    New Year Surcharge
-                                  </option>  
-
-                                  <option value="">
-                                    SongKran Gala Dinner
-                                  </option>  
-
-                                  <option value="">
-                                    Valentine Day Gala Dinner
-                                  </option>  
-
-
-                              </select>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>Wednesday</td>
-                              <td>2023-10-04</td>
-                              <td>
-                                <input type="text" class="form-control fs-85 rounded">
-                              </td>
-                              <td>
-                                <input type="text" class="form-control fs-85 rounded">
-                              </td>
-                              <td>
-                                <select id="typePromotion" class="form-select fs-85 borderadius" aria-label="Default select example">
-                                  <option selected>Choose Description</option>
-
-                                  <option value="">
-                                    Additional Extra Charge
-                                  </option>   
-
-                                  <option value="">
-                                    Chinese New Year
-                                  </option>   
-
-                                  <option value="">
-                                    Christmas Eve Gala Dinner
-                                  </option>  
-
-                                  <option value="">
-                                    Easter
-                                  </option>  
-
-                                  <option value="">
-                                    Gala Dinner
-                                  </option>  
-
-                                  <option value="">
-                                    Loy Kratong Gala Dinner
-                                  </option>  
-
-                                  <option value="">
-                                    Mardi Gras
-                                  </option>  
-
-                                  <option value="">
-                                    New Year Eve Gala Dinner
-                                  </option>  
-
-                                  <option value="">
-                                    New Year Surcharge
-                                  </option>  
-
-                                  <option value="">
-                                    SongKran Gala Dinner
-                                  </option>  
-
-                                  <option value="">
-                                    Valentine Day Gala Dinner
-                                  </option>  
-
-
-                              </select>
-                              </td>
-                            </tr>
-                          </tbody>
-                          <tfoot>
-                            <tr>
-                              <!-- <th>
-                                  <input id="checkboxAll" class="form-check-input" type="checkbox" style="cursor: pointer;" value="" id="flexCheckDefault">
-                              </th> -->
-                              <th>Day</th>
-                              <th>Date</th>
-                              <th>Adult Price</th>
-                              <th>Child Price</th>
-                              <th>Description</th>
-                            </tr>
-                          </tfoot>
-                        </table>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="card-footer">
-                      <button class="btn btn-primary float-end fs-85">Submit</button>
                     </div>
                   </div>
                 </div>

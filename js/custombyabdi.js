@@ -10,7 +10,7 @@ $(document).ready(function(){
     }
   });
 
-  $('#checkboxAll').on('click', function(){
+  $(document).on('click', '#checkboxAll', function(){
     $('#deleteChecked').css('cursor','default');
     $('#showChecked').css('cursor','default');
     $('#hideChecked').css('cursor','default');
@@ -22,7 +22,7 @@ $(document).ready(function(){
     }
   });
 
-  $('.checkboxSelected, #checkboxAll').on('change', function(){
+  $(document).on('change', '.checkboxSelected, #checkboxAll', function(){
     var checkAll = $('.checkboxSelected').filter(':checked').length;
     if (checkAll == $('.checkboxSelected').length) {
       $('#checkboxAll').prop('checked', true);
@@ -292,9 +292,11 @@ Manage Rooms
 $(document).ready(function(){
 // Note that the name "myDropzone" is the camelized
 // id of the form.
-Dropzone.options.myDropzone = {
-  // Configuration options go here
-};
+  Dropzone.options.myDropzone = {
+    // Configuration options go here
+    previewTemplate: '<input type="text" class="form-control" style="border-radius: 5px;" value="">',
+    addRemoveLinks: true,
+  };
 });
 
 
@@ -1336,6 +1338,53 @@ $(document).ready (function(){
   //         format: 'YYYY/MM'
   //       }
   //   });
+
+});
+
+/*=====================
+Manage Photos
+=====================*/
+
+$(document).ready(function(){
+
+  var previewPhotos = document.querySelector('#photoTemplate');
+  previewPhotos.id = "";
+  var previewTemplate = previewPhotos.parentNode.innerHTML;
+  previewPhotos.parentNode.removeChild(previewPhotos);
+  
+  photoDropZone = $(".dropZoneManagePhotos").dropzone({ 
+    // addRemoveLinks: true,
+    // maxFilesize: 1000,
+    url               : 'http://localhost:8000/api/photo/store',
+    acceptedFiles     : ".jpeg,.jpg,.png",
+    previewTemplate   : previewTemplate,
+    // autoQueue         : false, // Make sure the files aren't queued until manually added
+    previewsContainer : "#previews", // Define the container to display the previews
+    init: function() {
+        this.on("addedfile", function (file) {
+            var reader = new FileReader();
+            reader.onload = function(event) {
+                // event.target.result contains base64 encoded image
+                var base64String = event.target.result;
+                var fileName = file.name
+                console.log(base64String ,fileName );
+            };
+            reader.readAsDataURL(file);
+
+        });
+    }
+
+  });
+
+  
+  $(document).on('click', '.mainPhotosBtn', function(){
+    // e.preventDefault();
+    
+    var mainPhotos = $(this).closest('div.row').find('img.photosImg').attr('src');
+    $('img#mainPhoto').attr('src', mainPhotos);
+  });
+
+
 
 });
 

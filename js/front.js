@@ -85,6 +85,9 @@ document.addEventListener('DOMContentLoaded', function () {
 		  navbarText8  = document.querySelector('.navbar-text.nav8'),
 		  navbarText9  = document.querySelector('.navbar-text.nav9'),
 		  navbarText10  = document.querySelector('.navbar-text.nav10'),
+		  navbarText11  = document.querySelector('.navbar-text.nav11'),
+		  navbarText12  = document.querySelector('.navbar-text.nav12'),
+		  navbarText13  = document.querySelector('.navbar-text.nav13'),
           innerContent = document.querySelector('.content-inner'),
           smBrand = document.querySelector('.navbar-header .brand-small'),
           lgBrand = document.querySelector('.navbar-header .brand-big');
@@ -105,6 +108,9 @@ document.addEventListener('DOMContentLoaded', function () {
 			navbarText8.classList.toggle('hidden');
 			navbarText9.classList.toggle('hidden');
 			navbarText10.classList.toggle('hidden');
+			navbarText11.classList.toggle('hidden');
+			navbarText12.classList.toggle('hidden');
+			navbarText13.classList.toggle('hidden');
             innerContent.classList.toggle('active');
             document.dispatchEvent(new Event('sidebarChanged'));
 
