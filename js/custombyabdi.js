@@ -6,7 +6,7 @@ $(document).ready(function(){
   })
   $('.daterange-input').daterangepicker({
     locale: {
-      format: 'YYYY/MM/DD'
+      format: 'YYYY-MM-DD'
     }
   });
 
@@ -108,8 +108,14 @@ $(document).ready(function(){
     if ($('#checkboxBookingDateFilter').is(':checked')) {
       $('#inputBookingDateFilter').prop('disabled', false);
       $('#inputBookingDateFilter').css('cursor', '');
+      $('#inputBookingDateFilter').daterangepicker({
+          locale: {
+              format: "YYYY-MM-DD"
+          }
+      });
     }else{  
       $('#inputBookingDateFilter').prop('disabled', true);
+      $('#inputBookingDateFilter').val('Booking Date');
       $('#inputBookingDateFilter').css('cursor', 'not-allowed');
 
     }
@@ -125,10 +131,15 @@ $(document).ready(function(){
     if ($('#checkboxCheckinDateFilter').is(':checked')) {
       $('#inputCheckinDateFilter').prop('disabled', false);
       $('#inputCheckinDateFilter').css('cursor', '');
+      $('#inputCheckinDateFilter').daterangepicker({
+        locale: {
+            format: "YYYY-MM-DD"
+        }
+    });
     }else{  
       $('#inputCheckinDateFilter').prop('disabled', true);
       $('#inputCheckinDateFilter').css('cursor', 'not-allowed');
-
+      $('#inputCheckinDateFilter').val('Check-In Date');
     }
   }
 
@@ -624,7 +635,7 @@ $(document).ready(function(){
 
   $('#daterange-inputStayDate').daterangepicker({
     locale: {
-      format: 'YYYY/MM/DD'
+      format: 'YYYY-MM-DD'
     }
   });
 
@@ -1294,7 +1305,7 @@ $('#daterange-btn-announcementDueDate').on('click', function(){
 
 $('#daterange-inputAnnouncementDueDate').daterangepicker({
   locale: {
-    format: 'YYYY/MM/DD'
+    format: 'YYYY-MM-DD'
   }
 });
 
@@ -1388,31 +1399,65 @@ $(document).ready(function(){
 
 });
 
+/*=====================
+    Dashboard
+=====================*/
 $(document).ready( function(){
-//chart
-const ctx = document.getElementById('myChart').getContext("2d");
+    //chart
+    const ctx = document.getElementById('myChart').getContext("2d");
 
-var gradient = ctx.createLinearGradient(0, 0, 400, 0);
-gradient.addColorStop(0, 'rgb(102,176,212)');
-gradient.addColorStop(1, 'rgb(109,182,133)');   
+    var gradient = ctx.createLinearGradient(0, 0, 400, 0);
+    gradient.addColorStop(0, 'rgb(102,176,212)');
+    gradient.addColorStop(1, 'rgb(109,182,133)');   
 
-new Chart(ctx, {
-  type: 'horizontalBar',
-  data: {
-    labels: ['Today', 'Yesterday', 'Las 7 Days', 'This Month'],
-    datasets: [{
-      label: 'Bookings',
-      data: [11, 6, 14, 20],
-      backgroundColor: gradient,
-    //   borderWidth: 1
-    }],
-  },
-  options: {
-    scales: {
-      y: {
-        beginAtZero: true
+    new Chart(ctx, {
+      type: 'horizontalBar',
+      data: {
+        labels: ['Today', 'Yesterday', 'Las 7 Days', 'This Month'],
+        datasets: [{
+          label: 'Bookings',
+          data: [11, 6, 14, 20],
+          backgroundColor: gradient,
+        //   borderWidth: 1
+        }],
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
       }
-    }
-  }
-});
+    });
+
+    var ctxx = document.getElementById("chartBooking").getContext('2d');
+
+    var chartBooking = new Chart(ctxx, {
+      type: 'line',
+      data: {
+        labels: ["10/1", "10/2", "10/3", "10/4", "10/5", "10/6", "10/7", "10/8", "10/9", "10/10", "10/11", "10/12", "10/13", "10/14", "10/15", "10/16", "10/17", "10/18", "10/19", "10/20"],
+        datasets: [{
+          label: 'Hoterip Bookings',
+          data: [35, 40, 60, 47, 88, 27, 30],
+          fill: false,
+          borderColor: 'rgb(102,176,212', // Add custom color border (Line)
+          backgroundColor: 'rgb(102,176,212', // Add custom color background 
+          borderWidth: 2,
+        }, {
+          label: 'MG Bookings',
+          data: [65, 59, 80, 81, 56, 55, 40],
+          fill: false,
+          borderColor: '#FFA836', // Add custom color border (Line)
+          backgroundColor: '#FFA836', // Add custom color background 
+          borderWidth: 2,
+        }],
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
 });
