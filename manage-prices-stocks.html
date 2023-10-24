@@ -67,10 +67,11 @@
               <!-- Navbar Menu -->
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
                 <!-- Search-->
-                  <!-- <li class="nav-item d-flex align-items-center"><a id="search" href="#">
-                    <svg class="svg-icon svg-icon-xs svg-icon-heavy">
+                  <li class="nav-item d-flex align-items-center"><a id="search" href="#">
+                    <!-- <svg class="svg-icon svg-icon-xs svg-icon-heavy">
                       <use xlink:href="#find-1"> </use>
-                    </svg></a></li> -->
+                    </svg> -->
+				</a></li>
 				<!-- Hotel Search -->
 				<li class="nav-item dropdown"> <a class="nav-link text-white" id="hotelAccount" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                   <span class="material-symbols-outlined navbar">domain</span><span class="d-none d-sm-inline-block hotel-select">Mockup Hotel & Spa Jimbaran Bali</span></a>
@@ -328,11 +329,6 @@
                     <table class="table mb-0 table-custom manageroom">
                       <thead width="12px">
                         <tr>
-                          <th>
-               
-                              <input id="checkboxAll" class="form-check-input" type="checkbox" style="cursor: pointer;" value="" id="flexCheckDefault">
-                            
-                          </th>
                           <th>Room Name</th>
                           <th>Day</th>
                           <th>Date</th>
@@ -356,7 +352,6 @@
                         <!-- fix row -->
 
                         <tr>
-                          <td></td>
                           <td></td>
                           <td></td>
                           <td>
@@ -387,7 +382,7 @@
                           <td><input id="input-Korea" type="text" class="form-control rounded mask-money" class="fs-75"></td>
                           <td><input id="input-Asia" type="text" class="form-control rounded mask-money" class="fs-75"></td>
                           <td><input id="input-Other" type="text" class="form-control rounded mask-money" class="fs-75"></td>
-                          <td><input id="input-MinNight" type="text" class="form-control rounded mask-money" class="fs-75"></td>
+                          <td><input id="input-MinNight" type="text" class="form-control rounded" class="fs-75"></td>
                           <td></td>
                           <td>
                             <div class="form-check form-switch">
@@ -404,9 +399,7 @@
 
                         <!-- dinamis row -->
                         <tr>
-                          <td>
-                            <input class="form-check-input checkboxSelected" type="checkbox" style="cursor: pointer;" value="" id="flexCheckDefault">
-                          </td>
+                         
                           <td>Deluxe Room</td>
                           <td>Mon</td>
                           <td>Sep 11, 2023</td>
@@ -440,7 +433,7 @@
                           <td>
                             <input type="text" value="0.00" class="form-control rounded mask-money input-Other" style="font-size: 0.85rem;">
                           </td>
-                          <td><input type="text" value="0" class="form-control rounded mask-money input-MinNight" style="font-size: 0.85rem;"></td>
+                          <td><input type="text" value="0" class="form-control rounded input-MinNight" style="font-size: 0.85rem;"></td>
                           <td>0</td>
                           <td>
                             <div class="form-check form-switch">
@@ -454,9 +447,7 @@
                           </td>
                         </tr>
                         <tr>
-                          <td>
-                            <input class="form-check-input checkboxSelected" type="checkbox" style="cursor: pointer;" value="" id="flexCheckDefault">
-                          </td>
+                         
                           <td>Deluxe Room</td>
                           <td>Mon</td>
                           <td>Sep 11, 2023</td>
@@ -490,7 +481,7 @@
                           <td>
                             <input type="text" value="0.00" class="form-control rounded mask-money input-Other" style="font-size: 0.85rem;">
                           </td>
-                          <td><input type="text" value="0" class="form-control rounded mask-money input-MinNight" style="font-size: 0.85rem;"></td>
+                          <td><input type="text" value="0" class="form-control rounded input-MinNight" style="font-size: 0.85rem;"></td>
                           <td>0</td>
                           <td>
                             <div class="form-check form-switch">
@@ -504,9 +495,7 @@
                           </td>
                         </tr>
                         <tr>
-                          <td>
-                            <input class="form-check-input checkboxSelected" type="checkbox" style="cursor: pointer;" value="" id="flexCheckDefault">
-                          </td>
+                         
                           <td>Deluxe Room</td>
                           <td>Mon</td>
                           <td>Sep 11, 2023</td>
@@ -540,7 +529,7 @@
                           <td>
                             <input type="text" value="0.00" class="form-control rounded mask-money input-Other" style="font-size: 0.85rem;">
                           </td>
-                          <td><input type="text" value="0" class="form-control rounded mask-money input-MinNight" style="font-size: 0.85rem;"></td>
+                          <td><input type="text" value="0" class="form-control rounded input-MinNight" style="font-size: 0.85rem;"></td>
                           <td>0</td>
                           <td>
                             <div class="form-check form-switch">
@@ -554,9 +543,7 @@
                           </td>
                         </tr>
                         <tr>
-                          <td>
-                            <input class="form-check-input checkboxSelected" type="checkbox" style="cursor: pointer;" value="" id="flexCheckDefault">
-                          </td>
+                         
                           <td>Deluxe Room</td>
                           <td>Mon</td>
                           <td>Sep 11, 2023</td>
@@ -590,7 +577,7 @@
                           <td>
                             <input type="text" value="0.00" class="form-control rounded mask-money input-Other" style="font-size: 0.85rem;">
                           </td>
-                          <td><input type="text" value="0" class="form-control rounded mask-money input-MinNight" style="font-size: 0.85rem;"></td>
+                          <td><input type="text" value="0" class="form-control rounded input-MinNight" style="font-size: 0.85rem;"></td>
                           <td>0</td>
                           <td>
                             <div class="form-check form-switch">
@@ -609,8 +596,6 @@
                       </tbody>
                       <tfoot class="fs-85">
                         <tr>
-                          <th>
-                          </th>
                           <th>Room Name</th>
                           <th>Day</th>
                           <th>Date</th>

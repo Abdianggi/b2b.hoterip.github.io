@@ -67,10 +67,11 @@
               <!-- Navbar Menu -->
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
                 <!-- Search-->
-                  <!-- <li class="nav-item d-flex align-items-center"><a id="search" href="#">
-                    <svg class="svg-icon svg-icon-xs svg-icon-heavy">
+                  <li class="nav-item d-flex align-items-center"><a id="search" href="#">
+                    <!-- <svg class="svg-icon svg-icon-xs svg-icon-heavy">
                       <use xlink:href="#find-1"> </use>
-                    </svg></a></li> -->
+                    </svg> -->
+				</a></li>
 				<!-- Hotel Search -->
 				<li class="nav-item dropdown"> <a class="nav-link text-white" id="hotelAccount" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                   <span class="material-symbols-outlined navbar">domain</span><span class="d-none d-sm-inline-block hotel-select">Mockup Hotel & Spa Jimbaran Bali</span></a>
@@ -449,11 +450,35 @@
                           </div>
                         </sectiontab>
                         <sectiontab id="content3">
-                          
-                          <!-- <h1 class="text-center">DropZone</h1> -->
-                          <div class="my-3 mx-3">
-                            <form action="/target" class="dropzone rounded border-1" id="my-dropzone" ></form>
+                          <div class="card">
+                            <div class="card-header fw-bold">
+                              <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                  <div for="exampleFormControlInput1 fs-5 fw-normal" class="form-label input-required">Select Photo Room</div>
+                                  <select id="selectRoomPhoto" class="form-select borderadius fnt13" aria-label="Default select example">
+                                      <option selected value="DR">Resort View Room</option>
+                                      <option value="SDR">
+                                          Batur Room
+                                      </option>
+                                      <option value="BR">
+                                          Bratan Room
+                                      </option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card-body">
+                              <img id="roomPhoto" src="https://cms-asset.ayana.com/ARSB_Ocean_View_Room_King_1040x1040_3_1f82d3c332.jpg" class="img-fluid" alt="Responsive image" style="
+                                object-fit: none; /* Do not scale the image */
+                                object-position: center; /* Center the image within the element */
+                                width: 100%;
+                                max-height: 50rem;
+                                ">
+                            </div>
                           </div>
+                          <!-- <div class="my-3 mx-3">
+                            <form action="/target" class="dropzone rounded border-1" id="my-dropzone" ></form>
+                          </div> -->
 
                         </sectiontab>
                         <sectiontab id="content4">

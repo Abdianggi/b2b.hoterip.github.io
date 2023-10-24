@@ -67,10 +67,11 @@
               <!-- Navbar Menu -->
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
                 <!-- Search-->
-                  <!-- <li class="nav-item d-flex align-items-center"><a id="search" href="#">
-                    <svg class="svg-icon svg-icon-xs svg-icon-heavy">
+                  <li class="nav-item d-flex align-items-center"><a id="search" href="#">
+                    <!-- <svg class="svg-icon svg-icon-xs svg-icon-heavy">
                       <use xlink:href="#find-1"> </use>
-                    </svg></a></li> -->
+                    </svg> -->
+				</a></li>
 				<!-- Hotel Search -->
 				<li class="nav-item dropdown"> <a class="nav-link text-white" id="hotelAccount" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                   <span class="material-symbols-outlined navbar">domain</span><span class="d-none d-sm-inline-block hotel-select">Mockup Hotel & Spa Jimbaran Bali</span></a>
@@ -215,8 +216,14 @@
           <div class="container-fluid">
             <div class="card" style="font-size: 0.85rem;">
               <div class="card-body p-5">
-                
-                <div class="row mb-3">
+                <div class="mb-3">
+                  <div for="exampleFormControlInput1 fs-5" class="form-label">Breakfast Type</div>
+                  <div class="form-check form-switch fnt13">
+                    <input class="form-check-input" type="checkbox">
+                    <div class="form-check-label" for="flexSwitchCheckDefault">Exclude/Include</div>
+                  </div>
+                </div>
+                <div class="row mb-4">
                   <div class="col-md col-sm mb-3">
                     <h5 class="mb-3 borderbottom-1 pb-2">
                       Room Name
@@ -249,42 +256,7 @@
                   </div>
                   <div class="col-md col-sm mb-3">
                     <h5 class="mb-3 borderbottom-1 pb-2">
-                      Store Front
-                    </h5>
-                    
-                    <div class="form-check form-switch form-group">
-                      <input id="storeFrontAll" class="form-check-input me-2" type="checkbox">
-                      Select All
-                    </div>
-
-
-                    <div class="form-check form-switch form-group">
-                      <input class="form-check-input storeFrontSelected me-2" type="checkbox">
-                      English
-                    </div>
-
-
-                    <div class="form-check form-switch form-group">
-                      <input class="form-check-input storeFrontSelected me-2" type="checkbox">
-                      日本語
-                    </div>
-
-
-                    <div class="form-check form-switch form-group">
-                      <input class="form-check-input storeFrontSelected me-2" type="checkbox">
-                      Indonesia
-                    </div>
-
-
-                    <div class="form-check form-switch form-group">
-                      <input class="form-check-input storeFrontSelected me-2" type="checkbox">
-                      China
-                    </div>
-
-                  </div>
-                  <div class="col-md col-sm mb-3">
-                    <h5 class="mb-3 borderbottom-1 pb-2">
-                      Set Days
+                      Stay Days
                     </h5>
 
                     <div class="form-check form-group form-switch">
@@ -322,6 +294,41 @@
                       Saturday
                     </div>
                    
+                  </div>
+                  <div class="col-md col-sm mb-3">
+                    <h5 class="mb-3 borderbottom-1 pb-2">
+                      Store Front
+                    </h5>
+                    
+                    <div class="form-check form-switch form-group">
+                      <input id="storeFrontAll" class="form-check-input me-2" type="checkbox">
+                      Select All
+                    </div>
+
+
+                    <div class="form-check form-switch form-group">
+                      <input class="form-check-input storeFrontSelected me-2" type="checkbox">
+                      English
+                    </div>
+
+
+                    <div class="form-check form-switch form-group">
+                      <input class="form-check-input storeFrontSelected me-2" type="checkbox">
+                      日本語
+                    </div>
+
+
+                    <div class="form-check form-switch form-group">
+                      <input class="form-check-input storeFrontSelected me-2" type="checkbox">
+                      Indonesia
+                    </div>
+
+
+                    <!-- <div class="form-check form-switch form-group">
+                      <input class="form-check-input storeFrontSelected me-2" type="checkbox">
+                      China
+                    </div> -->
+
                   </div>
                 </div>
                 

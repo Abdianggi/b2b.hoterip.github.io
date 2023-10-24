@@ -67,10 +67,11 @@
               <!-- Navbar Menu -->
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
                 <!-- Search-->
-                  <!-- <li class="nav-item d-flex align-items-center"><a id="search" href="#">
-                    <svg class="svg-icon svg-icon-xs svg-icon-heavy">
+                  <li class="nav-item d-flex align-items-center"><a id="search" href="#">
+                    <!-- <svg class="svg-icon svg-icon-xs svg-icon-heavy">
                       <use xlink:href="#find-1"> </use>
-                    </svg></a></li> -->
+                    </svg> -->
+				</a></li>
 				<!-- Hotel Search -->
 				<li class="nav-item dropdown"> <a class="nav-link text-white" id="hotelAccount" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                   <span class="material-symbols-outlined navbar">domain</span><span class="d-none d-sm-inline-block hotel-select">Mockup Hotel & Spa Jimbaran Bali</span></a>
@@ -240,7 +241,7 @@
                         </div>
                         <div class="col-custom-entry">
                           <div class="col-custom-float-right">
-                            <input class="form-control hotel-confirmation" type="text" placeholder="Search bookings...">
+                            <input class="form-control hotel-confirmation" type="text" placeholder="Search rooms...">
                           </div>
                         </div>
                       </div>
@@ -260,7 +261,6 @@
                               <th>Breakfast</th>
                               <th>Extra Bed Price</th>
                               <th>Status</th>
-                              <th>Ctrip Active</th>
                               <th>Action</th>
                             </tr>
                           </thead>
@@ -275,8 +275,7 @@
                               <td>IDR 136,150.00	</td>
                               <td>Yes</td>
                               <td>IDR 510,000.00</td>
-                              <td>Not Active	</td>
-                              <td>Not Active</td>
+                              <td class="text-primary statusRooms" style="cursor: pointer;">Status</td>
                               <td class="d-inline-block">
                                 <button class="btn btn-primary btn-re me-1 btn-edit-modal">Edit</button>
                                 <button class="btn btn-primary btn-re me-1">Duplicate</button>
@@ -293,8 +292,7 @@
                               <td>IDR 136,150.00	</td>
                               <td>Yes</td>
                               <td>IDR 510,000.00</td>
-                              <td>Not Active	</td>
-                              <td>Not Active</td>
+                              <td class="text-primary statusRooms" style="cursor: pointer; text-wrap: nowrap;">Status</td>
                               <td class="d-inline-block">
                                 <button class="btn btn-primary btn-re me-1 btn-edit-modal" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
                                 <button class="btn btn-primary btn-re me-1">Duplicate</button>
@@ -311,8 +309,7 @@
                               <td>IDR 136,150.00	</td>
                               <td>Yes</td>
                               <td>IDR 510,000.00</td>
-                              <td>Not Active	</td>
-                              <td>Not Active</td>
+                              <td class="text-primary statusRooms" style="cursor: pointer;">Status</td>
                               <td class="d-inline-block">
                                 <button class="btn btn-primary btn-re me-1 btn-edit-modal" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
                                 <button class="btn btn-primary btn-re me-1">Duplicate</button>

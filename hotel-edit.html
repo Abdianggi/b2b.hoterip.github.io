@@ -23,6 +23,7 @@
     <!-- Favicon-->
     <link rel="shortcut icon" href="img/favicon.ico">
 	<link rel="stylesheet" type="text/css" media="all" href="css/daterangepicker.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css">
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -66,10 +67,11 @@
               <!-- Navbar Menu -->
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
                 <!-- Search-->
-                  <!-- <li class="nav-item d-flex align-items-center"><a id="search" href="#">
-                    <svg class="svg-icon svg-icon-xs svg-icon-heavy">
+                  <li class="nav-item d-flex align-items-center"><a id="search" href="#">
+                    <!-- <svg class="svg-icon svg-icon-xs svg-icon-heavy">
                       <use xlink:href="#find-1"> </use>
-                    </svg></a></li> -->
+                    </svg> -->
+				</a></li>
 				<!-- Hotel Search -->
 				<li class="nav-item dropdown"> <a class="nav-link text-white" id="hotelAccount" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                   <span class="material-symbols-outlined navbar">domain</span><span class="d-none d-sm-inline-block hotel-select">Mockup Hotel & Spa Jimbaran Bali</span></a>
@@ -477,13 +479,7 @@
                     </div>
                   </div>
                   <div class="col-md-3 col-sm-12 mb-3">
-                    <div class="">
-                        <div for="exampleFormControlInput1 fs-5" class="form-label input-required">Telephone</div>
-                        <input type="number" class="form-control" style="border-radius: 5px;" value="6281353040851">
-                    </div>
-                  </div>
-                  <div class="col-md-3 col-sm-12 mb-3">
-                    <div for="exampleFormControlInput1 fs-5" class="form-label input-required">Telephone</div>
+                    <div for="exampleFormControlInput1 fs-5" class="form-label input-required">Type</div>
                     <select class="form-select borderadius fnt13" aria-label="Default select example">
                         <option selected="">Hotel</option>
                         <option value="">
@@ -495,8 +491,14 @@
                     </select>
                   </div>
                   <div class="col-md-3 col-sm-12 mb-3">
+                    <div class="">
+                        <div for="exampleFormControlInput1 fs-5" class="form-label input-required">Telephone</div>
+                        <input id="countryCode" type="tel" class="form-control" style="border-radius: 5px;">
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-12 mb-3">
                     <div for="exampleFormControlInput1 fs-5" class="form-label input-required">Fax</div>
-                    <input type="number" class="form-control rounded" value="6281353040851">
+                    <input type="text" class="form-control rounded" value="(624)-456-7890">
                   </div>
                   <div class="col-md-3 col-sm-12 mb-3">
                     <div for="exampleFormControlInput1 fs-5" class="form-label input-required">Opening Month - Year </div>
@@ -1354,22 +1356,15 @@
 										</select>
 								</div>
                 <div class="mb-3">
+                    <div for="exampleFormControlInput1 fs-5" class="form-label input-required">Minimum Price</div>
+                    <input type="text" class="form-control rounded w-25">
+                </div>
+                <div class="mb-3">
                     <div for="exampleFormControlInput1 fs-5" class="form-label input-required">Sales Tax</div>
                     <div class="d-flex w-25">
                         <input type="text" class="form-control rounded-input-addon">
                         <span class="rounded-addon" style="background-color: rgb(227, 235, 235);">%</span>
                     </div>
-                </div>
-                <div class="mb-3">
-                    <div for="exampleFormControlInput1 fs-5" class="form-label input-required">Reward Point</div>
-                    <div class="d-flex w-25">
-                        <input type="text" class="form-control rounded-input-addon">
-                        <span class="rounded-addon" style="background-color: rgb(227, 235, 235);">%</span>
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <div for="exampleFormControlInput1 fs-5" class="form-label input-required">Minimum Price</div>
-                    <input type="text" class="form-control rounded w-25">
                 </div>
                 <div class="mb-3">
                   <div for="exampleFormControlInput1 fs-5" class="form-label input-required">Service Charge (Tax Applied)</div>
@@ -1378,6 +1373,13 @@
                       <span class="rounded-addon" style="background-color: rgb(227, 235, 235);">%</span>
                   </div>
                 </div>
+                <div class="mb-3">
+                  <div for="exampleFormControlInput1 fs-5" class="form-label input-required">Reward Point</div>
+                  <div class="d-flex w-25">
+                      <input type="text" class="form-control rounded-input-addon">
+                      <span class="rounded-addon" style="background-color: rgb(227, 235, 235);">%</span>
+                  </div>
+              </div>
 						  </sectiontab>
 						</maintab>
 					  <div class="form-group form-btn-right">
@@ -1453,6 +1455,8 @@
     <script src="vendor/just-validate/js/just-validate.min.js"></script>
     <script src="vendor/choices.js/public/assets/scripts/choices.min.js"></script>
     <script src="js/charts-home.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
+    <script src="js/countrycodeinput/countrycodeinput.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYRGpqHDPAqr2qapNUX7hihXRcNpG_X3s&libraries=places"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-locationpicker/0.1.12/locationpicker.jquery.min.js"></script>
     

@@ -134,8 +134,8 @@ $(document).ready(function(){
       $('#inputCheckinDateFilter').daterangepicker({
         locale: {
             format: "YYYY-MM-DD"
-        }
-    });
+          }
+      });
     }else{  
       $('#inputCheckinDateFilter').prop('disabled', true);
       $('#inputCheckinDateFilter').css('cursor', 'not-allowed');
@@ -157,9 +157,15 @@ $(document).ready(function(){
       if ($('#checkboxCheckoutDateFilter').is(':checked')) {
         $('#inputCheckoutDateFilter').prop('disabled', false);
         $('#inputCheckoutDateFilter').css('cursor', '');
+        $('#inputCheckoutDateFilter').daterangepicker({
+          locale: {
+              format: "YYYY-MM-DD"
+            }
+        });
       }else{  
         $('#inputCheckoutDateFilter').prop('disabled', true);
         $('#inputCheckoutDateFilter').css('cursor', 'not-allowed');
+        $('#inputCheckoutDateFilter').val('CheckOut Date');
 
       }
     }
@@ -301,6 +307,67 @@ $(document).ready(function(){
 Manage Rooms
 =====================*/
 $(document).ready(function(){
+  $('.statusRooms').popover({
+    // title: 'Abdi World',
+    placement: 'top',
+    trigger: 'hover',
+    sanitize: false,
+    html: true,
+    content: function(){
+      // var nameRoom = $(this).text();
+      var roomHtml = 
+                            `<table class="d-flex fs-85">
+                                <div style="width:100%;">
+                                  <tr>
+                                    <th>Room</th>
+                                    <td style="text-wrap: nowrap;">Not Active</td>
+                                  </tr>
+                                  
+                                  <tr>
+                                    <th>Ctrip</th>
+                                    <td style="text-wrap: nowrap;">Not Active</td>
+                                  </tr>
+                                  
+                                  <tr>
+                                    <th>Tuniu</th>
+                                    <td style="text-wrap: nowrap;">Not Active</td>
+                                  </tr>
+                                  
+                                  <tr>
+                                    <th>Dida</th>
+                                    <td style="text-wrap: nowrap;">Not Active</td>
+                                  </tr>
+                                  
+                                  <tr>
+                                    <th>B2B Rate Plan</th>
+                                    <td style="text-wrap: nowrap;">Not Active</td>
+                                  </tr>
+                                  
+                                  <tr>
+                                      <th >Show B2B Rate Plan on CM (D-Edge)</th>
+                                      <td style="text-wrap: nowrap; vertical-align: top;">Not Active</td>
+                                  </tr>                              
+                                </div>
+                            </table>`;
+                            // `First Name : `+nameBooking[0]+
+                            // ` <br> Last Name : `+nameBooking[1]+
+                            // ` <br> Nationality : Japan`;
+      return roomHtml;
+    },
+  });
+
+  $(document).on('change', '#selectRoomPhoto', function(){
+    var optionSelected = $("option:selected", this).attr('value');
+    console.log(optionSelected);
+    if (optionSelected == 'DR') {
+      $('#roomPhoto').attr('src', 'https://cms-asset.ayana.com/ARSB_Ocean_View_Room_King_1040x1040_3_1f82d3c332.jpg');
+    } else if(optionSelected == 'SDR'){
+      $('#roomPhoto').attr('src', 'https://cms-asset.ayana.com/996x560_MTG_Batur_c1f5d7e416.jpg');
+    } else if(optionSelected == 'BR'){
+      $('#roomPhoto').attr('src', 'https://s3.ap-southeast-1.amazonaws.com/cms-asset.ayana.com/respo_bb0be9b429.webp');
+    }
+  });
+
 // Note that the name "myDropzone" is the camelized
 // id of the form.
   Dropzone.options.myDropzone = {
@@ -646,7 +713,7 @@ $('#hideChecked').on('click', function(){
   var hideChecked = $('.checkboxSelected').is(':checked');
   $('.checkboxSelected').each(function(){
     if ($(this).is(':checked')) {
-      $(this).closest('.row-color').css('background-color', '#F2DEDE')
+      $(this).closest('.row-color').css('background-color', '#fed7aa')
     }
   });
 
@@ -688,7 +755,7 @@ $('#showChecked').on('click', function(){
   var showChecked = $('.checkboxSelected').is(':checked');
   $('.checkboxSelected').each(function(){
     if ($(this).is(':checked')) {
-      $(this).closest('.row-color').css('background-color', '#DFF0D8')
+      $(this).closest('.row-color').css('background-color', '#EDFAFD')
     }
   });
 
@@ -1316,6 +1383,17 @@ Manage Hotel Edit
 =====================*/
 $(document).ready (function(){
   console.log('Hotel Edit Ready');
+  const input = document.querySelector("#countryCode");
+  window.intlTelInput(input, {
+    initialCountry: "in",
+    sepseparateDialCode: true,
+    utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js",
+  });
+  // $("#countryCode").intlTelInput({
+  //   initialCountry: "in",
+  //   separateDialCode: true,
+  //   utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js",
+  // });
   // $('.numberOfRoom').inputmask({"mask": "999[Room]" });
   $('.numberOfFloors').inputmask({"mask": "99[Floor]" });
   $('.distanceKm').inputmask({"mask": "999[Km]" });
