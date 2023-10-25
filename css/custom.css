@@ -683,7 +683,7 @@
 
 @media (max-width: 1600px) {
 	.btn-re:last-child {
-		margin-top: 0.3rem;
+		/* margin-top: 0.3rem; */
 	}
 }
 
@@ -983,6 +983,10 @@ STYLE CUSTOM BY PUTUABDI
 
 	.dropzone{
 		border: 1px solid rgba(0,0,0,.3) !important;
+	}
+
+	.accordion{
+		--bs-accordion-btn-icon-width: 0.85rem !important;
 	}
 
 	input[type="month"]:focus{

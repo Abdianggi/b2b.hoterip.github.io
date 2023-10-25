@@ -1,6 +1,10 @@
 $(document).ready(function(){
   console.log('ready');
-  
+  // new Cleave('.inputThreeDigit', {
+  //     blocks: [3],
+  //     numericOnly: true,
+  // });
+
   $('#daterange-btn').on('click', function(){
       $('.daterange-input').focus();
   })
@@ -383,6 +387,49 @@ Manage Price Stock Page
 =====================*/
 $(document).ready(function(){
 
+  var dates = [];
+    $("#cal").daterangepicker({
+      locale: {
+        format: 'YYYY-MM-DD'
+      }
+    });
+
+    $("#cal").on('apply.daterangepicker', function(e, picker) {
+      e.preventDefault();
+      const obj = {
+        "key": dates.length + 1,
+        "start": picker.startDate.format('YYYY-MM-DD'),
+        "end": picker.endDate.format('YYYY-MM-DD')
+      }
+      dates.push(obj);
+      showDates();
+    })
+
+
+
+    $(document).on('click', '.remove', function() {
+      removeDate($(this).attr('key'));
+    });
+    
+    function removeDate(i) {
+      dates = dates.filter(function(o) {
+        return o.key != i;
+      });
+      showDates();
+    }
+    
+  function showDates() {
+    console.log(dates);
+
+    $("#ranges").html("");
+    $.each(dates, function() {
+      const el = "<tr class='ms-3'><td>" + this.start + " - " + this.end + "</td><td><button class='btn btn-danger ms-1 p-1 py-0 mt-1 remove' key="+this.key+">-</button></td></tr>";
+      $("#ranges").append(el);
+    });
+
+  }
+
+
 $('#popover').popover({
   // title: 'Abdi World',
   placement: 'bottom',
@@ -713,7 +760,7 @@ $('#hideChecked').on('click', function(){
   var hideChecked = $('.checkboxSelected').is(':checked');
   $('.checkboxSelected').each(function(){
     if ($(this).is(':checked')) {
-      $(this).closest('.row-color').css('background-color', '#fed7aa')
+      $(this).closest('.row-color').css('background-color', '#ffedd5')
     }
   });
 
@@ -794,8 +841,13 @@ $(document).on('change', '#typePromotion',function (e) {
     var optionSelected = $("option:selected", this).attr('value');
     if (optionSelected == 'SP' || optionSelected == 'FD') {
       console.log('its gone');
-      $('#typePromotionAppend').css('margin-bottom', '5rem')
+      $('#typePromotionAppend').css('margin-bottom', '')
       $('#typePromotionAppend').children('div').remove()
+      $('#typePromotionAppend').append(`
+        <div style="margin-top: 1.7rem;">
+          <input type="text" class="form-control fs-85" style="border-radius: 5px;" disabled>
+        </div>
+      `)
     }else if(optionSelected == 'EB')
     {
       console.log('Days Advance');
@@ -1501,6 +1553,10 @@ $(document).ready( function(){
       },
       options: {
         scales: {
+          yAxes: [{
+            categoryPercentage: .5,
+			      barPercentage: 1,
+          }],
           y: {
             beginAtZero: true
           }

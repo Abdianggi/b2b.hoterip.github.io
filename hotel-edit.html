@@ -1362,21 +1362,21 @@
                 <div class="mb-3">
                     <div for="exampleFormControlInput1 fs-5" class="form-label input-required">Sales Tax</div>
                     <div class="d-flex w-25">
-                        <input type="text" class="form-control rounded-input-addon">
+                        <input type="text" class="form-control rounded-input-addon inputThreeDigit">
                         <span class="rounded-addon" style="background-color: rgb(227, 235, 235);">%</span>
                     </div>
                 </div>
                 <div class="mb-3">
                   <div for="exampleFormControlInput1 fs-5" class="form-label input-required">Service Charge (Tax Applied)</div>
                   <div class="d-flex w-25">
-                      <input type="text" class="form-control rounded-input-addon">
+                      <input type="text" class="form-control rounded-input-addon inputThreeDigit">
                       <span class="rounded-addon" style="background-color: rgb(227, 235, 235);">%</span>
                   </div>
                 </div>
                 <div class="mb-3">
                   <div for="exampleFormControlInput1 fs-5" class="form-label input-required">Reward Point</div>
                   <div class="d-flex w-25">
-                      <input type="text" class="form-control rounded-input-addon">
+                      <input type="text" class="form-control rounded-input-addon inputThreeDigit">
                       <span class="rounded-addon" style="background-color: rgb(227, 235, 235);">%</span>
                   </div>
               </div>
@@ -1455,6 +1455,7 @@
     <script src="vendor/just-validate/js/just-validate.min.js"></script>
     <script src="vendor/choices.js/public/assets/scripts/choices.min.js"></script>
     <script src="js/charts-home.js"></script>
+    <script src="js/cleave/cleave.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
     <script src="js/countrycodeinput/countrycodeinput.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYRGpqHDPAqr2qapNUX7hihXRcNpG_X3s&libraries=places"></script>
@@ -1463,6 +1464,12 @@
 
     <!-- Main File-->
     <script src="js/front.js"></script>
+    <script type="text/javascript">
+      new Cleave('.inputThreeDigit', {
+          blocks: [3],
+          numericOnly: true,
+      });
+    </script>
     <script>
       // ------------------------------------------------------- //
       //   Inject SVG Sprite - 
