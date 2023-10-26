@@ -1435,6 +1435,8 @@ Manage Hotel Edit
 =====================*/
 $(document).ready (function(){
   console.log('Hotel Edit Ready');
+
+
   const input = document.querySelector("#countryCode");
   window.intlTelInput(input, {
     initialCountry: "in",
@@ -1474,11 +1476,17 @@ $(document).ready (function(){
       enableAutocompleteBlur: true,
   });
 
-  // $(".dateMonth").daterangepicker({
-  //       locale: {
-  //         format: 'YYYY/MM'
-  //       }
-  //   });
+   $(".dateMonth").datepicker({
+        format: "yyyy-mm",
+        startView: "months", 
+        minViewMode: "months",
+        showButtonPanel: true,
+    });
+
+   $(".timePicker").datepicker({
+        format: "HH:mm",
+        showButtonPanel: true,
+    });
 
 });
 
