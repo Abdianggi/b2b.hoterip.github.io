@@ -1091,4 +1091,8 @@ STYLE CUSTOM BY PUTUABDI
 		box-shadow: 0px 5px 5px #00000034;
 	}
 
+	.dropdown-menu{
+		--bs-dropdown-min-width:1rem !important;
+	}
+
 	
