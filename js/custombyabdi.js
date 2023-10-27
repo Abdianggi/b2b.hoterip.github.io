@@ -5,6 +5,20 @@ $(document).ready(function(){
   //     numericOnly: true,
   // });
 
+  $(document).on('click', 'div.icon.flex-shrink-0', function(){ 
+    console.log('abdinggi');
+    // $(this).toggle().css('background-color', '##10b981'); 
+    console.log($(this).css('background-color') == '#10b981');
+    if ($(this).css('background-color') === 'rgb(16, 185, 129)') {
+      $(this).css('background-color', '#dc2626');
+      $('#hotelActive').html('Innactive');
+    }else{
+      $('#hotelActive').html('Active');
+      $(this).css('background-color', '#10b981');
+    }
+
+   });
+
   $('#daterange-btn').on('click', function(){
       $('.daterange-input').focus();
   })
