@@ -989,6 +989,10 @@ STYLE CUSTOM BY PUTUABDI
 		--bs-accordion-btn-icon-width: 0.85rem !important;
 	}
 
+	.accordion-button::after {
+		margin-left: 1rem !important;
+	}
+
 	input[type="month"]:focus{
 		
 		outline: 0 none;
@@ -1068,6 +1072,23 @@ STYLE CUSTOM BY PUTUABDI
 	.btn-outline-amber:not(:disabled):not(.disabled).active:focus,
 	.show>.btn-outline-amber.dropdown-toggle:focus {
 		box-shadow: 0 0 0 .2rem rgba(119, 204, 204, 0.5)
+	}
+
+	.close{
+		background: transparent;
+		border: none;
+		float: inline-end;
+	}
+	.cancelBtn.btn.btn-sm.btn-default{
+		background-color: #f97316 !important;
+		color: white !important;
+	}
+
+	.datepicker.datepicker-dropdown.dropdown-menu.datepicker-orient-left.datepicker-orient-top{
+		border: 1px !important;
+		border-color: #00000034 !important;
+		border-style: solid !important;
+		box-shadow: 0px 5px 5px #00000034;
 	}
 
 	

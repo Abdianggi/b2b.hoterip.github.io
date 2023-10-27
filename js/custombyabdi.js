@@ -112,6 +112,8 @@ $(document).ready(function(){
     if ($('#checkboxBookingDateFilter').is(':checked')) {
       $('#inputBookingDateFilter').prop('disabled', false);
       $('#inputBookingDateFilter').css('cursor', '');
+      $('#inputBookingDateFilter').removeClass('text-muted');
+      $('#inputBookingDateFilter').closest('div.d-flex').children('span').removeClass('text-muted');
       $('#inputBookingDateFilter').daterangepicker({
           locale: {
               format: "YYYY-MM-DD"
@@ -121,6 +123,8 @@ $(document).ready(function(){
       $('#inputBookingDateFilter').prop('disabled', true);
       $('#inputBookingDateFilter').val('Booking Date');
       $('#inputBookingDateFilter').css('cursor', 'not-allowed');
+      $('#inputBookingDateFilter').addClass('text-muted');
+      $('#inputBookingDateFilter').closest('div.d-flex').children('span').addClass('text-muted');
 
     }
   }
@@ -135,6 +139,8 @@ $(document).ready(function(){
     if ($('#checkboxCheckinDateFilter').is(':checked')) {
       $('#inputCheckinDateFilter').prop('disabled', false);
       $('#inputCheckinDateFilter').css('cursor', '');
+      $('#inputCheckinDateFilter').removeClass('text-muted');
+      $('#inputCheckinDateFilter').closest('div.d-flex').children('span').removeClass('text-muted');
       $('#inputCheckinDateFilter').daterangepicker({
         locale: {
             format: "YYYY-MM-DD"
@@ -144,6 +150,8 @@ $(document).ready(function(){
       $('#inputCheckinDateFilter').prop('disabled', true);
       $('#inputCheckinDateFilter').css('cursor', 'not-allowed');
       $('#inputCheckinDateFilter').val('Check-In Date');
+      $('#inputCheckinDateFilter').addClass('text-muted');
+      $('#inputCheckinDateFilter').closest('div.d-flex').children('span').addClass('text-muted');
     }
   }
 
@@ -161,6 +169,8 @@ $(document).ready(function(){
       if ($('#checkboxCheckoutDateFilter').is(':checked')) {
         $('#inputCheckoutDateFilter').prop('disabled', false);
         $('#inputCheckoutDateFilter').css('cursor', '');
+        $('#inputCheckoutDateFilter').removeClass('text-muted');
+        $('#inputCheckoutDateFilter').closest('div.d-flex').children('span').removeClass('text-muted');
         $('#inputCheckoutDateFilter').daterangepicker({
           locale: {
               format: "YYYY-MM-DD"
@@ -170,6 +180,8 @@ $(document).ready(function(){
         $('#inputCheckoutDateFilter').prop('disabled', true);
         $('#inputCheckoutDateFilter').css('cursor', 'not-allowed');
         $('#inputCheckoutDateFilter').val('CheckOut Date');
+        $('#inputCheckoutDateFilter').addClass('text-muted');
+        $('#inputCheckoutDateFilter').closest('div.d-flex').children('span').addClass('text-muted');
 
       }
     }
@@ -1413,6 +1425,27 @@ $('.benefit-get').inputmask({"mask": "999[%]" });
 Manage Announcements Page
 =====================*/
 $(document).ready(function(){
+  $(document).on('change', '.checkPoliciesSelected, #checkAllPolicies', function(){
+    var checkAll = $('.checkPoliciesSelected').filter(':checked').length;
+    if (checkAll == $('.checkPoliciesSelected').length) {
+      $('#checkAllPolicies').prop('checked', true);
+    }else{
+      $('#checkAllPolicies').prop('checked', false);
+    }
+  });
+
+  $(document).on('click', '#checkAllPolicies', function(){
+    if ($('#checkAllPolicies').is(':checked')) {
+      $('.checkPoliciesSelected').prop('checked', true);
+    }else{
+      $('.checkPoliciesSelected').prop('checked', false);
+    }
+  });
+});
+/*=====================
+Manage Announcements Page
+=====================*/
+$(document).ready(function(){
 console.log('Announcements Ready');
 $(document).on('click', '.btn-announcement-edit', function(){
   window.location.href= 'manage-announcement-edit.html';
@@ -1435,6 +1468,15 @@ Manage Hotel Edit
 =====================*/
 $(document).ready (function(){
   console.log('Hotel Edit Ready');
+  $('.alert').alert()
+  $('#submit').on('click', function(){
+    $('.alert').addClass('show');
+    $('.alert').removeClass('d-none');
+  });
+  $('.close').on('click', function(){
+    $(this).closest('div.alert').removeClass('show');
+    $(this).closest('div.alert').addClass('d-none');
+  });
 
 
   const input = document.querySelector("#countryCode");
